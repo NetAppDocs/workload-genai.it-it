@@ -1,0 +1,93 @@
+---
+sidebar: sidebar 
+permalink: deploy-infrastructure.html 
+keywords: ai, chatbot, infrastructure, bedrock, fsx for ontap 
+summary: 'Prima di creare le knowledge base e le applicazioni di FSX per ONTAP per la tua organizzazione, devi implementare l"infrastruttura per il framework RAG nel tuo ambiente. I componenti principali dell"infrastruttura sono il servizio ai Amazon Bedrock, un"istanza di macchina virtuale per il motore NetApp Genai e un file system FSX per ONTAP.' 
+---
+= Implementare l'infrastruttura GenAI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Prima di creare knowledge base e applicazioni di FSX per ONTAP per la tua organizzazione, devi implementare l'infrastruttura Genai per il framework RAG nel tuo ambiente. I componenti principali dell'infrastruttura sono il servizio Amazon Bedrock, un'istanza di macchina virtuale per il motore NetApp Genai e un file system FSX per ONTAP.
+
+L'infrastruttura distribuita può supportare più knowledge base e chatbot, quindi in genere è necessario eseguire questa attività una sola volta.
+
+
+
+== Dettagli dell'infrastruttura
+
+L'implementazione Genai deve trovarsi in una regione AWS con Amazon Bedrock abilitato. https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html["Consente di visualizzare l'elenco delle regioni supportate"^]
+
+La distribuzione è costituita dai seguenti componenti.
+
+Servizio Amazon Bedrock:: Amazon Bedrock è un servizio completamente gestito che ti consente di utilizzare i modelli di base (FMS) di aziende di intelligenza artificiale leader attraverso una singola API. Fornisce inoltre le funzionalità necessarie per creare applicazioni ai generative sicure.
++
+--
+https://aws.amazon.com/bedrock/["Scopri di più su Amazon Bedrock"^]
+
+--
+Macchina virtuale per il motore NetApp Genai:: Il motore NetApp Genai viene implementato durante questo processo. Fornisce la potenza di elaborazione per acquisire i dati dalle origini dati e poi scriverli nel database vettoriale.
+File system FSX per ONTAP:: Il file system FSX per ONTAP offre lo storage per il tuo sistema GenAI.
++
+--
+Viene distribuito un singolo volume contenente il database vettoriale che memorizza i dati generati dal modello di base in base alle origini dati.
+
+Le origini dati che integrerai nella tua knowledge base possono risiedere nello stesso file system FSX per ONTAP o su un sistema diverso.
+
+Il motore NetApp Genai monitora e interagisce con entrambi questi volumi.
+
+--
+
+
+L'immagine seguente mostra l'infrastruttura GenAI. I componenti numerati 1, 2 e 3 vengono attivati durante questa procedura. Gli altri elementi devono essere presenti prima di iniziare la distribuzione.
+
+image:diagram-chatbot-infrastructure.png["Diagramma dei componenti del chatbot ai."]
+
+
+
+== Implementare l'infrastruttura GenAI
+
+Dovrai inserire le tue credenziali AWS e selezionare il file system FSX per ONTAP per implementare l'infrastruttura RAG (Retrieval Augmentation Generation).
+
+.Prima di iniziare
+Prima di iniziare la procedura, accertarsi che l'ambiente sia conforme link:requirements.html["i requisiti"] .
+
+.Fasi
+. Accedere a workload Factory.
+. Nella sezione carichi di lavoro ai, selezionare *Deploy & Manage*.
+. Esaminare il diagramma dell'infrastruttura e selezionare *Avanti*.
+. Completare gli elementi nella sezione *Impostazioni AWS*:
++
+.. *Credenziali AWS*: Selezionare o aggiungere le credenziali AWS che forniscono le autorizzazioni per implementare le risorse AWS.
+.. *Posizione*: Selezionare una regione AWS, un VPC e una subnet.
++
+L'implementazione Genai deve trovarsi in una regione AWS con Amazon Bedrock abilitato. https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html["Consente di visualizzare l'elenco delle regioni supportate"^]
+
+
+
+. Completare gli elementi nella sezione *Impostazioni infrastruttura*:
++
+.. *File system FSX per ONTAP*: Seleziona il file system FSX per ONTAP e la VM di storage in cui verranno distribuiti i volumi del database di istanze Genai, quindi specifica il nome che vuoi usare per il volume.
++
+A seconda che workload Factory disponga o meno delle credenziali per il file system FSX per ONTAP, potrebbe essere necessario immettere il nome utente e la password.
+
+.. *Tags*: Immettere qualsiasi coppia di chiavi di tag/valori che si desidera applicare a tutte le risorse AWS che fanno parte di questa distribuzione.
+.. *Coppia di chiavi*: Selezionare una coppia di chiavi che consente di connettersi in modo sicuro all'istanza del motore NetApp Genai.
+
+
+. Selezionare *Deploy* per iniziare la distribuzione.
+
+
+.Risultato
+Workload Factory inizia a implementare l'infrastruttura chatbot. Questo processo può richiedere fino a 10 minuti.
+
+Durante il processo di distribuzione, vengono impostati i seguenti elementi:
+
+* La rete viene impostata insieme agli endpoint privati.
+* Vengono creati il ruolo IAM, il profilo di istanza e il gruppo di protezione.
+* Il volume per il database del motore GenAI (LanceDB) viene creato nel file system FSX for ONTAP.
+* Viene implementata l'istanza della macchina virtuale per il motore GenAI.
+

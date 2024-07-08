@@ -1,0 +1,19 @@
+= 
+:allow-uri-read: 
+
+
+. *Selezionare un file system*: Selezionare il file system FSX per ONTAP in cui risiedono i file di origine dati e selezionare *Avanti*.
+. *Selezionare un volume*: Selezionare il volume in cui risiedono i file di origine dati e selezionare *Avanti*.
++
+Quando si selezionano i file archiviati utilizzando il protocollo SMB, è necessario immettere le informazioni di Active Directory, che includono il dominio, l'indirizzo IP, il nome utente e la password.
+
+. *Selezionare un'origine dati*: Selezionare la posizione dell'origine dati in base alla posizione in cui sono stati salvati i file. Può trattarsi di un intero volume o solo di una cartella o sottocartella specifica del volume e selezionare *Avanti*.
+. *Definisci i parametri ai*: Nella sezione *definizione del blocco*, definisci il modo in cui il servizio Amazon Bedrock suddivide il contenuto dell'origine dati in blocchi quando viene interrogata la knowledge base a cui appartiene. Al momento, è possibile scegliere solo frasi.
+. Nella sezione *Permission Aware*, disponibile solo quando l'origine dati selezionata si trova su un volume che utilizza il protocollo SMB, è possibile attivare o disattivare la selezione:
++
+** *Enabled*: Gli utenti del chatbot che accedono a questa knowledge base riceveranno solo risposte alle query provenienti da origini dati a cui hanno accesso.
+** *Disabled*: Gli utenti del chatbot riceveranno le risposte utilizzando il contenuto di tutte le origini dati integrate.
+
+
+. Selezionare *Aggiungi* per aggiungere questa origine dati alla knowledge base.
+

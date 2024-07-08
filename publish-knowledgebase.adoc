@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: publish-knowledgebase.html 
+keywords: ai, chatbot, publishing, knowledge base 
+summary: 'Dopo aver creato e testato la knowledge base a livello locale, è possibile pubblicare la knowledge base in modo che possa essere integrata con l"applicazione chatbot che consentirà agli utenti di interrogare la knowledge base.' 
+---
+= Pubblicare una knowledge base e visualizzare l'endpoint univoco
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dopo aver creato e testato la knowledge base a livello locale, è possibile pubblicare la knowledge base in modo che possa essere integrata con un'applicazione chatbot che consentirà agli utenti di interrogare la knowledge base.
+
+.A proposito di questa attività
+La pubblicazione della knowledge base consente di utilizzarla nelle applicazioni di chat. L'azione di pubblicazione attiva l'API workload Factory per generare e pubblicare endpoint univoci. Dopo la pubblicazione, la knowledge base diventa accessibile per le applicazioni di chat e gli endpoint API sono pronti per l'integrazione.
+
+Ogni knowledge base che pubblichi ha endpoint univoci.
+
+.Fasi
+. Nella pagina dell'inventario delle Knowledge base, selezionare la knowledge base che si desidera pubblicare.
+. Selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Gestisci knowledge base*.
++
+Questa pagina visualizza lo stato pubblicato, lo stato di incorporazione delle origini dati, la modalità di incorporazione e l'elenco di tutte le origini dati incorporate.
+
+. Selezionare il menu *azioni* e selezionare *pubblica*.
++
+Workload Factory pubblica la knowledge base. Nella pagina dei dettagli della knowledge base, lo stato cambia da *non pubblicato* a *pubblicato.*
+
++
+Ora è possibile ottenere dettagli sull'endpoint unico per la knowledge base.
+
+. Accanto allo stato pubblicato, selezionare *Visualizza*.
++
+Vengono visualizzati i dettagli su come accedere alla knowledge base utilizzando l'API workload Factory.
+
+. Dalla finestra di dialogo *Visualizza informazioni pubblicate*, copiare gli endpoint API che è possibile utilizzare per integrare la knowledge base con un'applicazione.
++
+Per ulteriori informazioni sugli endpoint API, andare al https://console.workloads.netapp.com/api-doc["Documentazione API"^] e selezionare *ai > External*.
+
++
+Prima di poter utilizzare questi endpoint, è necessario ottenere un token utente dal provider di autenticazione.
+
+
+
+.Risultato
+Ora avete una knowledge base pubblicata e l'endpoint unico che potete utilizzare per integrare la knowledge base con un'applicazione chatbot.

@@ -1,0 +1,66 @@
+---
+settings:
+  name: GenAI
+  platform: cloud
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  rss_page: whats-new.html
+  langs: it-it,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr
+sidebar:
+  entries:
+  - title: Documenti Genai
+    url: "/index.html"
+  - title: Note di rilascio
+    entries:
+    - title: Novità
+      url: "/whats-new.html"
+  - title: Inizia subito
+    entries:
+    - title: Scopri workload Factory per Genai
+      url: "/ai-workloads-overview.html"
+    - title: Avvio rapido
+      url: "/quick-start.html"
+    - title: Requisiti Genai
+      url: "/requirements.html"
+    - title: Identificare le origini dati per la knowledge base
+      url: "/identify-data-sources.html"
+    - title: Implementare l'infrastruttura della Knowledge base
+      url: "/deploy-infrastructure.html"
+  - title: Utilizzare GenAI per creare basi di conoscenza
+    entries:
+    - title: Creare una knowledge base
+      entries:
+      - title: Creare una knowledge base
+        url: "/create-knowledgebase.html"
+      - title: Testare una base di conoscenza
+        url: "/test-knowledgebase.html"
+      - title: Attivare l'autenticazione
+        url: "/activate-authentication.html"
+      - title: Pubblicare una knowledge base
+        url: "/publish-knowledgebase.html"
+      - title: Cosa fare in seguito
+        url: "/whats-next.html"
+    - title: Gestire le origini dati
+      url: "/manage-data-source.html"
+    - title: Gestire le knowledge base
+      url: "/manage-knowledgebase.html"
+  - title: Somministrare GenAI
+    entries:
+    - title: Gestire l'infrastruttura GenAI
+      url: "/manage-infrastructure.html"
+    - title: Componenti per il motore NetApp Genai
+      url: "/genai-engine-instance.html"
+  - title: Conoscenza e supporto
+    entries:
+    - title: Registrati per ricevere assistenza
+      url: "/support-registration.html"
+    - title: Richiedi assistenza
+      url: "/get-help.html"
+  - title: Note legali
+    url: "/legal-notices.html"
+product-family:
+  name: BlueXP Workload Factory for AWS
+  repo: workload-family

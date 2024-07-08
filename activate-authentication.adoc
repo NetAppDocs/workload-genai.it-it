@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: activate-authentication.html 
+keywords: ai, chatbot, publishing, knowledge base 
+summary: 'Attivare l"autenticazione per una knowledge base in modo che la convalida dei token e gli ACL siano necessari quando si integra la knowledge base con un"applicazione chatbot.' 
+---
+= Attivare l'autenticazione esterna per una knowledge base
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Attivare l'autenticazione per una knowledge base in modo che la convalida dei token e gli ACL siano necessari quando si utilizzano gli endpoint API per integrare una knowledge base con un'applicazione chatbot.
+
+.Fasi
+. Nella pagina dell'inventario delle Knowledge base, selezionare la knowledge base che si desidera pubblicare.
+. Selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Gestisci knowledge base*.
+. Selezionare il menu *azioni* e selezionare *Gestisci impostazioni di autenticazione*.
+. Impostazione dell'autenticazione:
++
+.. Selezionare *attiva impostazioni di autenticazione*.
+.. Fornire le informazioni richieste:
++
+*** Algoritmi
+*** Pubblico
+*** Emittente
+*** JWKS URI
+
+
+
+
++
+I valori di questi campi devono essere ottenuti dal proprio provider di autenticazione.
+
+. Selezionare *Salva*.
+
+
+.Risultato
+Ora avete una knowledge base pubblicata e l'endpoint unico che potete utilizzare per integrare la knowledge base con un'applicazione chatbot.

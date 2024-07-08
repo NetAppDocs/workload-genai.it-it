@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: identify-data-sources.html 
+keywords: data sources, chatbot, documents, knowledge base 
+summary: 'Identificare o creare i documenti (origini dati) che risiedono nel file system FSX per ONTAP da integrare nella knowledge base. Queste fonti di dati consentono alla knowledge base di fornire risposte accurate e personalizzate alle query degli utenti in base a dati rilevanti per l"organizzazione.' 
+---
+= Identificare le origini dati da integrare nella propria knowledge base
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Identificare o creare i documenti (origini dati) che risiedono nel file system FSX per ONTAP da integrare nella knowledge base. Queste fonti di dati consentono alla knowledge base di fornire risposte accurate e personalizzate alle query degli utenti in base a dati rilevanti per l'organizzazione.
+
+
+
+== Numero massimo di origini dati
+
+Il numero massimo di origini dati supportate è 10.
+
+
+
+== Ubicazione delle origini dati
+
+Le origini dati possono essere memorizzate in un singolo volume o in una cartella all'interno di un volume, in una condivisione SMB o in un file system NFS su Amazon FSX per NetApp ONTAP. Non è possibile selezionare singoli documenti all'interno di un volume o di una cartella, pertanto è necessario assicurarsi che ogni volume o cartella contenente origini dati non contenga documenti estranei che non devono essere integrati con la knowledge base.
+
+Puoi aggiungere più origini dati in ciascuna Knowledge base, ma tutte devono risiedere in FSX per ONTAP, accessibile dal tuo account AWS.
+
+La dimensione massima del file per ciascuna origine dati è di 50 MB.
+
+
+
+== Protocolli supportati
+
+La knowledge base supporta i dati provenienti dai volumi che utilizzano i protocolli NFS o SMB/CIFS. Quando si selezionano i file archiviati utilizzando il protocollo SMB, è necessario immettere le informazioni di Active Directory in modo che la knowledge base possa accedere ai file su tali volumi. Sono inclusi il dominio Active Directory, l'indirizzo IP, il nome utente e la password.
+
+Quando si archivia l'origine dati in una condivisione (file o directory) a cui si accede tramite SMB, i dati sono accessibili solo da utenti o gruppi di chatbot che dispongono delle autorizzazioni per accedere a tale condivisione. Quando questa funzionalità "in base alle autorizzazioni" è attivata, il sistema ai confronta l'e-mail dell'utente in auth0 con gli utenti autorizzati a visualizzare o utilizzare i file nella condivisione SMB. Il chatbot fornirà le risposte in base alle autorizzazioni dell'utente per i file incorporati.
+
+Ad esempio, se nella knowledge base sono stati integrati file 10 (origini dati) e 2 dei file sono file di risorse umane che contengono informazioni riservate, solo gli utenti di chatbot autenticati per accedere a tali file 2 riceveranno risposte dal chatbot che includono dati da tali file.
+
+
+
+== Formati di file origine dati supportati
+
+Attualmente sono supportati i seguenti formati di file di origine dati.
+
+[cols="2*"]
+|===
+| Formato file | Interno 
+
+
+| Testo normale | .txt 
+
+
+| Documento portatile | in formato .pdf 
+
+
+| Microsoft Word | .docx 
+
+
+| File di valori separati da virgola | .csv 
+|===

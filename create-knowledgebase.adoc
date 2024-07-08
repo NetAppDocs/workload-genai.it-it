@@ -1,0 +1,91 @@
+---
+sidebar: sidebar 
+permalink: create-knowledgebase.html 
+keywords: ai, chatbot, creating, knowledge base 
+summary: 'Dopo aver implementato l"infrastruttura ai e identificato le origini dei dati che integrerai nella tua knowledge base dai datastore FSX per ONTAP, sarai pronto a costruire la knowledge base utilizzando workload Factory. Nell"ambito di questa fase, definirai anche le caratteristiche dell"ai e creerai modi per avviare una conversazione.' 
+---
+= Creare una knowledge base
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dopo aver implementato l'infrastruttura ai e identificato le origini dei dati che integrerai nella tua knowledge base dai datastore FSX per ONTAP, sarai pronto a costruire la knowledge base utilizzando workload Factory. Nell'ambito di questo passaggio, definirai anche le caratteristiche dell'ai e creerai degli spunti di conversazione.
+
+È possibile utilizzare una knowledge base senza integrare le origini dati dell'organizzazione. In questo caso, un'applicazione integrata con la knowledge base fornirà i risultati solo dalle informazioni disponibili pubblicamente su Internet. Questa operazione è nota come integrazione _modalità pubblica_.
+
+Nella maggior parte dei casi, è necessario integrare le origini dati dell'organizzazione nella knowledge base. Questa è nota come integrazione _Enterprise mode_ perché fornisce informazioni dall'azienda.
+
+
+
+== Creare e configurare la knowledge base
+
+La knowledge base definisce caratteristiche quali i modelli di intelligenza artificiale Bedrock e il formato di inclusione che si desidera utilizzare per creare la propria knowledge base.
+
+.Fasi
+. Accedere a workload Factory.
+. Nella sezione carichi di lavoro ai, selezionare *Crea chatbot*.
+. Dalla scheda Knowledge base, selezionare *Aggiungi knowledge base*.
+. Nella pagina Definisci Knowledge base, configurare le impostazioni della Knowledge base:
++
+.. *Nome*: Immettere il nome che si desidera utilizzare per la knowledge base.
+.. *Descrizione*: Inserire una descrizione dettagliata per la base di conoscenza.
+.. *Modello di incorporazione*: Il modello di incorporazione definisce come i dati verranno convertiti in incorporazioni vettoriali per la base di conoscenza. Workload Factory supporta i seguenti modelli:
++
+*** Titano embedding G1 - testo
+*** Titan Embedding testo v2
+*** Incorporazioni multimodali Titan G1
++
+Si noti che è necessario aver già attivato il modello di inclusione da Amazon Bedrock.
+
++
+https://aws.amazon.com/bedrock/titan/["Scopri di più su Amazon Titan"^]
+
+
+
+.. *Modello chat*: Scegli tra i modelli chat Claude integrati in Amazon Bedrock. Nota: È necessario aver già attivato il modello di chat da Amazon Bedrock.
++
+Ulteriori informazioni sui modelli disponibili per effettuare la selezione: https://aws.amazon.com/bedrock/claude/["Claude di antropic in Amazon Bedrock"^]
+
+.. *Avviatori di conversazione*: Scegliere se si desidera fornire fino a quattro prompt iniziali di conversazione che vengono visualizzati agli utenti che interagiscono con un chatbot che utilizza questa knowledge base. Si consiglia di attivare questa impostazione.
++
+Se attivi gli avviatori di conversazione, per impostazione predefinita viene selezionata la modalità automatica. La "modalità manuale" può essere attivata solo dopo aver aggiunto origini dati alla knowledge base. link:manage-knowledgebase.html["Scopri come modificare le impostazioni della Knowledge base"].
+
+
+
+. Selezionare *Crea knowledge base* per aggiungere la knowledge base a GenAI.
+. Nella pagina successiva della procedura guidata è possibile aggiungere un'origine dati alla nuova knowledge base o terminare il processo senza aggiungere un'origine dati. Si consiglia di selezionare *Aggiungi origine dati* e aggiungere una o più origini dati.
+
+
+
+
+== Aggiungere fonti di dati alla knowledge base
+
+È possibile aggiungere una o più origini dati per popolare la knowledge base con i dati dell'organizzazione.
+
+.A proposito di questa attività
+Il numero massimo di origini dati supportate è 10.
+
+.Fasi
+. Dopo aver selezionato *Aggiungi origine dati*, viene visualizzata la pagina *Seleziona un file system*.
+. *Selezionare un file system*: Selezionare il file system FSX per ONTAP in cui risiedono i file di origine dati e selezionare *Avanti*.
+. *Selezionare un volume*: Selezionare il volume in cui risiedono i file di origine dati e selezionare *Avanti*.
++
+Quando si selezionano i file archiviati utilizzando il protocollo SMB, è necessario immettere le informazioni di Active Directory, che includono il dominio, l'indirizzo IP, il nome utente e la password.
+
+. *Selezionare un'origine dati*: Selezionare la posizione dell'origine dati in base alla posizione in cui sono stati salvati i file. Può trattarsi di un intero volume o solo di una cartella o sottocartella specifica del volume e selezionare *Avanti*.
+. *Definisci i parametri ai*: Nella sezione *definizione del blocco*, definisci il modo in cui il servizio Amazon Bedrock suddivide il contenuto dell'origine dati in blocchi quando viene interrogata la knowledge base a cui appartiene. Al momento, è possibile scegliere solo frasi.
+. Nella sezione *Permission Aware*, disponibile solo quando l'origine dati selezionata si trova su un volume che utilizza il protocollo SMB, è possibile attivare o disattivare la selezione:
++
+** *Enabled*: Gli utenti del chatbot che accedono a questa knowledge base riceveranno solo risposte alle query provenienti da origini dati a cui hanno accesso.
+** *Disabled*: Gli utenti del chatbot riceveranno le risposte utilizzando il contenuto di tutte le origini dati integrate.
+
+
+. Selezionare *Aggiungi* per aggiungere questa origine dati alla knowledge base.
+
+
+.Risultato
+L'origine dati inizia a essere integrata nella tua knowledge base. Lo stato cambia da "incorporazione" a "incorporata" quando l'origine dati è completamente incorporata.
+
+Dopo aver aggiunto una singola origine dati alla knowledge base, puoi testarla localmente nella finestra del simulatore di chatbot ed apportare le modifiche necessarie prima di rendere il chatbot disponibile per gli utenti. È inoltre possibile seguire la stessa procedura per aggiungere ulteriori origini dati alla knowledge base.

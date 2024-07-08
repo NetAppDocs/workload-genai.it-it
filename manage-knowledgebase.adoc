@@ -1,0 +1,165 @@
+---
+sidebar: sidebar 
+permalink: manage-knowledgebase.html 
+keywords: ai, chatbot, managing, knowledge base 
+summary: Dopo aver creato una knowledge base, è possibile visualizzare i dettagli della knowledge base, modificare la knowledge base, integrare fonti di dati aggiuntive o eliminare la knowledge base. 
+---
+= Gestire le knowledge base
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dopo aver creato una knowledge base, è possibile visualizzare i dettagli della knowledge base, modificare la knowledge base, integrare fonti di dati aggiuntive o eliminare la knowledge base.
+
+
+
+== Consente di visualizzare informazioni su una knowledge base
+
+È possibile visualizzare informazioni sulle impostazioni di una knowledge base e sull'origine dati integrata.
+
+.Fasi
+. Dal menu di navigazione, selezionare *ai*.
+. Selezionare la knowledge base che si desidera visualizzare.
++
+Se definito, gli avviamenti di conversazione attualmente in uso vengono visualizzati nel riquadro di destra.
+
+. Per visualizzare i dettagli della knowledge base, selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Gestisci knowledge base*.
++
+Questa pagina visualizza lo stato pubblicato, lo stato di incorporazione delle origini dati, la modalità di incorporazione, l'elenco di tutte le origini dati incorporate e altro ancora.
+
++
+Il menu *azioni* consente di gestire la knowledge base se si desidera apportare modifiche.
+
+
+
+
+
+== Modificare una knowledge base
+
+È possibile aggiornare una knowledge base modificando alcune impostazioni oppure aggiungere o rimuovere origini dati.
+
+Ogni volta che si aggiungono, modificano o rimuovono origini dati dalla knowledge base, è necessario sincronizzare l'origine dati in modo che venga riindicizzata nella knowledge base. La sincronizzazione è incrementale, quindi Amazon Bedrock elabora solo gli oggetti nel volume FSX per ONTAP che sono stati aggiunti, modificati o eliminati dall'ultima sincronizzazione.
+
+.Fasi
+. Nella pagina dell'inventario delle Knowledge base, selezionare la knowledge base che si desidera aggiornare.
+. Selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Gestisci knowledge base*.
++
+Questa pagina visualizza lo stato pubblicato, lo stato di incorporazione delle origini dati, la modalità di incorporazione, l'elenco di tutte le origini dati incorporate e altro ancora.
+
+. Selezionare il menu *azioni* e selezionare *Modifica knowledge base*.
+. Nella pagina Modifica knowledge base, è possibile modificare il nome della knowledge base, la descrizione, il modello di inclusione, il modello di chat e se gli avviatori di conversazione vengono creati automaticamente o manualmente.
++
+Se si utilizza la modalità Manuale per avviare una conversazione, è anche possibile cambiare gli avviatori di conversazione.
+
+. Selezionare *Salva* dopo aver apportato le modifiche.
+
+
+
+
+== Aggiungere ulteriori origini dati a una knowledge base
+
+È possibile incorporare ulteriori origini dati nella knowledge base per inserirle con dati aggiuntivi dell'organizzazione.
+
+.Fasi
+. Nella pagina dell'inventario delle Knowledge base, selezionare la knowledge base in cui si desidera aggiungere l'origine dati.
+. Selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Aggiungi origine dati*.
+. *Selezionare un file system*: Selezionare il file system FSX per ONTAP in cui risiedono i file di origine dati e selezionare *Avanti*.
+. *Selezionare un volume*: Selezionare il volume in cui risiedono i file di origine dati e selezionare *Avanti*.
++
+Quando si selezionano i file archiviati utilizzando il protocollo SMB, è necessario immettere le informazioni di Active Directory, che includono il dominio, l'indirizzo IP, il nome utente e la password.
+
+. *Selezionare un'origine dati*: Selezionare la posizione dell'origine dati in base alla posizione in cui sono stati salvati i file. Può trattarsi di un intero volume o solo di una cartella o sottocartella specifica del volume e selezionare *Avanti*.
+. *Definisci i parametri ai*: Nella sezione *definizione del blocco*, definisci il modo in cui il servizio Amazon Bedrock suddivide il contenuto dell'origine dati in blocchi quando viene interrogata la knowledge base a cui appartiene. Al momento, è possibile scegliere solo frasi.
+. Nella sezione *Permission Aware*, disponibile solo quando l'origine dati selezionata si trova su un volume che utilizza il protocollo SMB, è possibile attivare o disattivare la selezione:
++
+** *Enabled*: Gli utenti del chatbot che accedono a questa knowledge base riceveranno solo risposte alle query provenienti da origini dati a cui hanno accesso.
+** *Disabled*: Gli utenti del chatbot riceveranno le risposte utilizzando il contenuto di tutte le origini dati integrate.
+
+
+. Selezionare *Aggiungi* per aggiungere questa origine dati alla knowledge base.
+
+
+.Risultato
+L'origine dati è integrata nella knowledge base.
+
+
+
+== Sincronizzare le origini dati con la knowledge base
+
+Le origini dati vengono sincronizzate automaticamente con la knowledge base una volta al giorno, in modo che eventuali modifiche all'origine dati vengano riflesse nel chatbot. Se si apportano modifiche a una delle origini dati e si desidera sincronizzare immediatamente i dati, è possibile eseguire una sincronizzazione su richiesta.
+
+La sincronizzazione è incrementale, quindi Amazon Bedrock elabora solo gli oggetti nelle origini dati che sono stati aggiunti, modificati o eliminati dall'ultima sincronizzazione.
+
+.Fasi
+. Nella pagina dell'inventario delle Knowledge base, selezionare la knowledge base che si desidera sincronizzare.
+. Selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Gestisci knowledge base*.
+. Selezionare il menu *azioni* e selezionare *Esegui scansione ora*.
++
+Viene visualizzato un messaggio che indica che le origini dati sono in fase di scansione e un messaggio finale al termine della scansione.
+
+
+
+.Risultato
+La knowledge base è sincronizzata con le origini dati collegate e qualsiasi chatbot attivo inizierà a utilizzare le informazioni più recenti provenienti dalle origini dati.
+
+
+
+== Valutare i modelli di chat prima di creare una knowledge base
+
+È possibile valutare i modelli di chat di base disponibili prima di creare una knowledge base per individuare il modello più adatto alla propria implementazione. Poiché il supporto dei modelli varia in base alla regione di AWS, fare riferimento a https://docs.aws.amazon.com/bedrock/latest/userguide/models-regions.html["Questa pagina di documentazione di AWS"^] per verificare quali modelli è possibile utilizzare nelle regioni in cui si prevede di implementare la propria knowledge base.
+
+
+NOTE: Questa funzionalità è disponibile solo quando non è stata creata alcuna knowledge base -- quando nella pagina di inventario della Knowledge base non esiste alcuna knowledge base.
+
+.Fasi
+. Dalla pagina di inventario delle Knowledge base, vedrai l'opzione per selezionare il modello di chat sul lato destro della pagina per il chatbot.
+. Selezionare il modello di chat dall'elenco e inserire una serie di domande nell'area degli annunci per vedere come risponde il chatbot.
+. Provare più modelli per individuare il modello più adatto all'implementazione.
+
+
+.Risultato
+Utilizzate questo modello di chat quando create la vostra knowledge base.
+
+
+
+== Annullare la pubblicazione della knowledge base
+
+Dopo aver pubblicato la knowledge base in modo che possa essere integrata con un'applicazione chatbot, puoi annullare la pubblicazione se desideri disabilitare l'applicazione chatbot dall'accesso alla knowledge base.
+
+L'annullamento della pubblicazione della knowledge base impedisce il funzionamento di qualsiasi applicazione di chat. L'endpoint API univoco al quale la knowledge base è stata accessibile è disabilitato.
+
+.Fasi
+. Nella pagina dell'inventario delle Knowledge base, selezionare la knowledge base che si desidera annullare la pubblicazione.
+. Selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Gestisci knowledge base*.
++
+Questa pagina visualizza lo stato pubblicato, lo stato di incorporazione delle origini dati, la modalità di incorporazione e l'elenco di tutte le origini dati incorporate.
+
+. Selezionare il menu *azioni* e selezionare *Annulla pubblicazione*.
+
+
+.Risultato
+La knowledge base è disabilitata e non è più accessibile da un'applicazione chatbot.
+
+
+
+== Eliminare una knowledge base
+
+Se non hai più bisogno di una knowledge base, puoi eliminarla. Una volta eliminata, la knowledge base verrà rimossa da workload Factory e tutte le applicazioni o i chatbot che utilizzano la knowledge base smetteranno di funzionare. Questa azione non è reversibile.
+
+Quando si elimina una knowledge base, è necessario eseguire anche le seguenti azioni per eliminare completamente tutte le risorse associate alla knowledge base:
+
+* Dissociare la base di conoscenza da qualsiasi agente con cui è associato.
+* I dati sottostanti indicizzati dalla knowledge base rimangono nell'archivio vettoriale impostato e possono ancora essere recuperati. Per eliminare i dati, è anche necessario eliminare l'indice vettoriale contenente le incorporazioni dei dati.
+
+
+.Fasi
+. Nella pagina dell'inventario delle Knowledge base, selezionare la knowledge base che si desidera eliminare.
+. Selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Gestisci knowledge base*.
+. Selezionare il menu *azioni* e selezionare *Elimina knowledge base*.
+. Nella finestra di dialogo Elimina knowledge base, confermare che si desidera eliminarla e selezionare *Elimina*.
+
+
+.Risultato
+La knowledge base viene eliminata da workload Factory.

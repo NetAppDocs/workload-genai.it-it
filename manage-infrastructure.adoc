@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: manage-infrastructure.html 
+keywords: ai, chatbot, creating, knowledge base 
+summary: 'Puoi visualizzare i dettagli sull"infrastruttura Genai RAG implementata o rimuovere l"infrastruttura chatbot se non ne hai più bisogno.' 
+---
+= Gestire l'infrastruttura GenAI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puoi visualizzare i dettagli sull'infrastruttura Genai RAG implementata o rimuovere l'infrastruttura chatbot se non ne hai più bisogno.
+
+
+
+== Consente di visualizzare informazioni sull'infrastruttura
+
+È possibile visualizzare informazioni sull'infrastruttura del chatbot.
+
+.Fasi
+. Dal menu di navigazione, selezionare *ai*.
+. Selezionare la scheda *infrastruttura*.
+. Visualizzare le informazioni relative all'infrastruttura, che includono dettagli sui seguenti componenti:
++
+** Impostazioni AWS
+** File system FSX per ONTAP
+** Il motore ai
+** Il database vettoriale
+
+
+
+
+
+
+== Rimuovere l'infrastruttura
+
+Se non hai più bisogno dell'infrastruttura chatbot implementata per uno o più chatbot, puoi rimuoverla da workload Factory.
+
+
+NOTE: Tutti i chatbot che sono stati distribuiti su questa infrastruttura saranno disabilitati e tutta la cronologia chat sarà eliminata.
+
+Questa operazione rimuove solo i link all'infrastruttura ai da workload Factory --IT non rimuove tutti i componenti da AWS. Devi eliminare manualmente i seguenti componenti dell'infrastruttura da AWS:
+
+* Istanza della macchina virtuale
+* Endpoint privati
+* Volume nel file system FSX per ONTAP che contiene i database ai
+* Il ruolo IAM
+* La policy
+* Il gruppo di protezione
+
+
+.Fasi
+. Dal menu di navigazione, selezionare *ai*.
+. Selezionare la scheda *infrastruttura*.
+. Selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Rimuovi infrastruttura chatbot*.
+. Confermare che si desidera eliminare l'infrastruttura e selezionare *Rimuovi*.
+
+
+.Risultato
+I componenti dell'infrastruttura del chatbot sono rimossi da workload Factory.

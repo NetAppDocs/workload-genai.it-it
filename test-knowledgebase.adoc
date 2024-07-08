@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: test-knowledgebase.html 
+keywords: ai, chatbot, creating, knowledge base 
+summary: 'Dopo aver creato la knowledge base, sarà possibile testarla localmente utilizzando il simulatore di chatbot e apportare le modifiche necessarie prima di rendere disponibile la knowledge base agli utenti tramite un"applicazione chatbot.' 
+---
+= Testare una base di conoscenza
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dopo aver creato la knowledge base, sarà possibile testarla localmente utilizzando il simulatore di chatbot e apportare le modifiche necessarie prima di rendere disponibile la knowledge base agli utenti tramite un'applicazione chatbot.
+
+.A proposito di questa attività
+È possibile testare la knowledge base per assicurarsi che funzioni come previsto e personalizzare gli spunti di conversazione che si desidera siano disponibili per impostazione predefinita per gli utenti di chatbot di questa knowledge base. Il simulatore di chatbot viene eseguito su tutte le origini dati incorporate nella knowledge base.
+
+Puoi testare una knowledge base chattando con le tue origini dati incorporate nel simulatore di chatbot. Tenere presente che nessuna interazione o analisi viene acquisita nel database vettoriale GenAI quando si esegue il test della knowledge base a livello locale.
+
+Prima di distribuire la knowledge base in un'applicazione per gli utenti, eseguite la maggior parte dei test in workload Factory. Se devi apportare modifiche all'origine dati o all'operazione chatbot, devi farlo ora prima di pubblicare la tua knowledge base.
+
+Alcune delle attività che si desidera eseguire per testare il chatbot sono:
+
+* Immettere un numero elevato di domande rilevanti per l'organizzazione per assicurarsi che le risposte siano quelle previste.
+* Personalizzare gli avviatori di conversazione che si desidera rendere disponibili per impostazione predefinita per gli utenti nell'applicazione chatbot.
+* Assicurarsi che il contenuto attribuito fornito nella parte inferiore delle risposte del chatbot contenga i riferimenti corretti.
+
+
+.Fasi
+. Nella pagina dell'inventario delle Knowledge base, selezionare la knowledge base che si desidera testare.
++
+Il simulatore di chatbot viene visualizzato nel riquadro di destra. Se definito, vengono visualizzati anche gli avviatori di conversazione esistenti.
+
+. Nel campo di immissione chatbot, immettere un prompt o una domanda e selezionare image:button-run.png["il pulsante esegui"] per vedere come il chatbot risponde con le proprie conoscenze organizzative.
+. Se è necessario aggiornare una qualsiasi delle origini dati in modo che la knowledge base fornisca risposte più mirate, apportare le modifiche subito e quindi testare nuovamente la knowledge base.
+

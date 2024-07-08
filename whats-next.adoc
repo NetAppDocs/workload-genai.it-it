@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: whats-next.html 
+keywords: what you can do, knowledge base 
+summary: 'Ora che hai creato una knowledge base utilizzando i dati aziendali e li hai implementati per i tuoi utenti, puoi gestire la knowledge base, le origini dei dati e l"infrastruttura RAG, inclusi i file system FSX per ONTAP.' 
+---
+= Cosa fare in seguito
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ora che hai creato una knowledge base utilizzando i dati aziendali e li hai implementati per i tuoi utenti, puoi gestire la knowledge base, le origini dei dati e l'infrastruttura RAG, inclusi i file system FSX per ONTAP.
+
+Di seguito sono elencate alcune delle attività che è possibile eseguire per gestire i componenti della Knowledge base:
+
+* Aggiorna il contenuto delle tue origini dati o Aggiungi nuove origini dati e sincronizza tali modifiche con la tua knowledge base e il tuo chatbot.
+* Gestire le impostazioni dell'origine dati, incluse la strategia di suddivisione dei blocchi e la consapevolezza dei permessi (per l'accesso ai file SMB).
+* Gestisci le impostazioni della knowledge base, inclusi il modello di chat e gli avvii di conversazione.
+* Annullare la pubblicazione di una knowledge base o ripubblicarla dopo aver apportato modifiche.
+* Esegui il backup e proteggi i dati importanti sul file system FSX per ONTAP, in modo da assicurarti che i dati della knowledge base e altri componenti dell'infrastruttura siano sempre disponibili.
+
+
+Per informazioni sulla gestione del file system FSX per ONTAP, consultare la https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["Documentazione di workload Factory per Amazon FSX per NetApp ONTAP"^] per visualizzare le funzionalità di backup e protezione utilizzabili.
