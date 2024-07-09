@@ -58,7 +58,7 @@ GenAI aiuta a creare applicazioni ai generative utilizzando RAG nei seguenti mod
 
 == Costo
 
-Durante il periodo di anteprima, l'utilizzo della funzionalità Genai di workload Factory non comporta costi.
+L'utilizzo della funzionalità GenAI di workload Factory è gratuito.
 
 Tuttavia, dovrai pagare per le risorse AWS implementate per supportare l'infrastruttura ai generativa. Ad esempio, pagherai AWS per il servizio Amazon Bedrock ai, FSX per la capacità di storage e file system ONTAP e l'istanza Genai Engine EC2.
 
