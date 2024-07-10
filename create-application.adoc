@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: create-application.html 
+keywords: ai, chatbot, creating, application, knowledge base, rag, retrieval augmented generation 
+summary: 'Dopo aver creato la knowledge base e verificato il chatbot, è possibile configurare l"applicazione che consentirà agli utenti di eseguire query sul chatbot.' 
+---
+= Crea un'applicazione basata sulla knowledge base di FSX per ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dopo aver creato la knowledge base e verificato il chatbot, è possibile configurare l'applicazione che consentirà agli utenti di eseguire query sul chatbot.
+
+https://community.netapp.com/t5/Tech-ONTAP-Blogs/How-to-create-a-RAG-based-AI-application-on-FSx-for-ONTAP-with-BlueXP-workload/ba-p/453870["Scopri come creare un'applicazione ai basata su RAG in FSX per ONTAP"^]

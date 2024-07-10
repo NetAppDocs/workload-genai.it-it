@@ -41,6 +41,8 @@ sidebar:
         url: "/activate-authentication.html"
       - title: Pubblicare una knowledge base
         url: "/publish-knowledgebase.html"
+      - title: Crea un'applicazione ai basata su RAG
+        url: "/create-application.html"
       - title: Cosa fare in seguito
         url: "/whats-next.html"
     - title: Gestire le origini dati
