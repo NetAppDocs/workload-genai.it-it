@@ -15,6 +15,16 @@ Scopri le novità della funzionalità per i carichi di lavoro ai generici di wor
 
 
 
+== 4 agosto 2024
+
+
+
+=== Integrazione di Amazon CloudWatch Logs
+
+I carichi di lavoro ai generativi sono ora integrati con Amazon CloudWatch Logs, consentendo di monitorare i file di log dei carichi di lavoro ai generici.
+
+
+
 == 7 luglio 2024
 
 

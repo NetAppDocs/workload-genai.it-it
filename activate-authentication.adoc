@@ -14,7 +14,7 @@ summary: 'Attivare l"autenticazione per una knowledge base in modo che la conval
 Attivare l'autenticazione per una knowledge base in modo che la convalida dei token e gli ACL siano necessari quando si utilizzano gli endpoint API per integrare una knowledge base con un'applicazione chatbot.
 
 .Fasi
-. Nella pagina dell'inventario delle Knowledge base, selezionare la knowledge base che si desidera pubblicare.
+. Nella pagina dell'inventario delle Knowledge base, selezionare la knowledge base per la quale si desidera attivare l'autenticazione.
 . Selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Gestisci knowledge base*.
 . Selezionare il menu *azioni* e selezionare *Gestisci impostazioni di autenticazione*.
 . Impostazione dell'autenticazione:
@@ -37,4 +37,4 @@ I valori di questi campi devono essere ottenuti dal proprio provider di autentic
 
 
 .Risultato
-Ora avete una knowledge base pubblicata e l'endpoint unico che potete utilizzare per integrare la knowledge base con un'applicazione chatbot.
+L'autenticazione per la knowledge base è ora attiva ed è possibile utilizzare gli endpoint API per interagire con la knowledge base e integrare la knowledge base con un'applicazione chatbot.

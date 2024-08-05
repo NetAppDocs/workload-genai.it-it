@@ -90,4 +90,6 @@ Durante il processo di distribuzione, vengono impostati i seguenti elementi:
 * Vengono creati il ruolo IAM, il profilo di istanza e il gruppo di protezione.
 * Il volume per il database del motore GenAI (LanceDB) viene creato nel file system FSX for ONTAP.
 * Viene implementata l'istanza della macchina virtuale per il motore GenAI.
+* Amazon Bedrock è configurato per inviare i registri ad Amazon CloudWatch Logs, utilizzando un gruppo di registri con il prefisso `/aws/bedrock/`.
+* Il motore GenAI è configurato per inviare i registri ad Amazon CloudWatch Logs, utilizzando un gruppo di log con il nome `/netapp/wlmai/<tenancyAccountId>/randomId`, dove `<tenancyAccountID>` è https://docs.netapp.com/us-en/bluexp-automation/platform/get_identifiers.html#get-the-account-identifier["ID dell'account BlueXP"^] per l'utente corrente.
 
