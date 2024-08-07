@@ -12,7 +12,6 @@
   <block id="65f706122d6156fd52b6cb2ff2214944" category="list-text">Selezionare *Aggiungi* per aggiungere questa origine dati alla knowledge base.</block>
   <block id="f1af0b71f33a2e37e9e17b100f3c0b1e" category="summary">Attivare l'autenticazione per una knowledge base in modo che la convalida dei token e gli ACL siano necessari quando si integra la knowledge base con un'applicazione chatbot.</block>
   <block id="970a6e4ed60b5e3eb0f25c2ab67433fe" category="doc">Attivare l'autenticazione esterna per una knowledge base</block>
-  <block id="f739f01e878ac777330d67ca4158aece" category="paragraph">Attivare l'autenticazione per una knowledge base in modo che la convalida dei token e gli ACL siano necessari quando si utilizzano gli endpoint API per integrare una knowledge base con un'applicazione chatbot.</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Fasi</block>
   <block id="958a8f384aa34f23244386f38ed3aeab" category="list-text">Nella pagina dell'inventario delle Knowledge base, selezionare la knowledge base che si desidera pubblicare.</block>
   <block id="2041999f6b6b70199d1267ee84f453a6" category="inline-image-macro">il pulsante di opzione</block>
@@ -20,12 +19,6 @@
   <block id="717cb2ec03a878d541d7d67390c70a02" category="list-text">Selezionare il menu *azioni* e selezionare *Gestisci impostazioni di autenticazione*.</block>
   <block id="01345ed4b5ff7f7a1a05a52074ad1caf" category="list-text">Impostazione dell'autenticazione:</block>
   <block id="d408b7a47989c152a2aa2d90a6528cd8" category="list-text">Selezionare *attiva impostazioni di autenticazione*.</block>
-  <block id="06b97c41aa527667da7e7e745c867d3c" category="list-text">Fornire le informazioni richieste:</block>
-  <block id="f67d4abfe5d3ad3bdc35adca8802160f" category="list-text">Algoritmi</block>
-  <block id="ef1e6887c579ba81dcedc3f4e3793cd2" category="list-text">Pubblico</block>
-  <block id="51360304ea03557e79bdf5ff9cd2e234" category="list-text">Emittente</block>
-  <block id="9ebac1089717ab190990b2b9a0fd554c" category="list-text">JWKS URI</block>
-  <block id="9df3162c758e92127fd15a555cd18f04" category="paragraph">I valori di questi campi devono essere ottenuti dal proprio provider di autenticazione.</block>
   <block id="10492389e94efdebbb66f7b0cd8a1324" category="list-text">Selezionare *Salva*.</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Risultato</block>
   <block id="5d8cae383bd52502a39a1612796fb31f" category="paragraph">Ora avete una knowledge base pubblicata e l'endpoint unico che potete utilizzare per integrare la knowledge base con un'applicazione chatbot.</block>
@@ -550,4 +543,13 @@
   <block id="691e71734464aaf43017f5b033e54559" category="section-title">4 agosto 2024</block>
   <block id="ec7827c2237ae7b863c9ba93b519cbc1" category="section-title">Integrazione di Amazon CloudWatch Logs</block>
   <block id="64c1dd8cb5f86710c3293cc9807760fb" category="paragraph">I carichi di lavoro ai generativi sono ora integrati con Amazon CloudWatch Logs, consentendo di monitorare i file di log dei carichi di lavoro ai generici.</block>
+  <block id="c34bf4f0a7173f53dc110e7f41c2e0d0" category="paragraph">Attivare l'autenticazione per una knowledge base in modo che la convalida dei token e gli ACL siano necessari quando si utilizzano gli endpoint API per integrare una knowledge base con un'applicazione chatbot. Quando si attiva l'autenticazione, viene generato un token Web JSON da utilizzare per le richieste API a una knowledge base da client chatbot.</block>
+  <block id="d4cc00616339f0819c8ca53d7850ca2c" category="list-text">Fornire le informazioni richieste. Alcuni esempi sono forniti, ma i valori di questi campi devono essere forniti dal provider di autenticazione:</block>
+  <block id="8fbebd38c35cb217ad6437410297b5e7" category="list-text">*Algorithms*: L'algoritmo di firma utilizzato dal provider di autenticazione.</block>
+  <block id="59575929b41aa989abd4d539bc31b47a" category="list-text">*Pubblico di riferimento* (facoltativo): Una stringa contenente il destinatario del token di autenticazione (a volte un URL).</block>
+  <block id="8815fb464bfa6c8533fc5ae4e04b9c5a" category="list-text">*Issuer*: Stringa che identifica il provider che ha emesso il token.</block>
+  <block id="9f921e08c2635ce0ca6d5507cf90b6d2" category="paragraph">Ad esempio, Amazon Cognito utilizza stringhe dell'emittente con il seguente formato:</block>
+  <block id="69a143a2f8c7c42f85ef0de9978c131d" category="paragraph">Dove<block ref="d1dc4390a2dfb7cdc1a097e10b04acdf" prefix=" " category="inline-code"></block> è la regione AWS contenente il pool di utenti e<block ref="d47ea98789cbedeffd13a02b7b550538" prefix=" " category="inline-code"></block> rappresenta l'ID del pool di utenti. È possibile recuperare l'ID del pool di utenti utilizzando il seguente comando:</block>
+  <block id="563ae45eabbbd334a2af58d93ded707c" category="list-text">*JWKS URI*: La stringa URI che fornisce le chiavi pubbliche necessarie per verificare le firme di questo token.</block>
+  <block id="2caafa02c784bfe569590254865dd928" category="paragraph">Ad esempio, Amazon Cognito utilizza stringhe URI JWKS con il seguente formato:</block>
 </blocks>

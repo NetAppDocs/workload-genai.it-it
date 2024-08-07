@@ -11,7 +11,7 @@ summary: 'Attivare l"autenticazione per una knowledge base in modo che la conval
 
 
 [role="lead"]
-Attivare l'autenticazione per una knowledge base in modo che la convalida dei token e gli ACL siano necessari quando si utilizzano gli endpoint API per integrare una knowledge base con un'applicazione chatbot.
+Attivare l'autenticazione per una knowledge base in modo che la convalida dei token e gli ACL siano necessari quando si utilizzano gli endpoint API per integrare una knowledge base con un'applicazione chatbot. Quando si attiva l'autenticazione, viene generato un token Web JSON da utilizzare per le richieste API a una knowledge base da client chatbot.
 
 .Fasi
 . Nella pagina dell'inventario delle Knowledge base, selezionare la knowledge base per la quale si desidera attivare l'autenticazione.
@@ -20,18 +20,47 @@ Attivare l'autenticazione per una knowledge base in modo che la convalida dei to
 . Impostazione dell'autenticazione:
 +
 .. Selezionare *attiva impostazioni di autenticazione*.
-.. Fornire le informazioni richieste:
+.. Fornire le informazioni richieste. Alcuni esempi sono forniti, ma i valori di questi campi devono essere forniti dal provider di autenticazione:
 +
-*** Algoritmi
-*** Pubblico
-*** Emittente
-*** JWKS URI
-
-
-
+*** *Algorithms*: L'algoritmo di firma utilizzato dal provider di autenticazione.
+*** *Pubblico di riferimento* (facoltativo): Una stringa contenente il destinatario del token di autenticazione (a volte un URL).
+*** *Issuer*: Stringa che identifica il provider che ha emesso il token.
++
+Ad esempio, Amazon Cognito utilizza stringhe dell'emittente con il seguente formato:
 
 +
-I valori di questi campi devono essere ottenuti dal proprio provider di autenticazione.
+[listing]
+----
+https://cognito-idp-<region>.amazonaws.com/<UserPoolID>
+----
++
+Dove `<region>` è la regione AWS contenente il pool di utenti e `<UserPoolID>` rappresenta l'ID del pool di utenti. È possibile recuperare l'ID del pool di utenti utilizzando il seguente comando:
+
++
+[listing]
+----
+aws cognito-idp list-user-pools --max-results=60 --output=table
+----
+*** *JWKS URI*: La stringa URI che fornisce le chiavi pubbliche necessarie per verificare le firme di questo token.
++
+Ad esempio, Amazon Cognito utilizza stringhe URI JWKS con il seguente formato:
+
++
+[listing]
+----
+https://cognito-idp.<region>.amazonaws.com/<userPoolId>/.well-known/jwks.json
+----
++
+Dove `<region>` è la regione AWS contenente il pool di utenti e `<UserPoolID>` rappresenta l'ID del pool di utenti. È possibile recuperare l'ID del pool di utenti utilizzando il seguente comando:
+
++
+[listing]
+----
+aws cognito-idp list-user-pools --max-results=60 --output=table
+----
+
+
+
 
 . Selezionare *Salva*.
 
