@@ -543,13 +543,13 @@
   <block id="691e71734464aaf43017f5b033e54559" category="section-title">4 agosto 2024</block>
   <block id="ec7827c2237ae7b863c9ba93b519cbc1" category="section-title">Integrazione di Amazon CloudWatch Logs</block>
   <block id="64c1dd8cb5f86710c3293cc9807760fb" category="paragraph">I carichi di lavoro ai generativi sono ora integrati con Amazon CloudWatch Logs, consentendo di monitorare i file di log dei carichi di lavoro ai generici.</block>
-  <block id="c34bf4f0a7173f53dc110e7f41c2e0d0" category="paragraph">Attivare l'autenticazione per una knowledge base in modo che la convalida dei token e gli ACL siano necessari quando si utilizzano gli endpoint API per integrare una knowledge base con un'applicazione chatbot. Quando si attiva l'autenticazione, viene generato un token Web JSON da utilizzare per le richieste API a una knowledge base da client chatbot.</block>
   <block id="d4cc00616339f0819c8ca53d7850ca2c" category="list-text">Fornire le informazioni richieste. Alcuni esempi sono forniti, ma i valori di questi campi devono essere forniti dal provider di autenticazione:</block>
   <block id="8fbebd38c35cb217ad6437410297b5e7" category="list-text">*Algorithms*: L'algoritmo di firma utilizzato dal provider di autenticazione.</block>
-  <block id="59575929b41aa989abd4d539bc31b47a" category="list-text">*Pubblico di riferimento* (facoltativo): Una stringa contenente il destinatario del token di autenticazione (a volte un URL).</block>
   <block id="8815fb464bfa6c8533fc5ae4e04b9c5a" category="list-text">*Issuer*: Stringa che identifica il provider che ha emesso il token.</block>
   <block id="9f921e08c2635ce0ca6d5507cf90b6d2" category="paragraph">Ad esempio, Amazon Cognito utilizza stringhe dell'emittente con il seguente formato:</block>
   <block id="69a143a2f8c7c42f85ef0de9978c131d" category="paragraph">Dove<block ref="d1dc4390a2dfb7cdc1a097e10b04acdf" prefix=" " category="inline-code"></block> è la regione AWS contenente il pool di utenti e<block ref="d47ea98789cbedeffd13a02b7b550538" prefix=" " category="inline-code"></block> rappresenta l'ID del pool di utenti. È possibile recuperare l'ID del pool di utenti utilizzando il seguente comando:</block>
   <block id="563ae45eabbbd334a2af58d93ded707c" category="list-text">*JWKS URI*: La stringa URI che fornisce le chiavi pubbliche necessarie per verificare le firme di questo token.</block>
   <block id="2caafa02c784bfe569590254865dd928" category="paragraph">Ad esempio, Amazon Cognito utilizza stringhe URI JWKS con il seguente formato:</block>
+  <block id="566673c66dc53f65f0662ca186b4ff33" category="paragraph">Attivare l'autenticazione per una knowledge base in modo che la convalida dei token e gli ACL siano necessari quando si utilizzano gli endpoint API per integrare una knowledge base con un'applicazione chatbot. Quando si attiva l'autenticazione, si configurano le impostazioni per un token Web JSON che verrà utilizzato per le richieste API a una knowledge base dai client chatbot.</block>
+  <block id="af3e21688164f21808a96c579519e58a" category="list-text">*Pubblico* (facoltativo): Una stringa contenente il destinatario del token (a volte un URL).</block>
 </blocks>
