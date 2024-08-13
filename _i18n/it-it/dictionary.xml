@@ -552,4 +552,23 @@
   <block id="2caafa02c784bfe569590254865dd928" category="paragraph">Ad esempio, Amazon Cognito utilizza stringhe URI JWKS con il seguente formato:</block>
   <block id="566673c66dc53f65f0662ca186b4ff33" category="paragraph">Attivare l'autenticazione per una knowledge base in modo che la convalida dei token e gli ACL siano necessari quando si utilizzano gli endpoint API per integrare una knowledge base con un'applicazione chatbot. Quando si attiva l'autenticazione, si configurano le impostazioni per un token Web JSON che verrà utilizzato per le richieste API a una knowledge base dai client chatbot.</block>
   <block id="af3e21688164f21808a96c579519e58a" category="list-text">*Pubblico* (facoltativo): Una stringa contenente il destinatario del token (a volte un URL).</block>
+  <block id="9f6d7e16caf2363ed289cf415c43d68e" category="summary">Puoi installare ed eseguire un'applicazione chatbot di esempio per testare le tue knowledge base e scoprire come utilizzare l'API workload Factory per creare la tua applicazione ai generativa.</block>
+  <block id="ce8f8573f53c4f625df29c794cd7d82a" category="doc">Utilizzare l'applicazione chatbot di esempio esterna</block>
+  <block id="15abf1d561eb7f7ddb0e28f6c4562a8c" category="paragraph">Dopo aver configurato, attivato e pubblicato una knowledge base, gli sviluppatori di applicazioni esterne possono configurare ed eseguire l'applicazione chatbot open source di esempio fornita da NetApp per interagire con la knowledge base e imparare a utilizzare l'API workload Factory per creare le proprie applicazioni ai generative.</block>
+  <block id="39f8e13a71ec862a906b446df493f119" category="list-text"><block ref="34b37227349aa26ad88498e81a1ea1af" category="inline-link-macro-rx"></block>.</block>
+  <block id="804d039033ead5360f1a1a7d2c362f11" category="list-text"><block ref="30b5e2b0cf5de93d45c874ca5c8c6a31" category="inline-link-macro-rx"></block> per la knowledge base creata.</block>
+  <block id="73e5c231c5129b847eb8645a0a52a595" category="paragraph">Ciò consente alla knowledge base di autenticare le richieste API e rende necessarie la convalida token e gli ACL quando si utilizzano gli endpoint API.</block>
+  <block id="9422cba0464f58f3b37b0745e5b00b27" category="admonition">Le applicazioni di chat esterne che si integrano con questa knowledge base dovranno utilizzare lo stesso provider di autenticazione (emittente) configurato nelle impostazioni di autenticazione per la knowledge base.</block>
+  <block id="4608fcb51404075a263bdb6e179b0a2d" category="inline-link-macro">Pubblicare la knowledge base</block>
+  <block id="722a513785392127bf30ac1365e83362" category="list-text"><block ref="55b5b45f76a7f4e93c30f45e62e61f7a" category="inline-link-macro-rx"></block> Per abilitare l'accesso API per le applicazioni esterne.</block>
+  <block id="1119e2011350c0d24f44e3aaf7f8fd74" category="paragraph">Dopo la pubblicazione di una knowledge base, gli endpoint API sono accessibili dall'esterno ed è possibile integrare la knowledge base con un'applicazione di chat esterna (come l'applicazione chatbot di esempio).</block>
+  <block id="d3b7c913cd04ebfec0e9ec32cb6fd58c" category="inline-link">GitHub</block>
+  <block id="f49a88c7b28444b7b991e9803b076e62" category="list-text">Scaricare il pacchetto applicativo chatbot di esempio da<block ref="61cc64ceefa7eff1b19d7a7c0c883e1f" category="inline-link-rx"></block>.</block>
+  <block id="188374f3639ec34e68d38eae79f19aae" category="list-text">Installare ed eseguire l'applicazione chatbot seguendo le istruzioni contenute nel file README incluso nel pacchetto.</block>
+  <block id="c2847f2ccebd5c687f46c7bf12c1be5c" category="inline-link"><block ref="c2847f2ccebd5c687f46c7bf12c1be5c" category="inline-link-rx"></block></block>
+  <block id="4fc1d0607a3fe50db5ef612a2c4a178e" category="list-text">Accedere a<block ref="0e14f9ffc1d2673bd92f13a4ac79e32e" category="inline-link-rx"></block> per accedere all'applicazione.</block>
+  <block id="5f62c285aea87618ed1381c43c7ae2cf" category="paragraph">Viene visualizzata l'applicazione chatbot di esempio.</block>
+  <block id="d59048f21fd887ad520398ce677be586" category="section-title">Scopri di più</block>
+  <block id="862b02acae8afc7a8e5ed9bf4c7cb18e" category="inline-link">Documentazione dell'API workload Factory</block>
+  <block id="39d0fcde59bc31b066cd026cdc9718f8" category="paragraph"><block ref="39d0fcde59bc31b066cd026cdc9718f8" category="inline-link-rx"></block></block>
 </blocks>

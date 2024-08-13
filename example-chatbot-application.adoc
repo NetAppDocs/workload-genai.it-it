@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: example-chatbot-application.html 
+keywords: ai, example, sample, chatbot, app, application, local 
+summary: 'Puoi installare ed eseguire un"applicazione chatbot di esempio per testare le tue knowledge base e scoprire come utilizzare l"API workload Factory per creare la tua applicazione ai generativa.' 
+---
+= Utilizzare l'applicazione chatbot di esempio esterna
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dopo aver configurato, attivato e pubblicato una knowledge base, gli sviluppatori di applicazioni esterne possono configurare ed eseguire l'applicazione chatbot open source di esempio fornita da NetApp per interagire con la knowledge base e imparare a utilizzare l'API workload Factory per creare le proprie applicazioni ai generative.
+
+.Fasi
+. link:create-knowledgebase.html["Creare una knowledge base"].
+. link:activate-authentication.html["Attivare l'autenticazione"] per la knowledge base creata.
++
+Ciò consente alla knowledge base di autenticare le richieste API e rende necessarie la convalida token e gli ACL quando si utilizzano gli endpoint API.
+
++
+
+NOTE: Le applicazioni di chat esterne che si integrano con questa knowledge base dovranno utilizzare lo stesso provider di autenticazione (emittente) configurato nelle impostazioni di autenticazione per la knowledge base.
+
+. link:publish-knowledgebase.html["Pubblicare la knowledge base"] Per abilitare l'accesso API per le applicazioni esterne.
++
+Dopo la pubblicazione di una knowledge base, gli endpoint API sono accessibili dall'esterno ed è possibile integrare la knowledge base con un'applicazione di chat esterna (come l'applicazione chatbot di esempio).
+
+. Scaricare il pacchetto applicativo chatbot di esempio da https://github.com/NetApp/FSx-ONTAP-samples-scripts/tree/main/AI/GenAI-ChatBot-application-sample["GitHub"^].
+. Installare ed eseguire l'applicazione chatbot seguendo le istruzioni contenute nel file README incluso nel pacchetto.
+. Accedere a http://localhost:9091["http://localhost:9091"] per accedere all'applicazione.
++
+Viene visualizzata l'applicazione chatbot di esempio.
+
+
+
+
+
+== Scopri di più
+
+https://console.workloads.netapp.com/api-doc["Documentazione dell'API workload Factory"]
