@@ -35,7 +35,7 @@ Elenca inoltre le informazioni di inclusione e se tale origine dati è attualmen
 
 == Modificare le impostazioni dell'origine dati
 
-È possibile modificare le informazioni relative a un'origine dati integrata in una knowledge base. La maggior parte delle informazioni viene risolta dopo aver aggiunto un'origine dati a una knowledge base, ma è possibile apportare modifiche alla definizione di suddivisione in blocchi e alla consapevolezza delle autorizzazioni (quando si utilizza il protocollo SMB sul volume di origine dati).
+È possibile modificare le informazioni relative a un'origine dati integrata in una knowledge base. La maggior parte delle informazioni viene risolta dopo aver aggiunto un'origine dati a una knowledge base, ma è possibile apportare modifiche alla definizione e alla configurazione di suddivisione in blocchi e alla consapevolezza delle autorizzazioni (quando si utilizza il protocollo SMB sul volume di origine dati).
 
 .Fasi
 . Dalla pagina dell'inventario delle Knowledge base, selezionare la knowledge base in cui risiede l'origine dati, quindi selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Gestisci knowledge base*.
@@ -43,8 +43,8 @@ Elenca inoltre le informazioni di inclusione e se tale origine dati è attualmen
 Nella parte inferiore della pagina sono elencate le origini dati che fanno parte di questa knowledge base.
 
 . Nella riga dell'origine dati che si desidera modificare, selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Modifica origine dati*.
-. Nella pagina Modifica origine dati, selezionare image:button-down-caret.png["il pulsante freccia giù"] per espandere la riga per definizione blocco.
-. Aggiornare le impostazioni per la strategia di Chunking e le dimensioni della chunk e la consapevolezza delle autorizzazioni (per i volumi SMB) e selezionare *Salva*.
+. Nella pagina Modifica origine dati, selezionare image:button-down-caret.png["il pulsante freccia giù"] per espandere la riga per la definizione del blocco.
+. Aggiornare le impostazioni per la strategia e la configurazione del chunking e la consapevolezza delle autorizzazioni (per i volumi SMB) e selezionare *Salva*.
 
 
 .Risultato

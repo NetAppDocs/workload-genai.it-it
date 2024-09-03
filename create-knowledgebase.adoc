@@ -25,7 +25,7 @@ La knowledge base definisce caratteristiche quali i modelli di intelligenza arti
 
 .Fasi
 . Accedere a workload Factory.
-. Nella sezione carichi di lavoro ai, selezionare *Crea chatbot*.
+. Nella sezione carichi di lavoro ai, selezionare *Deploy & Manage*.
 . Dalla scheda Knowledge base, selezionare *Aggiungi knowledge base*.
 . Nella pagina Definisci Knowledge base, configurare le impostazioni della Knowledge base:
 +
@@ -50,12 +50,19 @@ Ulteriori informazioni sui modelli disponibili per effettuare la selezione: http
 
 .. *Avviatori di conversazione*: Scegliere se si desidera fornire fino a quattro prompt iniziali di conversazione che vengono visualizzati agli utenti che interagiscono con un chatbot che utilizza questa knowledge base. Si consiglia di attivare questa impostazione.
 +
-Se attivi gli avviatori di conversazione, per impostazione predefinita viene selezionata la modalità automatica. La "modalità manuale" può essere attivata solo dopo aver aggiunto origini dati alla knowledge base. link:manage-knowledgebase.html["Scopri come modificare le impostazioni della Knowledge base"].
+Se si attivano gli avviatori di conversazione, per impostazione predefinita viene selezionata la modalità automatica. La "modalità manuale" può essere attivata solo dopo aver aggiunto origini dati alla knowledge base. link:manage-knowledgebase.html["Scopri come modificare le impostazioni della Knowledge base"].
+
+.. *File system FSX per ONTAP*: Quando si definisce una nuova knowledge base, workload Factory crea un nuovo volume Amazon FSX per NetApp ONTAP per memorizzarlo. Scegli un nome di file system esistente e una SVM (detti anche Storage VM) dove verrà creato il nuovo volume.
+.. *Snapshot policy*: Scegliere un criterio snapshot dall'elenco dei criteri esistenti definiti nell'inventario di archiviazione di workload Factory.
++
+Se la policy di snapshot necessaria non esiste, è possibile https://docs.netapp.com/us-en/ontap/data-protection/create-snapshot-policy-task.html["creare un criterio di snapshot"] sulla VM di storage che contiene il volume.
 
 
 
 . Selezionare *Crea knowledge base* per aggiungere la knowledge base a GenAI.
-. Nella pagina successiva della procedura guidata è possibile aggiungere un'origine dati alla nuova knowledge base o terminare il processo senza aggiungere un'origine dati. Si consiglia di selezionare *Aggiungi origine dati* e aggiungere una o più origini dati.
++
+Nella pagina successiva della procedura guidata è possibile aggiungere un'origine dati alla nuova knowledge base o terminare il processo senza aggiungere un'origine dati. Si consiglia di selezionare *Aggiungi origine dati* e aggiungere una o più origini dati.
+
 
 
 
@@ -75,7 +82,16 @@ Il numero massimo di origini dati supportate è 10.
 Quando si selezionano i file archiviati utilizzando il protocollo SMB, è necessario immettere le informazioni di Active Directory, che includono il dominio, l'indirizzo IP, il nome utente e la password.
 
 . *Selezionare un'origine dati*: Selezionare la posizione dell'origine dati in base alla posizione in cui sono stati salvati i file. Può trattarsi di un intero volume o solo di una cartella o sottocartella specifica del volume e selezionare *Avanti*.
-. *Definisci i parametri ai*: Nella sezione *definizione del blocco*, definisci il modo in cui il servizio Amazon Bedrock suddivide il contenuto dell'origine dati in blocchi quando viene interrogata la knowledge base a cui appartiene. Al momento, è possibile scegliere solo frasi.
+. *Definisci i parametri ai*: Nella sezione *strategia di Chunking*, definisci come il motore GenAI suddivide il contenuto dell'origine dati in blocchi quando l'origine dati è integrata con una knowledge base. È possibile scegliere una delle seguenti strategie:
++
+** *Chunking a più frasi*: Organizza le informazioni dalla vostra origine dati in blocchi definiti dalle frasi. È possibile scegliere quante frasi compongono ciascun blocco (fino a 100).
+** *Chunking basato su sovrapposizione*: Organizza le informazioni dall'origine dati in blocchi definiti dai caratteri che possono sovrapporsi a blocchi adiacenti. È possibile scegliere la dimensione di ciascun frammento in caratteri e la sovrapposizione di ciascun frammento con i frammenti adiacenti. È possibile configurare una dimensione del frammento compresa tra 50 e 3000 caratteri e una percentuale di sovrapposizione compresa tra 1 e 99%.
++
+
+NOTE: La scelta di un'elevata percentuale di sovrapposizione può aumentare notevolmente i requisiti di archiviazione con solo lievi miglioramenti nella precisione di recupero.
+
+
+
 . Nella sezione *Permission Aware*, disponibile solo quando l'origine dati selezionata si trova su un volume che utilizza il protocollo SMB, è possibile attivare o disattivare la selezione:
 +
 ** *Enabled*: Gli utenti del chatbot che accedono a questa knowledge base riceveranno solo risposte alle query provenienti da origini dati a cui hanno accesso.

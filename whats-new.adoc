@@ -15,6 +15,22 @@ Scopri le novità della funzionalità per i carichi di lavoro ai generici di wor
 
 
 
+== 1 settembre 2024
+
+
+
+=== Ulteriori strategie di scissione
+
+I carichi di lavoro ai generativi ora supportano la suddivisione di più frasi e la suddivisione in blocchi basata su sovrapposizioni per le origini dati.
+
+
+
+=== Volume dedicato per ogni knowledge base
+
+I workload ai generativi ora creano un volume Amazon FSX per NetApp ONTAP dedicato per ogni nuova knowledge base, abilitando singole policy Snapshot per ogni knowledge base e migliorando la protezione da guasti e intossicazione dei dati.
+
+
+
 == 4 agosto 2024
 
 
@@ -22,6 +38,12 @@ Scopri le novità della funzionalità per i carichi di lavoro ai generici di wor
 === Integrazione di Amazon CloudWatch Logs
 
 I carichi di lavoro ai generativi sono ora integrati con Amazon CloudWatch Logs, consentendo di monitorare i file di log dei carichi di lavoro ai generici.
+
+
+
+=== Esempio di applicazione chatbot
+
+L'applicazione di esempio Genai di NetApp workload Factory ti consente di testare l'autenticazione e il recupero dalla tua knowledge base pubblicata di NetApp workload Factory interagendo direttamente con essa in un'applicazione chatbot basata sul web.
 
 
 

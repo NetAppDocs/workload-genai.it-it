@@ -69,16 +69,14 @@ L'implementazione Genai deve trovarsi in una regione AWS con Amazon Bedrock abil
 
 
 . Completare gli elementi nella sezione *Impostazioni infrastruttura*:
+
+
+. *Tags*: Immettere qualsiasi coppia di chiavi di tag/valori che si desidera applicare a tutte le risorse AWS che fanno parte di questa distribuzione.
+. *Coppia di chiavi*: Selezionare una coppia di chiavi che consente di connettersi in modo sicuro all'istanza del motore NetApp Genai.
 +
-.. *File system FSX per ONTAP*: Seleziona il file system FSX per ONTAP e la VM di storage in cui verranno distribuiti i volumi del database di istanze Genai, quindi specifica il nome che vuoi usare per il volume.
-+
-A seconda che workload Factory disponga o meno delle credenziali per il file system FSX per ONTAP, potrebbe essere necessario immettere il nome utente e la password.
-
-.. *Tags*: Immettere qualsiasi coppia di chiavi di tag/valori che si desidera applicare a tutte le risorse AWS che fanno parte di questa distribuzione.
-.. *Coppia di chiavi*: Selezionare una coppia di chiavi che consente di connettersi in modo sicuro all'istanza del motore NetApp Genai.
+.. Selezionare *Deploy* per iniziare la distribuzione.
 
 
-. Selezionare *Deploy* per iniziare la distribuzione.
 
 
 .Risultato
@@ -88,7 +86,6 @@ Durante il processo di distribuzione, vengono impostati i seguenti elementi:
 
 * La rete viene impostata insieme agli endpoint privati.
 * Vengono creati il ruolo IAM, il profilo di istanza e il gruppo di protezione.
-* Il volume per il database del motore GenAI (LanceDB) viene creato nel file system FSX for ONTAP.
 * Viene implementata l'istanza della macchina virtuale per il motore GenAI.
 * Amazon Bedrock è configurato per inviare i registri ad Amazon CloudWatch Logs, utilizzando un gruppo di registri con il prefisso `/aws/bedrock/`.
 * Il motore GenAI è configurato per inviare i registri ad Amazon CloudWatch Logs, utilizzando un gruppo di log con il nome `/netapp/wlmai/<tenancyAccountId>/randomId`, dove `<tenancyAccountID>` è https://docs.netapp.com/us-en/bluexp-automation/platform/get_identifiers.html#get-the-account-identifier["ID dell'account BlueXP"^] per l'utente corrente.

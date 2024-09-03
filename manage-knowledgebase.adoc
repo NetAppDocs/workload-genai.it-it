@@ -49,7 +49,7 @@ Ogni volta che si aggiungono, modificano o rimuovono origini dati dalla knowledg
 Questa pagina visualizza lo stato pubblicato, lo stato di incorporazione delle origini dati, la modalità di incorporazione, l'elenco di tutte le origini dati incorporate e altro ancora.
 
 . Selezionare il menu *azioni* e selezionare *Modifica knowledge base*.
-. Nella pagina Modifica knowledge base, è possibile modificare il nome della knowledge base, la descrizione, il modello di inclusione, il modello di chat e se gli avviatori di conversazione vengono creati automaticamente o manualmente.
+. Nella pagina Modifica knowledge base è possibile modificare il nome della knowledge base, la descrizione, il modello di incorporazione, il modello di chat, se gli avviatori di conversazione vengono creati automaticamente o manualmente e il criterio di snapshot utilizzato per il volume che contiene la knowledge base.
 +
 Se si utilizza la modalità Manuale per avviare una conversazione, è anche possibile cambiare gli avviatori di conversazione.
 
@@ -71,7 +71,16 @@ Se si utilizza la modalità Manuale per avviare una conversazione, è anche poss
 Quando si selezionano i file archiviati utilizzando il protocollo SMB, è necessario immettere le informazioni di Active Directory, che includono il dominio, l'indirizzo IP, il nome utente e la password.
 
 . *Selezionare un'origine dati*: Selezionare la posizione dell'origine dati in base alla posizione in cui sono stati salvati i file. Può trattarsi di un intero volume o solo di una cartella o sottocartella specifica del volume e selezionare *Avanti*.
-. *Definisci i parametri ai*: Nella sezione *definizione del blocco*, definisci il modo in cui il servizio Amazon Bedrock suddivide il contenuto dell'origine dati in blocchi quando viene interrogata la knowledge base a cui appartiene. Al momento, è possibile scegliere solo frasi.
+. *Definisci i parametri ai*: Nella sezione *strategia di Chunking*, definisci come il motore GenAI suddivide il contenuto dell'origine dati in blocchi quando l'origine dati è integrata con una knowledge base. È possibile scegliere una delle seguenti strategie:
++
+** *Chunking a più frasi*: Organizza le informazioni dalla vostra origine dati in blocchi definiti dalle frasi. È possibile scegliere quante frasi compongono ciascun blocco (fino a 100).
+** *Chunking basato su sovrapposizione*: Organizza le informazioni dall'origine dati in blocchi definiti dai caratteri che possono sovrapporsi a blocchi adiacenti. È possibile scegliere la dimensione di ciascun frammento in caratteri e la sovrapposizione di ciascun frammento con i frammenti adiacenti. È possibile configurare una dimensione del frammento compresa tra 50 e 3000 caratteri e una percentuale di sovrapposizione compresa tra 1 e 99%.
++
+
+NOTE: La scelta di un'elevata percentuale di sovrapposizione può aumentare notevolmente i requisiti di archiviazione con solo lievi miglioramenti nella precisione di recupero.
+
+
+
 . Nella sezione *Permission Aware*, disponibile solo quando l'origine dati selezionata si trova su un volume che utilizza il protocollo SMB, è possibile attivare o disattivare la selezione:
 +
 ** *Enabled*: Gli utenti del chatbot che accedono a questa knowledge base riceveranno solo risposte alle query provenienti da origini dati a cui hanno accesso.
@@ -146,13 +155,9 @@ La knowledge base è disabilitata e non è più accessibile da un'applicazione c
 
 == Eliminare una knowledge base
 
-Se non hai più bisogno di una knowledge base, puoi eliminarla. Una volta eliminata, la knowledge base verrà rimossa da workload Factory e tutte le applicazioni o i chatbot che utilizzano la knowledge base smetteranno di funzionare. Questa azione non è reversibile.
+Se non hai più bisogno di una knowledge base, puoi eliminarla. Quando si elimina una knowledge base, questa viene rimossa da workload Factory e il volume che contiene la knowledge base viene eliminato. Tutte le applicazioni o i chatbot che utilizzano la knowledge base smetteranno di funzionare. L'eliminazione di una knowledge base non è reversibile.
 
-Quando si elimina una knowledge base, è necessario eseguire anche le seguenti azioni per eliminare completamente tutte le risorse associate alla knowledge base:
-
-* Dissociare la base di conoscenza da qualsiasi agente con cui è associato.
-* I dati sottostanti indicizzati dalla knowledge base rimangono nell'archivio vettoriale impostato e possono ancora essere recuperati. Per eliminare i dati, è anche necessario eliminare l'indice vettoriale contenente le incorporazioni dei dati.
-
+Quando si elimina una knowledge base, è inoltre necessario dissociarla da qualsiasi agente a cui è associata per eliminare completamente tutte le risorse associate alla knowledge base.
 
 .Fasi
 . Nella pagina dell'inventario delle Knowledge base, selezionare la knowledge base che si desidera eliminare.
@@ -162,4 +167,4 @@ Quando si elimina una knowledge base, è necessario eseguire anche le seguenti a
 
 
 .Risultato
-La knowledge base viene eliminata da workload Factory.
+La knowledge base viene rimossa da workload Factory e il volume associato viene eliminato.

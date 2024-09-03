@@ -25,7 +25,7 @@ Puoi visualizzare i dettagli sull'infrastruttura Genai RAG implementata o rimuov
 . Visualizzare le informazioni relative all'infrastruttura, che includono dettagli sui seguenti componenti:
 +
 ** Impostazioni AWS
-** File system FSX per ONTAP
+** Impostazioni dell'infrastruttura
 ** Il motore ai
 ** Il database vettoriale
 
