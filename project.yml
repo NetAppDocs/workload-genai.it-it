@@ -63,6 +63,8 @@ sidebar:
     entries:
     - title: Registrati per ricevere assistenza
       url: "/support-registration.html"
+    - title: Risoluzione dei problemi
+      url: "/troubleshooting.html"
     - title: Richiedi assistenza
       url: "/get-help.html"
   - title: Note legali

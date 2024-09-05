@@ -1,0 +1,72 @@
+---
+sidebar: sidebar 
+permalink: troubleshooting.html 
+keywords: support registration, register for support, support, nss account, add nss account, 
+summary: Prima di poter aprire un caso di supporto con il supporto tecnico NetApp, devi aggiungere un account del sito di supporto NetApp a workload Factory e registrarti per ricevere supporto. 
+---
+= Risoluzione dei problemi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Scopri come risolvere alcuni problemi comuni che potresti incontrare.
+
+
+
+== Problemi e soluzioni comuni
+
+Se si verifica uno di questi problemi, è possibile utilizzare la procedura nella colonna soluzione alternativa per tentare di risolverlo.
+
+[cols="1,2,2,4"]
+|===
+| Area | Problema | Causa | Soluzione alternativa 
+
+
+| Implementazione | La distribuzione non riesce perché il volume esiste già. | Workload Factory per Genai deve creare un nuovo volume durante il processo di implementazione, ma un volume esiste già utilizzando il nome specificato. | Specificare un nome univoco da utilizzare per il nuovo volume e provare a eseguire nuovamente la distribuzione. 
+
+
+| Implementazione | L'implementazione non riesce perché workload Factory per Genai non è in grado di montare il volume. | Una o più porte in entrata richieste per FSX per NetApp ONTAP vengono chiuse o filtrate.  a| 
+Aprire le porte elencate in https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/reference-security-groups-fsx.html#inbound-rules["Regole del gruppo di sicurezza per FSX per ONTAP"^].
+
+
+
+| Manutenzione | L'istanza Docker di back-end utilizzata da workload Factory per GenAI non si è avviata. | Eliminazione del volume e riavvio dell'istanza EC2.  a| 
+Attenersi alla seguente procedura di ripristino:
+
+.Fasi
+. Crea un nuovo volume in FSX per NetApp ONTAP. Ad esempio, il nome del volume può essere `netapp_ai` e il percorso del volume può essere `/netapp_ai`.
+. SSH all'istanza di Amazon EC2.
+. Elencare i volumi:
++
+[source, console]
+----
+docker volume list
+----
+. Rimuovere il vecchio volume:
++
+[source, console]
+----
+docker volume rm ec2-user_persistent_folder
+----
+. Aprire il `docker-compose.yml` file utilizzando un editor di testo.
+. Nella `volumes` sezione , modificare il percorso del dispositivo sul nuovo percorso del volume. Ad esempio:
++
+[source, yaml]
+----
+volumes:
+  persistent_folder:
+    driver_opts:
+      type: 'nfs'
+      o: "addr=svm-0df66b96a890d8a72.\
+      fs-0d673008aaca12bc3.\
+      fsx.us-east-1.amazonaws.com,nolock,soft,rw"
+      device: ':/netapp_ai' # Path to new volume
+----
+
+
+
+
+| Manutenzione | L'istanza Docker di back-end utilizzata da workload Factory per GenAI non si è avviata. | Il volume root è stato eliminato. | Creare un volume con nome e percorso, quindi riavviare l'istanza Docker back-end da Amazon EC2. 
+|===
