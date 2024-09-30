@@ -599,7 +599,6 @@
   <block id="9cbd2c5c5175ed32f13a8e1e7a8198dd" category="list-text">Nella<block ref="078831e29f354e83fac6da3db6ed6b7b" prefix=" " category="inline-code"></block> sezione , modificare il percorso del dispositivo sul nuovo percorso del volume. Ad esempio:</block>
   <block id="e9813bd2289d9835204f02be0a5d2df6" category="cell">Il volume root è stato eliminato.</block>
   <block id="358ede72c2c3d3e77baf3ed35b4039f6" category="cell">Creare un volume con nome e percorso, quindi riavviare l'istanza Docker back-end da Amazon EC2.</block>
-  <block id="430ea429b454fdc4ea2eb6c6b9cdbd77" category="doc">Creare una snapshot e ripristinare un volume della Knowledge base</block>
   <block id="1ae13d57da1c55ee537cb9dc63916d03" category="paragraph">Ora puoi proteggere i dati dei carichi di lavoro ai generici acquisendo una copia point-in-time di una knowledge base. Ciò consente di proteggere i dati da perdite accidentali o di verificare le modifiche alle impostazioni della knowledge base. È possibile ripristinare la versione precedente del volume della Knowledge base in qualsiasi momento.</block>
   <block id="073751c61467c5e36c6cc197d92a75c4" category="section-title">Sospendere le scansioni pianificate</block>
   <block id="6c31cb11ffc4d11a5aed0e968bb5f8c9" category="paragraph">È ora possibile mettere in pausa le scansioni delle origini dati pianificate. Per impostazione predefinita, i carichi di lavoro ai generativi analizzano ogni origine dati ogni giorno per acquisire nuovi dati in ciascuna knowledge base. Se non si desidera acquisire le ultime modifiche (ad esempio durante il test o il ripristino di uno snapshot), è possibile sospendere le scansioni pianificate e riprenderle in qualsiasi momento.</block>
@@ -644,4 +643,5 @@
   <block id="340b5c4d996cad6cf6d27d13faf94e89" category="paragraph"><block ref="340b5c4d996cad6cf6d27d13faf94e89" category="inline-link-rx"></block></block>
   <block id="f951fa0f2608d186cd1f0bd8889ac232" category="paragraph"><block ref="f951fa0f2608d186cd1f0bd8889ac232" category="inline-link-rx"></block></block>
   <block id="8afd34c2a29e7b6286f3ed0bf9e20c22" category="paragraph"><block ref="8afd34c2a29e7b6286f3ed0bf9e20c22" category="inline-link-rx"></block></block>
+  <block id="4936442e55cb8f837f9616ca6aaf1e92" category="doc">Supporto di Snapshot e ripristino per i volumi della Knowledge base</block>
 </blocks>
