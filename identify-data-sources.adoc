@@ -23,7 +23,9 @@ Il numero massimo di origini dati supportate è 10.
 
 == Ubicazione delle origini dati
 
-Le origini dati possono essere memorizzate in un singolo volume o in una cartella all'interno di un volume, in una condivisione SMB o in un file system NFS su Amazon FSX per NetApp ONTAP. Non è possibile selezionare singoli documenti all'interno di un volume o di una cartella, pertanto è necessario assicurarsi che ogni volume o cartella contenente origini dati non contenga documenti estranei che non devono essere integrati con la knowledge base.
+Le origini dati possono essere memorizzate in un singolo volume o in una cartella all'interno di un volume, in una condivisione SMB o in un file system NFS su Amazon FSX per NetApp ONTAP. Le origini dei dati possono anche essere memorizzate su Amazon FSX per NetApp ONTAP Volumes che sono in una relazione di data Protection di NetApp SnapMirror.
+
+Non è possibile selezionare singoli documenti all'interno di un volume o di una cartella, pertanto è necessario assicurarsi che ogni volume o cartella contenente origini dati non contenga documenti estranei che non devono essere integrati con la knowledge base.
 
 Puoi aggiungere più origini dati in ciascuna Knowledge base, ma tutte devono risiedere in FSX per ONTAP, accessibile dal tuo account AWS.
 
@@ -50,14 +52,17 @@ Attualmente sono supportati i seguenti formati di file di origine dati.
 | Formato file | Interno 
 
 
+| File di valori separati da virgola | .csv 
+
+
+| Valutazione | md 
+
+
+| Microsoft Word | .doc o .docx 
+
+
 | Testo normale | .txt 
 
 
-| Documento portatile | in formato .pdf 
-
-
-| Microsoft Word | .docx 
-
-
-| File di valori separati da virgola | .csv 
+| Formato documento portatile | in formato .pdf 
 |===

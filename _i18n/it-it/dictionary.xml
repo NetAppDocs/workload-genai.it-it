@@ -73,14 +73,12 @@
   <block id="bb75c182eff66bee3c76899d41fc8e8f" category="list-text">*Avviatori di conversazione*: Scegliere se si desidera fornire fino a quattro prompt iniziali di conversazione che vengono visualizzati agli utenti che interagiscono con un chatbot che utilizza questa knowledge base. Si consiglia di attivare questa impostazione.</block>
   <block id="fd6f710773f79577a44d128bb3df27cc" category="inline-link-macro">Scopri come modificare le impostazioni della Knowledge base</block>
   <block id="7311e81ffb665c2ec2a4c996ce693887" category="list-text">Selezionare *Crea knowledge base* per aggiungere la knowledge base a GenAI.</block>
-  <block id="89f815e342683a86616ce06926e87088" category="list-text">Nella pagina successiva della procedura guidata è possibile aggiungere un'origine dati alla nuova knowledge base o terminare il processo senza aggiungere un'origine dati. Si consiglia di selezionare *Aggiungi origine dati* e aggiungere una o più origini dati.</block>
   <block id="9bd079cbc91b32393983ae28a378c00c" category="section-title">Aggiungere fonti di dati alla knowledge base</block>
   <block id="831e8ddab4c3e70bcfe67a3e58aaf8cc" category="paragraph">È possibile aggiungere una o più origini dati per popolare la knowledge base con i dati dell'organizzazione.</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">A proposito di questa attività</block>
   <block id="443fa995d0ec899357a7e519e2055b98" category="paragraph">Il numero massimo di origini dati supportate è 10.</block>
   <block id="10031d73287aadb6c5f8b3dae7b23860" category="list-text">Dopo aver selezionato *Aggiungi origine dati*, viene visualizzata la pagina *Seleziona un file system*.</block>
   <block id="8817d70d4163473468fa1b2b6e498321" category="paragraph">L'origine dati inizia a essere integrata nella tua knowledge base. Lo stato cambia da "incorporazione" a "incorporata" quando l'origine dati è completamente incorporata.</block>
-  <block id="8dfce7f4d224734508ee16a1aff7ad72" category="paragraph">Dopo aver aggiunto una singola origine dati alla knowledge base, puoi testarla localmente nella finestra del simulatore di chatbot ed apportare le modifiche necessarie prima di rendere il chatbot disponibile per gli utenti. È inoltre possibile seguire la stessa procedura per aggiungere ulteriori origini dati alla knowledge base.</block>
   <block id="b9605cf748e4b8e1c97d786258a0be40" category="summary">Prima di creare le knowledge base e le applicazioni di FSX per ONTAP per la tua organizzazione, devi implementare l'infrastruttura per il framework RAG nel tuo ambiente. I componenti principali dell'infrastruttura sono il servizio ai Amazon Bedrock, un'istanza di macchina virtuale per il motore NetApp Genai e un file system FSX per ONTAP.</block>
   <block id="e379b913896cf9bdd4e2d6717212215a" category="doc">Implementare l'infrastruttura GenAI</block>
   <block id="0cd805094b5dffd702d8e0faa10c927c" category="paragraph">Prima di creare knowledge base e applicazioni di FSX per ONTAP per la tua organizzazione, devi implementare l'infrastruttura Genai per il framework RAG nel tuo ambiente. I componenti principali dell'infrastruttura sono il servizio Amazon Bedrock, un'istanza di macchina virtuale per il motore NetApp Genai e un file system FSX per ONTAP.</block>
@@ -218,7 +216,6 @@
   <block id="7d7b61e2696184ef2f1a673b4b505c10" category="doc">Identificare le origini dati da integrare nella propria knowledge base</block>
   <block id="887cf13beb27381e3305ca34c5115c2d" category="section-title">Numero massimo di origini dati</block>
   <block id="4b8e341857a3eb86f0ae58a01da824ed" category="section-title">Ubicazione delle origini dati</block>
-  <block id="517b9fa88a903df70d1614de4a032562" category="paragraph">Le origini dati possono essere memorizzate in un singolo volume o in una cartella all'interno di un volume, in una condivisione SMB o in un file system NFS su Amazon FSX per NetApp ONTAP. Non è possibile selezionare singoli documenti all'interno di un volume o di una cartella, pertanto è necessario assicurarsi che ogni volume o cartella contenente origini dati non contenga documenti estranei che non devono essere integrati con la knowledge base.</block>
   <block id="a07dd9fe7465f7ec7d15135a3cfab3a4" category="paragraph">Puoi aggiungere più origini dati in ciascuna Knowledge base, ma tutte devono risiedere in FSX per ONTAP, accessibile dal tuo account AWS.</block>
   <block id="ffbef7cfe7a8524b59851c8a1389ebcc" category="paragraph">La dimensione massima del file per ciascuna origine dati è di 50 MB.</block>
   <block id="c84d4278eb32c7a089aea86ebf95ad39" category="section-title">Protocolli supportati</block>
@@ -231,10 +228,8 @@
   <block id="63e4e92bb7d207ca577b11c07f827279" category="cell">Interno</block>
   <block id="f39a0720a929097afa9db4505cdf9669" category="cell">Testo normale</block>
   <block id="be4117b0c842c4be8f9960294bdc2cd1" category="cell">.txt</block>
-  <block id="7fe3b93cf991d61aa2597033a8f37d76" category="cell">Documento portatile</block>
   <block id="abdf095626d4a4ab2bcd4167b128c1f1" category="cell">in formato .pdf</block>
   <block id="d241ed446445a725f6362568f61cc6c3" category="cell">Microsoft Word</block>
-  <block id="8c7a7a618a6d4acfe85b4b4b1048846d" category="cell">.docx</block>
   <block id="68dfdbe39ab30356a21fe4db773d9589" category="cell">File di valori separati da virgola</block>
   <block id="01b1b6ebeb388697cca6712b58439069" category="cell">.csv</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">Note legali</block>
@@ -329,8 +324,6 @@
   <block id="365770c3700b9872888879ce60ec18e9" category="list-text">Nella pagina dell'inventario delle Knowledge base, selezionare la knowledge base in cui si desidera aggiungere l'origine dati.</block>
   <block id="5e1a4fe723264018579dfc3330f9b160" category="list-text">Selezionare <block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block> e selezionare *Aggiungi origine dati*.</block>
   <block id="07d9f547e6bcd64a574782add9797b63" category="paragraph">L'origine dati è integrata nella knowledge base.</block>
-  <block id="5b1f48da21d15acc675f4720c57d0f26" category="section-title">Sincronizzare le origini dati con la knowledge base</block>
-  <block id="9547b575fe1c28cc98e35108cacd9918" category="paragraph">Le origini dati vengono sincronizzate automaticamente con la knowledge base una volta al giorno, in modo che eventuali modifiche all'origine dati vengano riflesse nel chatbot. Se si apportano modifiche a una delle origini dati e si desidera sincronizzare immediatamente i dati, è possibile eseguire una sincronizzazione su richiesta.</block>
   <block id="9cbd78c1bcf6132d43822acf74d520f1" category="paragraph">La sincronizzazione è incrementale, quindi Amazon Bedrock elabora solo gli oggetti nelle origini dati che sono stati aggiunti, modificati o eliminati dall'ultima sincronizzazione.</block>
   <block id="5fe210e3b4435e2188200d1f9b96db74" category="list-text">Nella pagina dell'inventario delle Knowledge base, selezionare la knowledge base che si desidera sincronizzare.</block>
   <block id="fbf8fa86db3bb16616d2fb45b7250a0d" category="list-text">Selezionare il menu *azioni* e selezionare *Esegui scansione ora*.</block>
@@ -567,7 +560,6 @@
   <block id="a97438cf1c94fe51248083c86ce591c5" category="list-text">Nella pagina Definisci Knowledge base, configurare le impostazioni della Knowledge base:</block>
   <block id="b651dafbe972dff3ef00c60a522c2c08" category="paragraph">Se si attivano gli avviatori di conversazione, per impostazione predefinita viene selezionata la modalità automatica. La "modalità manuale" può essere attivata solo dopo aver aggiunto origini dati alla knowledge base. <block ref="787b3d64d417e723feebaf5fa5dbfeee" category="inline-link-macro-rx"></block>.</block>
   <block id="ce08e73f7c40cf7e58d6371a757d23c6" category="list-text">*File system FSX per ONTAP*: Quando si definisce una nuova knowledge base, workload Factory crea un nuovo volume Amazon FSX per NetApp ONTAP per memorizzarlo. Scegli un nome di file system esistente e una SVM (detti anche Storage VM) dove verrà creato il nuovo volume.</block>
-  <block id="305529b9c4df0ab06763778bf46b9449" category="list-text">*Snapshot policy*: Scegliere un criterio snapshot dall'elenco dei criteri esistenti definiti nell'inventario di archiviazione di workload Factory.</block>
   <block id="ced63c567878ed01730fce043c8ade96" category="inline-link">creare un criterio di snapshot</block>
   <block id="ad36efe6c620944e32785812d09accd6" category="paragraph">Se la policy di snapshot necessaria non esiste, è possibile<block ref="7546e5b5141e2979fa53ccc7106931ca" category="inline-link-rx"></block> sulla VM di storage che contiene il volume.</block>
   <block id="d2efa843fffdf7f0b1400f4edeb08081" category="paragraph">È possibile modificare le informazioni relative a un'origine dati integrata in una knowledge base. La maggior parte delle informazioni viene risolta dopo aver aggiunto un'origine dati a una knowledge base, ma è possibile apportare modifiche alla definizione e alla configurazione di suddivisione in blocchi e alla consapevolezza delle autorizzazioni (quando si utilizza il protocollo SMB sul volume di origine dati).</block>
@@ -607,4 +599,45 @@
   <block id="9cbd2c5c5175ed32f13a8e1e7a8198dd" category="list-text">Nella<block ref="078831e29f354e83fac6da3db6ed6b7b" prefix=" " category="inline-code"></block> sezione , modificare il percorso del dispositivo sul nuovo percorso del volume. Ad esempio:</block>
   <block id="e9813bd2289d9835204f02be0a5d2df6" category="cell">Il volume root è stato eliminato.</block>
   <block id="358ede72c2c3d3e77baf3ed35b4039f6" category="cell">Creare un volume con nome e percorso, quindi riavviare l'istanza Docker back-end da Amazon EC2.</block>
+  <block id="430ea429b454fdc4ea2eb6c6b9cdbd77" category="doc">Creare una snapshot e ripristinare un volume della Knowledge base</block>
+  <block id="1ae13d57da1c55ee537cb9dc63916d03" category="paragraph">Ora puoi proteggere i dati dei carichi di lavoro ai generici acquisendo una copia point-in-time di una knowledge base. Ciò consente di proteggere i dati da perdite accidentali o di verificare le modifiche alle impostazioni della knowledge base. È possibile ripristinare la versione precedente del volume della Knowledge base in qualsiasi momento.</block>
+  <block id="073751c61467c5e36c6cc197d92a75c4" category="section-title">Sospendere le scansioni pianificate</block>
+  <block id="6c31cb11ffc4d11a5aed0e968bb5f8c9" category="paragraph">È ora possibile mettere in pausa le scansioni delle origini dati pianificate. Per impostazione predefinita, i carichi di lavoro ai generativi analizzano ogni origine dati ogni giorno per acquisire nuovi dati in ciascuna knowledge base. Se non si desidera acquisire le ultime modifiche (ad esempio durante il test o il ripristino di uno snapshot), è possibile sospendere le scansioni pianificate e riprenderle in qualsiasi momento.</block>
+  <block id="9813be0bded00d4a8f5457f2e27277fa" category="section-title">Volumi di protezione dei dati ora supportati per le basi di conoscenza</block>
+  <block id="f20c02f54f20ee06aed661b133ba0fc3" category="paragraph">Quando si seleziona un volume della Knowledge base, è ora possibile scegliere un volume di data Protection che fa parte di una relazione di replica NetApp SnapMirror. In questo modo è possibile archiviare knowledge base su volumi già protetti dalla replica SnapMirror.</block>
+  <block id="c880ade9c6e1657038a733388834bf6d" category="list-text">*Snapshot policy*: Scegliere un criterio snapshot dall'elenco dei criteri esistenti definiti nell'inventario di archiviazione di workload Factory. Gli snapshot ricorrenti della Knowledge base verranno creati automaticamente con una frequenza basata sulla policy di snapshot selezionata.</block>
+  <block id="530d81713422730939efa8236f41105f" category="paragraph">Durante la creazione della knowledge base viene visualizzato un indicatore di avanzamento.</block>
+  <block id="2ec7e499bf83fa315927a96623d03df5" category="paragraph">Una volta creata la knowledge base, è possibile aggiungere un'origine dati alla nuova knowledge base o terminare il processo senza aggiungere un'origine dati. Si consiglia di selezionare *Aggiungi origine dati* e aggiungere una o più origini dati.</block>
+  <block id="e0308d285e9bc5966f6ceb7008c87849" category="paragraph">Dopo aver aggiunto una singola origine dati alla knowledge base, puoi testarla localmente nella finestra del simulatore di chatbot ed apportare le modifiche necessarie prima di rendere il chatbot disponibile per gli utenti. È inoltre possibile seguire la stessa procedura per aggiungere ulteriori origini dati alla knowledge base.</block>
+  <block id="2ea3dbeb714261d8180c0931e50d9b53" category="paragraph">Le origini dati possono essere memorizzate in un singolo volume o in una cartella all'interno di un volume, in una condivisione SMB o in un file system NFS su Amazon FSX per NetApp ONTAP. Le origini dei dati possono anche essere memorizzate su Amazon FSX per NetApp ONTAP Volumes che sono in una relazione di data Protection di NetApp SnapMirror.</block>
+  <block id="709c30bf3c120fca30b346788a407cf8" category="paragraph">Non è possibile selezionare singoli documenti all'interno di un volume o di una cartella, pertanto è necessario assicurarsi che ogni volume o cartella contenente origini dati non contenga documenti estranei che non devono essere integrati con la knowledge base.</block>
+  <block id="2182a74bab7188d959e795d9301e87ff" category="cell">Valutazione</block>
+  <block id="dadf0304a901246ee7f588e5276f1761" category="cell">md</block>
+  <block id="09df1824d82fa779fc65302df5218ed7" category="cell">.doc o .docx</block>
+  <block id="df8b8a3c2e9816c8fa5785b811006754" category="cell">Formato documento portatile</block>
+  <block id="af467f026dd1b56c8564e770bf39737f" category="section-title">Proteggere una knowledge base con le snapshot</block>
+  <block id="ebe007adb0cdb086ff8918410a8dee5b" category="paragraph">Puoi proteggere i dati della tua knowledge base eseguendo e ripristinando snapshot dei volumi della tua knowledge base. È possibile eseguire il ripristino da uno snapshot per tornare alla versione precedente della knowledge base in qualsiasi momento.</block>
+  <block id="4579190c461a9ec96d3604ff5fad8099" category="paragraph">Le snapshot possono essere più veloci ed efficienti in termini di storage rispetto ai backup, consentendo inoltre di proteggere ogni knowledge base utilizzando una policy di protezione differente. Di seguito sono elencati alcuni degli scenari in cui le snapshot possono essere utili:</block>
+  <block id="07d621cfd1a721c92651875f5213cf9c" category="list-text">Perdita o danneggiamento accidentale di dati</block>
+  <block id="b3edfca5cba615cc8a93b9d63e97b819" category="list-text">Recupero da dati errati inseriti nella knowledge base</block>
+  <block id="0243c67f7fa35f362d1323768ccc5871" category="list-text">Test di diverse origini dati o strategie di suddivisione e rapido ritorno al termine del test</block>
+  <block id="4dfbf3ac57687ef65479f0135589593f" category="section-title">Creare un'istantanea del volume di una knowledge base</block>
+  <block id="4d44b256311340bb736c203922fb0296" category="paragraph">È possibile salvare lo stato di una knowledge base eseguendo un'istantanea manuale del volume della knowledge base.</block>
+  <block id="1fbeeb5e6aa15ff7209e4a92d6562e31" category="list-text">Dalla pagina di inventario delle Knowledge base, selezionare la knowledge base che si desidera proteggere.</block>
+  <block id="81d9d121de4b6c5678182e3422bf9650" category="list-text">Selezionare il menu *azioni* e selezionare *istantanea &gt; Crea nuova istantanea*.</block>
+  <block id="3ec558c4a178bea34d2e5946bf312b7d" category="paragraph">Viene creata un'istantanea della knowledge base.</block>
+  <block id="3d1e45266a0a6784e668353081a13cd0" category="section-title">Ripristinare uno snapshot di un volume della Knowledge base</block>
+  <block id="1c0e06755573de2de1c2d9b32674ea2f" category="paragraph">È possibile ripristinare uno snapshot manuale o pianificato di un volume della Knowledge base in qualsiasi momento.</block>
+  <block id="de134183bea5df515a6756a539ce6f18" category="inline-link">CLI ONTAP</block>
+  <block id="f14abb5dd88e8c117fe2da63e57697d4" category="admonition">Non è possibile ripristinare uno snapshot utilizzando l'interfaccia utente dei carichi di lavoro ai generativi se il database archiviato sul volume è corrotto o è stato eliminato. Come soluzione alternativa, puoi ripristinare la snapshot utilizzando sul cluster ONTAP in cui è ospitato il<block ref="6335761ebc6c6e298f35eb8b2201e062" category="inline-link-rx"></block> volume.</block>
+  <block id="4eb5e554b61083f3b7827cb521093085" category="list-text">Nella pagina dell'inventario delle Knowledge base, selezionare la knowledge base che si desidera ripristinare.</block>
+  <block id="e890c518ff6cfabdc152007bfb3c49d8" category="list-text">Selezionare il menu *azioni* e selezionare *istantanea &gt; Ripristina istantanea*.</block>
+  <block id="da5ec29ae3439bc7afa7fa8e6407b19e" category="paragraph">Viene visualizzata la finestra di dialogo di selezione delle istantanee, in cui è possibile visualizzare un elenco delle istantanee create per questa knowledge base.</block>
+  <block id="ece73b44227fa0e2047743c76b07917a" category="list-text">(Facoltativo) deselezionare l'opzione *Sospendi scansioni in esecuzione e pianificate dopo il ripristino dell'istantanea* se si desidera che le scansioni dell'origine dati pianificate e in esecuzione continuino dopo il ripristino dell'istantanea.</block>
+  <block id="562ecd64817b603d4fc723f3f68aa81c" category="paragraph">Questa opzione è attivata per impostazione predefinita per garantire che la scansione non avvenga mentre la base di conoscenza è in uno stato parzialmente ripristinato o che una scansione non aggiorni una knowledge base appena ripristinata con i dati meno recenti.</block>
+  <block id="c33a9a11971ce2afdcc7d2ca3639e49d" category="list-text">Selezionare dall'elenco l'istantanea che si desidera ripristinare.</block>
+  <block id="f77361b272ce81d8275727f7b1a756a8" category="list-text">Selezionare *Restore* (Ripristina).</block>
+  <block id="75adfeedf06d70e0bc627133f85cd211" category="section-title">Sincronizzare le origini dati con una knowledge base</block>
+  <block id="44736bad98446163ecd5077653cbd105" category="paragraph">Le origini dati vengono sincronizzate automaticamente con la knowledge base associata una volta al giorno, in modo che eventuali modifiche all'origine dati vengano riflesse nel chatbot. Se si apportano modifiche a una delle origini dati e si desidera sincronizzare immediatamente i dati, è possibile eseguire una sincronizzazione su richiesta.</block>
+  <block id="26e6f4cc71039ce95ddbb0acdad6891d" category="section-title">29 settembre 2024</block>
 </blocks>

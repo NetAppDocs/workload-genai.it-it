@@ -53,7 +53,7 @@ Ulteriori informazioni sui modelli disponibili per effettuare la selezione: http
 Se si attivano gli avviatori di conversazione, per impostazione predefinita viene selezionata la modalità automatica. La "modalità manuale" può essere attivata solo dopo aver aggiunto origini dati alla knowledge base. link:manage-knowledgebase.html["Scopri come modificare le impostazioni della Knowledge base"].
 
 .. *File system FSX per ONTAP*: Quando si definisce una nuova knowledge base, workload Factory crea un nuovo volume Amazon FSX per NetApp ONTAP per memorizzarlo. Scegli un nome di file system esistente e una SVM (detti anche Storage VM) dove verrà creato il nuovo volume.
-.. *Snapshot policy*: Scegliere un criterio snapshot dall'elenco dei criteri esistenti definiti nell'inventario di archiviazione di workload Factory.
+.. *Snapshot policy*: Scegliere un criterio snapshot dall'elenco dei criteri esistenti definiti nell'inventario di archiviazione di workload Factory. Gli snapshot ricorrenti della Knowledge base verranno creati automaticamente con una frequenza basata sulla policy di snapshot selezionata.
 +
 Se la policy di snapshot necessaria non esiste, è possibile https://docs.netapp.com/us-en/ontap/data-protection/create-snapshot-policy-task.html["creare un criterio di snapshot"] sulla VM di storage che contiene il volume.
 
@@ -61,7 +61,10 @@ Se la policy di snapshot necessaria non esiste, è possibile https://docs.netapp
 
 . Selezionare *Crea knowledge base* per aggiungere la knowledge base a GenAI.
 +
-Nella pagina successiva della procedura guidata è possibile aggiungere un'origine dati alla nuova knowledge base o terminare il processo senza aggiungere un'origine dati. Si consiglia di selezionare *Aggiungi origine dati* e aggiungere una o più origini dati.
+Durante la creazione della knowledge base viene visualizzato un indicatore di avanzamento.
+
++
+Una volta creata la knowledge base, è possibile aggiungere un'origine dati alla nuova knowledge base o terminare il processo senza aggiungere un'origine dati. Si consiglia di selezionare *Aggiungi origine dati* e aggiungere una o più origini dati.
 
 
 

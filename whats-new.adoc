@@ -15,6 +15,28 @@ Scopri le novità della funzionalità per i carichi di lavoro ai generici di wor
 
 
 
+== 29 settembre 2024
+
+
+
+=== Creare una snapshot e ripristinare un volume della Knowledge base
+
+Ora puoi proteggere i dati dei carichi di lavoro ai generici acquisendo una copia point-in-time di una knowledge base. Ciò consente di proteggere i dati da perdite accidentali o di verificare le modifiche alle impostazioni della knowledge base. È possibile ripristinare la versione precedente del volume della Knowledge base in qualsiasi momento.
+
+
+
+=== Sospendere le scansioni pianificate
+
+È ora possibile mettere in pausa le scansioni delle origini dati pianificate. Per impostazione predefinita, i carichi di lavoro ai generativi analizzano ogni origine dati ogni giorno per acquisire nuovi dati in ciascuna knowledge base. Se non si desidera acquisire le ultime modifiche (ad esempio durante il test o il ripristino di uno snapshot), è possibile sospendere le scansioni pianificate e riprenderle in qualsiasi momento.
+
+
+
+=== Volumi di protezione dei dati ora supportati per le basi di conoscenza
+
+Quando si seleziona un volume della Knowledge base, è ora possibile scegliere un volume di data Protection che fa parte di una relazione di replica NetApp SnapMirror. In questo modo è possibile archiviare knowledge base su volumi già protetti dalla replica SnapMirror.
+
+
+
 == 1 settembre 2024
 
 

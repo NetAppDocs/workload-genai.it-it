@@ -58,6 +58,64 @@ Se si utilizza la modalità Manuale per avviare una conversazione, è anche poss
 
 
 
+== Proteggere una knowledge base con le snapshot
+
+Puoi proteggere i dati della tua knowledge base eseguendo e ripristinando snapshot dei volumi della tua knowledge base. È possibile eseguire il ripristino da uno snapshot per tornare alla versione precedente della knowledge base in qualsiasi momento.
+
+Le snapshot possono essere più veloci ed efficienti in termini di storage rispetto ai backup, consentendo inoltre di proteggere ogni knowledge base utilizzando una policy di protezione differente. Di seguito sono elencati alcuni degli scenari in cui le snapshot possono essere utili:
+
+* Perdita o danneggiamento accidentale di dati
+* Recupero da dati errati inseriti nella knowledge base
+* Test di diverse origini dati o strategie di suddivisione e rapido ritorno al termine del test
+
+
+
+
+=== Creare un'istantanea del volume di una knowledge base
+
+È possibile salvare lo stato di una knowledge base eseguendo un'istantanea manuale del volume della knowledge base.
+
+.Fasi
+. Dalla pagina di inventario delle Knowledge base, selezionare la knowledge base che si desidera proteggere.
+. Selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Gestisci knowledge base*.
++
+Questa pagina visualizza lo stato pubblicato, lo stato di incorporazione delle origini dati, la modalità di incorporazione, l'elenco di tutte le origini dati incorporate e altro ancora.
+
+. Selezionare il menu *azioni* e selezionare *istantanea > Crea nuova istantanea*.
++
+Viene creata un'istantanea della knowledge base.
+
+
+
+
+
+=== Ripristinare uno snapshot di un volume della Knowledge base
+
+È possibile ripristinare uno snapshot manuale o pianificato di un volume della Knowledge base in qualsiasi momento.
+
+
+NOTE: Non è possibile ripristinare uno snapshot utilizzando l'interfaccia utente dei carichi di lavoro ai generativi se il database archiviato sul volume è corrotto o è stato eliminato. Come soluzione alternativa, puoi ripristinare la snapshot utilizzando sul cluster ONTAP in cui è ospitato il https://docs.netapp.com/us-en/ontap-cli/volume-snapshot-restore.html["CLI ONTAP"^] volume.
+
+.Fasi
+. Nella pagina dell'inventario delle Knowledge base, selezionare la knowledge base che si desidera ripristinare.
+. Selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Gestisci knowledge base*.
++
+Questa pagina visualizza lo stato pubblicato, lo stato di incorporazione delle origini dati, la modalità di incorporazione, l'elenco di tutte le origini dati incorporate e altro ancora.
+
+. Selezionare il menu *azioni* e selezionare *istantanea > Ripristina istantanea*.
++
+Viene visualizzata la finestra di dialogo di selezione delle istantanee, in cui è possibile visualizzare un elenco delle istantanee create per questa knowledge base.
+
+. (Facoltativo) deselezionare l'opzione *Sospendi scansioni in esecuzione e pianificate dopo il ripristino dell'istantanea* se si desidera che le scansioni dell'origine dati pianificate e in esecuzione continuino dopo il ripristino dell'istantanea.
++
+Questa opzione è attivata per impostazione predefinita per garantire che la scansione non avvenga mentre la base di conoscenza è in uno stato parzialmente ripristinato o che una scansione non aggiorni una knowledge base appena ripristinata con i dati meno recenti.
+
+. Selezionare dall'elenco l'istantanea che si desidera ripristinare.
+. Selezionare *Restore* (Ripristina).
+
+
+
+
 == Aggiungere ulteriori origini dati a una knowledge base
 
 È possibile incorporare ulteriori origini dati nella knowledge base per inserirle con dati aggiuntivi dell'organizzazione.
@@ -95,9 +153,9 @@ L'origine dati è integrata nella knowledge base.
 
 
 
-== Sincronizzare le origini dati con la knowledge base
+== Sincronizzare le origini dati con una knowledge base
 
-Le origini dati vengono sincronizzate automaticamente con la knowledge base una volta al giorno, in modo che eventuali modifiche all'origine dati vengano riflesse nel chatbot. Se si apportano modifiche a una delle origini dati e si desidera sincronizzare immediatamente i dati, è possibile eseguire una sincronizzazione su richiesta.
+Le origini dati vengono sincronizzate automaticamente con la knowledge base associata una volta al giorno, in modo che eventuali modifiche all'origine dati vengano riflesse nel chatbot. Se si apportano modifiche a una delle origini dati e si desidera sincronizzare immediatamente i dati, è possibile eseguire una sincronizzazione su richiesta.
 
 La sincronizzazione è incrementale, quindi Amazon Bedrock elabora solo gli oggetti nelle origini dati che sono stati aggiunti, modificati o eliminati dall'ultima sincronizzazione.
 
