@@ -640,4 +640,8 @@
   <block id="75adfeedf06d70e0bc627133f85cd211" category="section-title">Sincronizzare le origini dati con una knowledge base</block>
   <block id="44736bad98446163ecd5077653cbd105" category="paragraph">Le origini dati vengono sincronizzate automaticamente con la knowledge base associata una volta al giorno, in modo che eventuali modifiche all'origine dati vengano riflesse nel chatbot. Se si apportano modifiche a una delle origini dati e si desidera sincronizzare immediatamente i dati, è possibile eseguire una sincronizzazione su richiesta.</block>
   <block id="26e6f4cc71039ce95ddbb0acdad6891d" category="section-title">29 settembre 2024</block>
+  <block id="f8016d0e0375ce671e71803692cf105c" category="paragraph"><block ref="f8016d0e0375ce671e71803692cf105c" category="inline-link-rx"></block></block>
+  <block id="340b5c4d996cad6cf6d27d13faf94e89" category="paragraph"><block ref="340b5c4d996cad6cf6d27d13faf94e89" category="inline-link-rx"></block></block>
+  <block id="f951fa0f2608d186cd1f0bd8889ac232" category="paragraph"><block ref="f951fa0f2608d186cd1f0bd8889ac232" category="inline-link-rx"></block></block>
+  <block id="8afd34c2a29e7b6286f3ed0bf9e20c22" category="paragraph"><block ref="8afd34c2a29e7b6286f3ed0bf9e20c22" category="inline-link-rx"></block></block>
 </blocks>
