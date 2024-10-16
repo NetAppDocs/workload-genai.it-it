@@ -275,7 +275,6 @@
   <block id="f0c862596fc0a1dd30faa6b630a0d09b" category="section-title">Aggiornare il contenuto di un'origine dati esistente</block>
   <block id="d811eb8aad6aebc071695232fb58c5a5" category="paragraph">È possibile modificare il contenuto di un'origine dati in qualsiasi momento per aggiungere o aggiornare i dati dell'organizzazione. Se questa origine dati viene utilizzata attivamente in una knowledge base, è necessario sincronizzare l'origine dati in modo che venga riindicizzata nella knowledge base. La sincronizzazione è incrementale, quindi Amazon Bedrock elabora solo gli oggetti nel volume FSX per ONTAP che sono stati aggiunti, modificati o eliminati dall'ultima sincronizzazione.</block>
   <block id="24f189799b33f2d3f465d0658dcc69e1" category="inline-link-macro">eseguire una sincronizzazione su richiesta</block>
-  <block id="424609f726117c0fe50e1034bb197bf7" category="paragraph">Le origini dati vengono sincronizzate automaticamente con la knowledge base una volta al giorno, in modo che eventuali modifiche all'origine dati vengano riflesse nel chatbot. Se si apportano modifiche a un'origine dati e si desidera sincronizzare immediatamente i dati, è possibile <block ref="67b891ffaab1342f4fb267d7cc798f81" category="inline-link-macro-rx"></block>.</block>
   <block id="35198182831e3f9922e23822e3f2e2eb" category="section-title">Eliminare un'origine dati</block>
   <block id="19045c987301cc2ddb28f24761554946" category="paragraph">Se non è più necessario che un'origine dati faccia parte della knowledge base, è possibile eliminarla.</block>
   <block id="7c25f02bbc30d711041ddd1cc4235dc3" category="list-text">Dalla pagina dell'inventario della Knowledge base, selezionare la knowledge base in cui risiede l'origine dati, quindi selezionare <block ref="4dc533ba94e6ca8d1968a9d477e1cbce" category="inline-image-macro-rx" type="image"></block> e selezionare *Gestisci knowledge base*.</block>
@@ -501,7 +500,6 @@
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">Note di rilascio</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">Novità</block>
   <block id="acbf2b120f060c765cc5fbfef7779840" category="sidebar">Identificare le origini dati per la knowledge base</block>
-  <block id="2e800147de9688c09f27dae52c542680" category="sidebar">Utilizzare GenAI per creare basi di conoscenza</block>
   <block id="b032727d9e00be7e59aefec94a0972c2" category="sidebar">Attivare l'autenticazione</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Conoscenza e supporto</block>
   <block id="3163a16fc98aa29c5fea8b61c62bb459" category="paragraph">L'utilizzo della funzionalità GenAI di workload Factory è gratuito.</block>
@@ -644,4 +642,6 @@
   <block id="f951fa0f2608d186cd1f0bd8889ac232" category="paragraph"><block ref="f951fa0f2608d186cd1f0bd8889ac232" category="inline-link-rx"></block></block>
   <block id="8afd34c2a29e7b6286f3ed0bf9e20c22" category="paragraph"><block ref="8afd34c2a29e7b6286f3ed0bf9e20c22" category="inline-link-rx"></block></block>
   <block id="4936442e55cb8f837f9616ca6aaf1e92" category="doc">Supporto di Snapshot e ripristino per i volumi della Knowledge base</block>
+  <block id="ef3d62d3a83e208fec16cf94a1c9ef8b" category="paragraph">Le origini dati vengono sincronizzate automaticamente con la knowledge base una volta al giorno, in modo che eventuali modifiche all'origine dati vengano riflesse nel chatbot. Se si apportano modifiche a un'origine dati e si desidera sincronizzare immediatamente i dati, è possibile <block ref="a5f82761b74f2896160929ccd4ead00e" category="inline-link-macro-rx"></block>.</block>
+  <block id="3bd082f2a7c2961a682116b6ed9f43fc" category="sidebar">Utilizzare GenAI per creare basi di conoscenza</block>
 </blocks>

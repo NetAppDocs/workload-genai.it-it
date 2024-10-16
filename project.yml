@@ -33,32 +33,30 @@ sidebar:
       url: "/deploy-infrastructure.html"
     - title: Utilizzare l'applicazione chatbot di esempio esterna
       url: "/example-chatbot-application.html"
+    - title: Componenti per il motore NetApp Genai
+      url: "/genai-engine-instance.html"
   - title: Utilizzare GenAI per creare basi di conoscenza
     entries:
     - title: Creare una knowledge base
-      entries:
-      - title: Creare una knowledge base
-        url: "/create-knowledgebase.html"
-      - title: Testare una base di conoscenza
-        url: "/test-knowledgebase.html"
-      - title: Attivare l'autenticazione
-        url: "/activate-authentication.html"
-      - title: Pubblicare una knowledge base
-        url: "/publish-knowledgebase.html"
-      - title: Crea un'applicazione ai basata su RAG
-        url: "/create-application.html"
-      - title: Cosa fare in seguito
-        url: "/whats-next.html"
-    - title: Gestire le origini dati
-      url: "/manage-data-source.html"
-    - title: Gestire le knowledge base
-      url: "/manage-knowledgebase.html"
+      url: "/create-knowledgebase.html"
+    - title: Testare una base di conoscenza
+      url: "/test-knowledgebase.html"
+    - title: Attivare l'autenticazione
+      url: "/activate-authentication.html"
+    - title: Pubblicare una knowledge base
+      url: "/publish-knowledgebase.html"
+    - title: Crea un'applicazione ai basata su RAG
+      url: "/create-application.html"
+    - title: Cosa fare in seguito
+      url: "/whats-next.html"
   - title: Somministrare GenAI
     entries:
     - title: Gestire l'infrastruttura GenAI
       url: "/manage-infrastructure.html"
-    - title: Componenti per il motore NetApp Genai
-      url: "/genai-engine-instance.html"
+    - title: Gestire le knowledge base
+      url: "/manage-knowledgebase.html"
+    - title: Gestire le origini dati
+      url: "/manage-data-source.html"
   - title: Conoscenza e supporto
     entries:
     - title: Registrati per ricevere assistenza

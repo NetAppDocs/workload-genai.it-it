@@ -56,7 +56,7 @@ Le impostazioni dell'origine dati vengono aggiornate e il sistema ai sincronizza
 
 È possibile modificare il contenuto di un'origine dati in qualsiasi momento per aggiungere o aggiornare i dati dell'organizzazione. Se questa origine dati viene utilizzata attivamente in una knowledge base, è necessario sincronizzare l'origine dati in modo che venga riindicizzata nella knowledge base. La sincronizzazione è incrementale, quindi Amazon Bedrock elabora solo gli oggetti nel volume FSX per ONTAP che sono stati aggiunti, modificati o eliminati dall'ultima sincronizzazione.
 
-Le origini dati vengono sincronizzate automaticamente con la knowledge base una volta al giorno, in modo che eventuali modifiche all'origine dati vengano riflesse nel chatbot. Se si apportano modifiche a un'origine dati e si desidera sincronizzare immediatamente i dati, è possibile link:manage-knowledgebase.html#synchronize-your-data-sources-with-the-knowledge-base["eseguire una sincronizzazione su richiesta"].
+Le origini dati vengono sincronizzate automaticamente con la knowledge base una volta al giorno, in modo che eventuali modifiche all'origine dati vengano riflesse nel chatbot. Se si apportano modifiche a un'origine dati e si desidera sincronizzare immediatamente i dati, è possibile link:manage-knowledgebase.html#synchronize-your-data-sources-with-a-knowledge-base["eseguire una sincronizzazione su richiesta"].
 
 
 
