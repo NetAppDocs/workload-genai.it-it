@@ -49,9 +49,13 @@ Ogni volta che si aggiungono, modificano o rimuovono origini dati dalla knowledg
 Questa pagina visualizza lo stato pubblicato, lo stato di incorporazione delle origini dati, la modalità di incorporazione, l'elenco di tutte le origini dati incorporate e altro ancora.
 
 . Selezionare il menu *azioni* e selezionare *Modifica knowledge base*.
-. Nella pagina Modifica knowledge base è possibile modificare il nome della knowledge base, la descrizione, il modello di incorporazione, il modello di chat, se gli avviatori di conversazione vengono creati automaticamente o manualmente e il criterio di snapshot utilizzato per il volume che contiene la knowledge base.
+. Nella pagina Modifica knowledge base è possibile modificare il nome della knowledge base, la descrizione, il modello di incorporazione, il modello di chat, l'abilitazione delle barriere di protezione dei dati, scegliere se creare automaticamente o manualmente gli avviatori di conversazione e il criterio di snapshot utilizzato per il volume che contiene la knowledge base.
 +
 Se si utilizza la modalità Manuale per avviare una conversazione, è anche possibile cambiare gli avviatori di conversazione.
+
++
+
+NOTE: Ogni scansione della Knowledge base, che include l'integrazione, i costi. Se le barriere di sicurezza dei dati sono abilitate dopo la creazione di una knowledge base, la knowledge base viene nuovamente sottoposta a scansione e i costi sono sostenuti.
 
 . Selezionare *Salva* dopo aver apportato le modifiche.
 

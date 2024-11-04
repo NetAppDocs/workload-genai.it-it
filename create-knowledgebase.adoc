@@ -13,9 +13,22 @@ summary: 'Dopo aver implementato l"infrastruttura ai e identificato le origini d
 [role="lead"]
 Dopo aver implementato l'infrastruttura ai e identificato le origini dei dati che integrerai nella tua knowledge base dai datastore FSX per ONTAP, sarai pronto a costruire la knowledge base utilizzando workload Factory. Nell'ambito di questo passaggio, definirai anche le caratteristiche dell'ai e creerai degli spunti di conversazione.
 
-È possibile utilizzare una knowledge base senza integrare le origini dati dell'organizzazione. In questo caso, un'applicazione integrata con la knowledge base fornirà i risultati solo dalle informazioni disponibili pubblicamente su Internet. Questa operazione è nota come integrazione _modalità pubblica_.
+.A proposito di questa attività
+Le knowledge base hanno due modalità di integrazione dei dati: _Modalità pubblica_ e _modalità aziendale_.
 
-Nella maggior parte dei casi, è necessario integrare le origini dati dell'organizzazione nella knowledge base. Questa è nota come integrazione _Enterprise mode_ perché fornisce informazioni dall'azienda.
+Modalità pubblica:: È possibile utilizzare una knowledge base senza integrare le origini dati dell'organizzazione. In questo caso, un'applicazione integrata con la knowledge base fornirà i risultati solo dalle informazioni disponibili pubblicamente su Internet. Questa operazione è nota come integrazione _modalità pubblica_.
+Modalità Enterprise:: Nella maggior parte dei casi, è necessario integrare le origini dati dell'organizzazione nella knowledge base. Questa è nota come integrazione _Enterprise mode_ perché fornisce informazioni dall'azienda.
++
+--
+Le origini dati dell'organizzazione possono contenere informazioni sull'identità privata (PII, Private Identity Information). Per proteggere queste informazioni sensibili, è possibile abilitare _data Guardrails_ durante la creazione e la configurazione di knowledge base. Le barriere di protezione dei dati, basate sulla classificazione BlueXP , identificano e maschera PII, rendendolo inaccessibile e irrecuperabile.
+
+link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Scopri di più sulla classificazione BlueXP"^].
+
+
+NOTE: Le barriere di sicurezza dei dati possono essere attivate o disattivate in qualsiasi momento. Se si cambia l'abilitazione dei data Guardrails, workload Factory analizza da zero l'intera knowledge base, il che implica un costo.
+
+--
+
 
 
 
@@ -47,6 +60,21 @@ https://aws.amazon.com/bedrock/titan/["Scopri di più su Amazon Titan"^]
 .. *Modello chat*: Scegli tra i modelli chat Claude integrati in Amazon Bedrock. Nota: È necessario aver già attivato il modello di chat da Amazon Bedrock.
 +
 Ulteriori informazioni sui modelli disponibili per effettuare la selezione: https://aws.amazon.com/bedrock/claude/["Claude di antropic in Amazon Bedrock"^]
+
+.. *Data Guardrails*: Scegliere se attivare o disattivare le barriere di protezione dei dati. link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Scopri le barriere di protezione dei dati, basate sulla classificazione BlueXP "^].
++
+Per abilitare le barriere di protezione dei dati, è necessario completare i seguenti prerequisiti.
+
++
+*** Per comunicare con la classificazione BlueXP  è necessario un account di servizio. Per la creazione dell'account di servizio, è necessario disporre del ruolo _Amministratore organizzazione_ nell'account di locazione BlueXP . Un membro che ha il ruolo di amministratore dell'organizzazione può completare tutte le azioni in BlueXP . link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-manage-members-permissions.html#add-a-role-to-a-member["Scopri come aggiungere un ruolo a un membro in BlueXP "^]
+*** È necessario effettuare le seguenti operazioni come descritto in link:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-cloud-compliance.html#quick-start["Documentazione sulla classificazione BlueXP"^]:
++
+.... Crea un connettore BlueXP
+.... Accertarsi che l'ambiente in uso soddisfi i prerequisiti
+.... Implementare la classificazione BlueXP
+
+
+
 
 .. *Avviatori di conversazione*: Scegliere se si desidera fornire fino a quattro prompt iniziali di conversazione che vengono visualizzati agli utenti che interagiscono con un chatbot che utilizza questa knowledge base. Si consiglia di attivare questa impostazione.
 +
