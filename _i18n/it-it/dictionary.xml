@@ -667,4 +667,8 @@
   <block id="b91895758c5a35a75fd3e87dc1fa0741" category="list-text">Nella pagina Modifica knowledge base è possibile modificare il nome della knowledge base, la descrizione, il modello di incorporazione, il modello di chat, l'abilitazione delle barriere di protezione dei dati, scegliere se creare automaticamente o manualmente gli avviatori di conversazione e il criterio di snapshot utilizzato per il volume che contiene la knowledge base.</block>
   <block id="fde00ba8f64d2c57d64a163698fd6f03" category="admonition">Ogni scansione della Knowledge base, che include l'integrazione, i costi. Se le barriere di sicurezza dei dati sono abilitate dopo la creazione di una knowledge base, la knowledge base viene nuovamente sottoposta a scansione e i costi sono sostenuti.</block>
   <block id="d9f5899ddcae7952c9df69e075c822e2" category="section-title">3 novembre 2024</block>
+  <block id="5975f7e9036c78e6217b16f295f0ca75" category="inline-link-macro">Console BlueXP</block>
+  <block id="402ae08ce46f82670c0313312e504ad7" category="list-text">Il motore ai deve avere accesso a. <block ref="046fd603b18837f482287e5ec741e5ed" category="inline-link-macro-rx"></block></block>
+  <block id="4d82a1ec1af02725042c8c785564ee7a" category="list-text">Amazon FSX per NetApp ONTAP</block>
+  <block id="4b88d56bd65ef92611ac63064c38369f" category="list-text">Amazon CloudWatch</block>
 </blocks>
