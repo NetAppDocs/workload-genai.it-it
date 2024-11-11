@@ -1,6 +1,6 @@
 ---
 indexpage:
-  title: Workload factory per la documentazione GenAI
+  title: Fabbrica di workload BlueXP  per la documentazione GenAI
   summary: Integra i dati dei file system FSX per ONTAP con le piattaforme MLOps e
     i modelli di base GenAI per creare chatbot funzionali utilizzando i dati organizzativi.
   keywords: AI, GenAI, ML, Chatbot, FSx, FSx for ONTAP, knowledge base

@@ -686,5 +686,5 @@
   <block id="34734891f639d2ae1ecbbaab22157fe2" category="paragraph">Scopri le novità della funzionalità per i carichi di lavoro ai generici della farm di workload.</block>
   <block id="81ff996ef963d9805259d4a6c9bafac8" category="inline-link">Documentazione della fabbrica di carichi di lavoro per Amazon FSX per NetApp ONTAP</block>
   <block id="07e2e5eecff8fe1dbb4712055f0055f1" category="paragraph">Per informazioni sulla gestione del file system FSX per ONTAP, consultare la<block ref="3845b9852e43f2af9ae621ea5bb328c1" category="inline-link-rx"></block> per visualizzare le funzionalità di backup e protezione utilizzabili.</block>
-  <block id="ae734fb1e6d4e05106a10b963ef2ee25" category="sidebar">Workload factory per la documentazione GenAI</block>
+  <block id="2b6b3d10fe7ba8590618a95b1cc96a1a" category="sidebar">Fabbrica di workload BlueXP  per la documentazione GenAI</block>
 </blocks>
