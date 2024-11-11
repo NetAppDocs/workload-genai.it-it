@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: example-chatbot-application.html 
 keywords: ai, example, sample, chatbot, app, application, local 
-summary: 'Puoi installare ed eseguire un"applicazione chatbot di esempio per testare le tue knowledge base e scoprire come utilizzare l"API workload Factory per creare la tua applicazione ai generativa.' 
+summary: 'È possibile installare ed eseguire un"applicazione chatbot di esempio per testare le proprie knowledge base e scoprire come utilizzare l"API di workload factory per creare la propria applicazione ai generativa.' 
 ---
 = Utilizzare l'applicazione chatbot di esempio esterna
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Puoi installare ed eseguire un"applicazione chatbot di esempio per tes
 
 
 [role="lead"]
-Dopo aver configurato, attivato e pubblicato una knowledge base, gli sviluppatori di applicazioni esterne possono configurare ed eseguire l'applicazione chatbot open source di esempio fornita da NetApp per interagire con la knowledge base e imparare a utilizzare l'API workload Factory per creare le proprie applicazioni ai generative.
+Dopo aver configurato, attivato e pubblicato una knowledge base, gli sviluppatori di applicazioni esterne possono configurare ed eseguire l'applicazione chatbot open source di esempio fornita da NetApp per interagire con la knowledge base e imparare a utilizzare l'API della farm dei workload per creare le proprie applicazioni ai generative.
 
 .Fasi
 . link:create-knowledgebase.html["Creare una knowledge base"].
@@ -39,4 +39,4 @@ Viene visualizzata l'applicazione chatbot di esempio.
 
 == Scopri di più
 
-https://console.workloads.netapp.com/api-doc["Documentazione dell'API workload Factory"]
+https://console.workloads.netapp.com/api-doc["Documentazione dell'API di fabbrica del carico di lavoro"]

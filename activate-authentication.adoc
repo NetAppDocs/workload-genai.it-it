@@ -14,6 +14,7 @@ summary: 'Attivare l"autenticazione per una knowledge base in modo che la conval
 Attivare l'autenticazione per una knowledge base in modo che la convalida dei token e gli ACL siano necessari quando si utilizzano gli endpoint API per integrare una knowledge base con un'applicazione chatbot. Quando si attiva l'autenticazione, si configurano le impostazioni per un token Web JSON che verrà utilizzato per le richieste API a una knowledge base dai client chatbot.
 
 .Fasi
+. Accedere a workload Factory utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella pagina dell'inventario delle Knowledge base, selezionare la knowledge base per la quale si desidera attivare l'autenticazione.
 . Selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Gestisci knowledge base*.
 . Selezionare il menu *azioni* e selezionare *Gestisci impostazioni di autenticazione*.

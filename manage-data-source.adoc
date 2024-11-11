@@ -20,7 +20,8 @@ Dopo aver creato una knowledge base utilizzando le origini dati sul file system 
 È possibile visualizzare le informazioni sul contenuto di un'origine dati ed è possibile visualizzarne lo stato di integrazione con la knowledge base. Poiché un'origine dati fa parte di una knowledge base, è necessario aprire la knowledge base prima di poter visualizzare i dettagli dell'origine dati.
 
 .Fasi
-. Dal menu di navigazione, selezionare *ai*.
+. Accedere a workload Factory utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Dal menu di navigazione di fabbrica del carico di lavoro, selezionare *ai*.
 . Selezionare la knowledge base in cui risiede l'origine dati, quindi selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Gestisci knowledge base*.
 +
 Nella parte inferiore della pagina sono elencate le origini dati che fanno parte di questa knowledge base.
@@ -38,6 +39,7 @@ Elenca inoltre le informazioni di inclusione e se tale origine dati è attualmen
 È possibile modificare le informazioni relative a un'origine dati integrata in una knowledge base. La maggior parte delle informazioni viene risolta dopo aver aggiunto un'origine dati a una knowledge base, ma è possibile apportare modifiche alla definizione e alla configurazione di suddivisione in blocchi e alla consapevolezza delle autorizzazioni (quando si utilizza il protocollo SMB sul volume di origine dati).
 
 .Fasi
+. Accedere a workload Factory utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Dalla pagina dell'inventario delle Knowledge base, selezionare la knowledge base in cui risiede l'origine dati, quindi selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Gestisci knowledge base*.
 +
 Nella parte inferiore della pagina sono elencate le origini dati che fanno parte di questa knowledge base.
@@ -65,6 +67,7 @@ Le origini dati vengono sincronizzate automaticamente con la knowledge base una 
 Se non è più necessario che un'origine dati faccia parte della knowledge base, è possibile eliminarla.
 
 .Fasi
+. Accedere a workload Factory utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Dalla pagina dell'inventario della Knowledge base, selezionare la knowledge base in cui risiede l'origine dati, quindi selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Gestisci knowledge base*.
 +
 Nella parte inferiore della pagina sono elencate le origini dati che fanno parte di questa knowledge base.

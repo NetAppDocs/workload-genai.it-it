@@ -22,4 +22,4 @@ Di seguito sono elencate alcune delle attività che è possibile eseguire per ge
 * Esegui il backup e proteggi i dati importanti sul file system FSX per ONTAP, in modo da assicurarti che i dati della knowledge base e altri componenti dell'infrastruttura siano sempre disponibili.
 
 
-Per informazioni sulla gestione del file system FSX per ONTAP, consultare la https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["Documentazione di workload Factory per Amazon FSX per NetApp ONTAP"^] per visualizzare le funzionalità di backup e protezione utilizzabili.
+Per informazioni sulla gestione del file system FSX per ONTAP, consultare la https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["Documentazione della fabbrica di carichi di lavoro per Amazon FSX per NetApp ONTAP"^] per visualizzare le funzionalità di backup e protezione utilizzabili.

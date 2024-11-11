@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-knowledgebase.html 
 keywords: ai, chatbot, creating, knowledge base 
-summary: 'Dopo aver implementato l"infrastruttura ai e identificato le origini dei dati che integrerai nella tua knowledge base dai datastore FSX per ONTAP, sarai pronto a costruire la knowledge base utilizzando workload Factory. Nell"ambito di questa fase, definirai anche le caratteristiche dell"ai e creerai modi per avviare una conversazione.' 
+summary: 'Dopo aver implementato l"infrastruttura ai e identificato le origini dei dati che integrerai nella tua knowledge base dai datastore FSX per ONTAP, sarai pronto a costruire la knowledge base utilizzando la farm di carichi di lavoro. Nell"ambito di questa fase, definirai anche le caratteristiche dell"ai e creerai modi per avviare una conversazione.' 
 ---
 = Creare una knowledge base
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Dopo aver implementato l"infrastruttura ai e identificato le origini d
 
 
 [role="lead"]
-Dopo aver implementato l'infrastruttura ai e identificato le origini dei dati che integrerai nella tua knowledge base dai datastore FSX per ONTAP, sarai pronto a costruire la knowledge base utilizzando workload Factory. Nell'ambito di questo passaggio, definirai anche le caratteristiche dell'ai e creerai degli spunti di conversazione.
+Dopo aver implementato l'infrastruttura ai e identificato le origini dei dati che integrerai nella tua knowledge base dai datastore FSX per ONTAP, sarai pronto a costruire la knowledge base utilizzando la farm di carichi di lavoro. Nell'ambito di questo passaggio, definirai anche le caratteristiche dell'ai e creerai degli spunti di conversazione.
 
 .A proposito di questa attività
 Le knowledge base hanno due modalità di integrazione dei dati: _Modalità pubblica_ e _modalità aziendale_.
@@ -37,7 +37,7 @@ NOTE: Le barriere di sicurezza dei dati possono essere attivate o disattivate in
 La knowledge base definisce caratteristiche quali i modelli di intelligenza artificiale Bedrock e il formato di inclusione che si desidera utilizzare per creare la propria knowledge base.
 
 .Fasi
-. Accedere a workload Factory.
+. Accedere a workload Factory utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione carichi di lavoro ai, selezionare *Deploy & Manage*.
 . Dalla scheda Knowledge base, selezionare *Aggiungi knowledge base*.
 . Nella pagina Definisci Knowledge base, configurare le impostazioni della Knowledge base:
@@ -82,7 +82,7 @@ Per abilitare le barriere di protezione dei dati, è necessario completare i seg
 Se si attivano gli avviatori di conversazione, per impostazione predefinita viene selezionata la modalità automatica. La "modalità manuale" può essere attivata solo dopo aver aggiunto origini dati alla knowledge base. link:manage-knowledgebase.html["Scopri come modificare le impostazioni della Knowledge base"].
 
 .. *File system FSX per ONTAP*: Quando si definisce una nuova knowledge base, workload Factory crea un nuovo volume Amazon FSX per NetApp ONTAP per memorizzarlo. Scegli un nome di file system esistente e una SVM (detti anche Storage VM) dove verrà creato il nuovo volume.
-.. *Snapshot policy*: Scegliere un criterio snapshot dall'elenco dei criteri esistenti definiti nell'inventario di archiviazione di workload Factory. Gli snapshot ricorrenti della Knowledge base verranno creati automaticamente con una frequenza basata sulla policy di snapshot selezionata.
+.. *Criterio istantanea*: Scegliere un criterio istantanea dall'elenco dei criteri esistenti definiti nell'inventario di archiviazione della fabbrica del carico di lavoro. Gli snapshot ricorrenti della Knowledge base verranno creati automaticamente con una frequenza basata sulla policy di snapshot selezionata.
 +
 Se la policy di snapshot necessaria non esiste, è possibile https://docs.netapp.com/us-en/ontap/data-protection/create-snapshot-policy-task.html["creare un criterio di snapshot"] sulla VM di storage che contiene il volume.
 

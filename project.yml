@@ -21,7 +21,7 @@ sidebar:
       url: "/whats-new.html"
   - title: Inizia subito
     entries:
-    - title: Scopri workload Factory per Genai
+    - title: Scopri la workload Factory per Genai
       url: "/ai-workloads-overview.html"
     - title: Avvio rapido
       url: "/quick-start.html"
@@ -68,5 +68,5 @@ sidebar:
   - title: Note legali
     url: "/legal-notices.html"
 product-family:
-  name: BlueXP Workload Factory for AWS
+  name: BlueXP workload factory for AWS
   repo: workload-family

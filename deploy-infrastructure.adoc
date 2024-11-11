@@ -56,7 +56,7 @@ Dovrai inserire le tue credenziali AWS e selezionare il file system FSX per ONTA
 Prima di iniziare la procedura, accertarsi che l'ambiente sia conforme link:requirements.html["i requisiti"] .
 
 .Fasi
-. Accedere a workload Factory.
+. Accedere a workload Factory utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione carichi di lavoro ai, selezionare *Deploy & Manage*.
 . Esaminare il diagramma dell'infrastruttura e selezionare *Avanti*.
 . Completare gli elementi nella sezione *Impostazioni AWS*:
@@ -78,7 +78,7 @@ L'implementazione Genai deve trovarsi in una regione AWS con Amazon Bedrock abil
 
 
 .Risultato
-Workload Factory inizia a implementare l'infrastruttura chatbot. Questo processo può richiedere fino a 10 minuti.
+La fabbrica dei workload inizia a implementare l'infrastruttura chatbot. Questo processo può richiedere fino a 10 minuti.
 
 Durante il processo di distribuzione, vengono impostati i seguenti elementi:
 

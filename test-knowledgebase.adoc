@@ -18,7 +18,7 @@ Dopo aver creato la knowledge base, sarà possibile testarla localmente utilizza
 
 Puoi testare una knowledge base chattando con le tue origini dati incorporate nel simulatore di chatbot. Tenere presente che nessuna interazione o analisi viene acquisita nel database vettoriale GenAI quando si esegue il test della knowledge base a livello locale.
 
-Prima di distribuire la knowledge base in un'applicazione per gli utenti, eseguite la maggior parte dei test in workload Factory. Se devi apportare modifiche all'origine dati o all'operazione chatbot, devi farlo ora prima di pubblicare la tua knowledge base.
+Prima di distribuire la knowledge base in un'applicazione per gli utenti, eseguirete la maggior parte dei test all'interno della fabbrica dei carichi di lavoro. Se devi apportare modifiche all'origine dati o all'operazione chatbot, devi farlo ora prima di pubblicare la tua knowledge base.
 
 Alcune delle attività che si desidera eseguire per testare il chatbot sono:
 

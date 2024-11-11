@@ -12,4 +12,4 @@ I carichi di lavoro ai generativi sono ora integrati con Amazon CloudWatch Logs,
 
 === Esempio di applicazione chatbot
 
-L'applicazione di esempio Genai di NetApp workload Factory ti consente di testare l'autenticazione e il recupero dalla tua knowledge base pubblicata di NetApp workload Factory interagendo direttamente con essa in un'applicazione chatbot basata sul web.
+L'applicazione di esempio Genai della fabbrica di workload NetApp consente di testare l'autenticazione e il recupero dalla knowledge base di fabbrica dei workload NetApp pubblicati interagendo direttamente con essa in un'applicazione chatbot basata sul Web.

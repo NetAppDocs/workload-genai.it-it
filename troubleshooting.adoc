@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: troubleshooting.html 
 keywords: support registration, register for support, support, nss account, add nss account, 
-summary: Prima di poter aprire un caso di supporto con il supporto tecnico NetApp, devi aggiungere un account del sito di supporto NetApp a workload Factory e registrarti per ricevere supporto. 
+summary: Prima di poter aprire un caso di supporto con il supporto tecnico NetApp, devi aggiungere un account del sito di supporto NetApp alla workload factory e quindi registrarti per il supporto. 
 ---
 = Risoluzione dei problemi
 :allow-uri-read: 
@@ -27,12 +27,12 @@ Se si verifica uno di questi problemi, è possibile utilizzare la procedura nell
 | Implementazione | La distribuzione non riesce perché il volume esiste già. | Workload Factory per Genai deve creare un nuovo volume durante il processo di implementazione, ma un volume esiste già utilizzando il nome specificato. | Specificare un nome univoco da utilizzare per il nuovo volume e provare a eseguire nuovamente la distribuzione. 
 
 
-| Implementazione | L'implementazione non riesce perché workload Factory per Genai non è in grado di montare il volume. | Una o più porte in entrata richieste per FSX per NetApp ONTAP vengono chiuse o filtrate.  a| 
+| Implementazione | L'implementazione non riesce perché la fabbrica del carico di lavoro per GenAI non è in grado di montare il volume. | Una o più porte in entrata richieste per FSX per NetApp ONTAP vengono chiuse o filtrate.  a| 
 Aprire le porte elencate in https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/reference-security-groups-fsx.html#inbound-rules["Regole del gruppo di sicurezza per FSX per ONTAP"^].
 
 
 
-| Manutenzione | L'istanza Docker di back-end utilizzata da workload Factory per GenAI non si è avviata. | Eliminazione del volume e riavvio dell'istanza EC2.  a| 
+| Manutenzione | L'istanza Docker back-end utilizzata dalla farm dei workload per Genai non si è avviata. | Eliminazione del volume e riavvio dell'istanza EC2.  a| 
 Attenersi alla seguente procedura di ripristino:
 
 .Fasi
@@ -68,5 +68,5 @@ volumes:
 
 
 
-| Manutenzione | L'istanza Docker di back-end utilizzata da workload Factory per GenAI non si è avviata. | Il volume root è stato eliminato. | Creare un volume con nome e percorso, quindi riavviare l'istanza Docker back-end da Amazon EC2. 
+| Manutenzione | L'istanza Docker back-end utilizzata dalla farm dei workload per Genai non si è avviata. | Il volume root è stato eliminato. | Creare un volume con nome e percorso, quindi riavviare l'istanza Docker back-end da Amazon EC2. 
 |===

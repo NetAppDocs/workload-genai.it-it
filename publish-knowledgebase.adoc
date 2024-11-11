@@ -14,11 +14,12 @@ summary: 'Dopo aver creato e testato la knowledge base a livello locale, è poss
 Dopo aver creato e testato la knowledge base a livello locale, è possibile pubblicare la knowledge base in modo che possa essere integrata con un'applicazione chatbot che consentirà agli utenti di interrogare la knowledge base.
 
 .A proposito di questa attività
-La pubblicazione della knowledge base consente di utilizzarla nelle applicazioni di chat. L'azione di pubblicazione attiva l'API workload Factory per generare e pubblicare endpoint univoci. Dopo la pubblicazione, la knowledge base diventa accessibile per le applicazioni di chat e gli endpoint API sono pronti per l'integrazione.
+La pubblicazione della knowledge base consente di utilizzarla nelle applicazioni di chat. L'azione di pubblicazione attiva l'API di fabbrica del workload per generare e pubblicare endpoint univoci. Dopo la pubblicazione, la knowledge base diventa accessibile per le applicazioni di chat e gli endpoint API sono pronti per l'integrazione.
 
 Ogni knowledge base che pubblichi ha endpoint univoci.
 
 .Fasi
+. Accedere a workload Factory utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella pagina dell'inventario delle Knowledge base, selezionare la knowledge base che si desidera pubblicare.
 . Selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Gestisci knowledge base*.
 +
@@ -26,14 +27,14 @@ Questa pagina visualizza lo stato pubblicato, lo stato di incorporazione delle o
 
 . Selezionare il menu *azioni* e selezionare *pubblica*.
 +
-Workload Factory pubblica la knowledge base. Nella pagina dei dettagli della knowledge base, lo stato cambia da *non pubblicato* a *pubblicato.*
+La fabbrica del carico di lavoro pubblica la knowledge base. Nella pagina dei dettagli della knowledge base, lo stato cambia da *non pubblicato* a *pubblicato.*
 
 +
 Ora è possibile ottenere dettagli sull'endpoint unico per la knowledge base.
 
 . Accanto allo stato pubblicato, selezionare *Visualizza*.
 +
-Vengono visualizzati i dettagli su come accedere alla knowledge base utilizzando l'API workload Factory.
+Vengono visualizzati i dettagli su come accedere alla knowledge base utilizzando l'API di fabbrica del carico di lavoro.
 
 . Dalla finestra di dialogo *Visualizza informazioni pubblicate*, copiare gli endpoint API che è possibile utilizzare per integrare la knowledge base con un'applicazione.
 +

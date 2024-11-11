@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, enhancements, fixes' 
-summary: Scopri le novità della funzionalità dei workload ai di workload Factory. 
+summary: Scopri le novità della funzionalità per i carichi di lavoro ai della farm. 
 ---
 = Novità
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Scopri le novità della funzionalità dei workload ai di workload Facto
 
 
 [role="lead"]
-Scopri le novità della funzionalità per i carichi di lavoro ai generici di workload Factory.
+Scopri le novità della funzionalità per i carichi di lavoro ai generici della farm di workload.
 
 
 
@@ -87,7 +87,7 @@ I carichi di lavoro ai generativi sono ora integrati con Amazon CloudWatch Logs,
 
 === Esempio di applicazione chatbot
 
-L'applicazione di esempio Genai di NetApp workload Factory ti consente di testare l'autenticazione e il recupero dalla tua knowledge base pubblicata di NetApp workload Factory interagendo direttamente con essa in un'applicazione chatbot basata sul web.
+L'applicazione di esempio Genai della fabbrica di workload NetApp consente di testare l'autenticazione e il recupero dalla knowledge base di fabbrica dei workload NetApp pubblicati interagendo direttamente con essa in un'applicazione chatbot basata sul Web.
 
 
 
@@ -95,6 +95,6 @@ L'applicazione di esempio Genai di NetApp workload Factory ti consente di testar
 
 
 
-=== Release iniziale di workload Factory per Genai
+=== Rilascio iniziale della fabbrica del carico di lavoro per GenAI
 
 La versione iniziale include la capacità di sviluppare una knowledge base personalizzata incorporando i dati dell'organizzazione. È possibile accedere alla knowledge base tramite un'applicazione chatbot destinata agli utenti. Questa funzionalità garantisce risposte accurate e pertinenti alle domande specifiche dell'organizzazione, migliorando la soddisfazione e la produttività di tutti gli utenti.
