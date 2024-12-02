@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: ai-workloads-overview.html 
 keywords: overview, concepts, features, use case, workloads, AI, Bedrock, knowledge base, chatbot 
-summary: Workload factory per Genai ti permette di integrare i file system Amazon FSX per NetApp ONTAP con modelli di base Genai. In questo modo otterrai uno storage dalle performance elevate con un ricco set di funzionalità di protezione, sicurezza e ottimizzazione dei costi per i tuoi set di dati ai. 
+summary: La BlueXP  workload factory per Genai ti permette di integrare i file system Amazon FSX per NetApp ONTAP con i modelli di base Genai. In questo modo otterrai uno storage dalle performance elevate con un ricco set di funzionalità di protezione, sicurezza e ottimizzazione dei costi per i tuoi set di dati ai. 
 ---
-= Scopri la workload Factory per Genai
+= Scopri la BlueXP  workload Factory per Genai
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -15,9 +15,9 @@ Workload factory per Genai ti permette di integrare i file system Amazon FSX per
 
 
 
-== Che cos'è la fabbrica di workload per GenAI?
+== Che cos'è la fabbrica di carichi di lavoro BlueXP  per GenAI?
 
-La workload factory per Genai ti permette di usare le tue origini dei dati Enterprise in Amazon FSX per NetApp ONTAP con applicazioni ai generative. Utilizzando il framework Retrieval Augmentation Generation (RAG), è possibile collegare rapidamente le origini dati ai modelli di base disponibili tramite Amazon Bedrock per sviluppare applicazioni basate sull'intelligenza artificiale generativa, come assistenti virtuali, chatbot Q&A, sintesi dei documenti, creazione di contenuti, ecc.
+La BlueXP  workload factory per Genai ti permette di usare le tue origini dei dati Enterprise in Amazon FSX per NetApp ONTAP con applicazioni ai generative. Utilizzando il framework Retrieval Augmentation Generation (RAG), è possibile collegare rapidamente le origini dati ai modelli di base disponibili tramite Amazon Bedrock per sviluppare applicazioni basate sull'intelligenza artificiale generativa, come assistenti virtuali, chatbot Q&A, sintesi dei documenti, creazione di contenuti, ecc.
 
 L'utilizzo dell'intelligenza artificiale generativa con i dati organizzativi ti consente di sfruttare le tue conoscenze e competenze, non solo l'intelligenza del modello basata sui dati pubblici su cui i modelli sono stati formati. L'utilizzo di RAG per personalizzare i modelli garantisce risposte precise e pertinenti alle domande specifiche dell'organizzazione, migliorando la produttività e l'efficienza per gli utenti delle applicazioni utilizzando l'intelligenza artificiale generativa.
 
@@ -29,7 +29,7 @@ Per ulteriori informazioni sulla fabbrica dei carichi di lavoro, fare riferiment
 
 == Vantaggi dell'utilizzo di Genai per la creazione di applicazioni di intelligenza artificiale generative
 
-Workload factory per Genai semplifica il processo di implementazione dell'infrastruttura necessaria per creare applicazioni ai generative utilizzando Retrieval Augmented Generation (RAG). In particolare, GenAI offre i seguenti vantaggi:
+La fabbrica di workload BlueXP  per Genai semplifica il processo di implementazione dell'infrastruttura necessaria per creare applicazioni ai generative utilizzando Retrieval Augmented Generation (RAG). In particolare, GenAI offre i seguenti vantaggi:
 
 * Senza bisogno di una conoscenza approfondita dell'infrastruttura dati, delle basi e dei modelli linguistici, gli amministratori IT e gli sviluppatori possono accelerare lo sviluppo delle applicazioni utilizzando l'automazione fornita da Genai. Amministratori e sviluppatori dei dati possono creare in modo semplice e rapido knowledge base aziendali che integrano i dati non strutturati dell'organizzazione che possono essere utilizzati da applicazioni ai generative.
 * Migliorare la protezione preservando le autorizzazioni degli utenti nei file incorporati nelle knowledge base per garantire il mantenimento della protezione e della privacy dei dati. Un'applicazione, come un chatbot, può essere sviluppata per fornire solo agli utenti autenticati risposte basate sui dati a cui gli utenti hanno accesso.
@@ -49,7 +49,7 @@ image:diagram-chatbot-processing.png["Un diagramma che mostra i componenti princ
 
 
 
-== In che modo la workload factory per GenAI aiuta a creare applicazioni ai generative
+== In che modo la workload factory BlueXP  per Genai aiuta a creare applicazioni ai generative
 
 GenAI aiuta a creare applicazioni ai generative utilizzando RAG nei seguenti modi:
 

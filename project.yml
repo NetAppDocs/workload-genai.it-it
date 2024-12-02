@@ -10,7 +10,7 @@ settings:
   rss_page: whats-new.html
   release_notes_autogen:
     release_notes_repo: workload-relnotes
-  langs: it-it,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr
+  langs: it-it,us-en,de-de,es-es,fr-fr,pt-br,ja-jp,ko-kr,zh-cn,zh-tw
 sidebar:
   entries:
   - title: Documenti Genai
@@ -21,7 +21,7 @@ sidebar:
       url: "/whats-new.html"
   - title: Inizia subito
     entries:
-    - title: Scopri la workload Factory per Genai
+    - title: Scopri la BlueXP  workload Factory per Genai
       url: "/ai-workloads-overview.html"
     - title: Avvio rapido
       url: "/quick-start.html"

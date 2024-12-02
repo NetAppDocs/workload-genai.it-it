@@ -29,7 +29,7 @@ https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Scopri 
 Amazon Bedrock:: Amazon Bedrock ti consente di utilizzare modelli di base e offre le funzionalità per creare applicazioni ai generative.
 +
 --
-Prima di iniziare a utilizzare la fabbrica di workload per Genai, è necessario configurare Amazon Bedrock. L'implementazione Genai deve trovarsi in una regione AWS con Amazon Bedrock abilitato.
+Prima di iniziare a utilizzare la fabbrica di carichi di lavoro BlueXP  per Genai, è necessario configurare Amazon Bedrock. L'implementazione Genai deve trovarsi in una regione AWS con Amazon Bedrock abilitato.
 
 * https://docs.aws.amazon.com/bedrock/latest/userguide/setting-up.html["Documentazione AWS: Configurare Amazon Bedrock"^]
 * https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html["Documentazione AWS: Regioni e modelli supportati per le Knowledge base di Amazon Bedrock"^]

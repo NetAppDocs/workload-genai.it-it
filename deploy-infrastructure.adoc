@@ -50,7 +50,7 @@ image:diagram-chatbot-infrastructure.png["Diagramma dei componenti del chatbot a
 
 == Implementare l'infrastruttura GenAI
 
-Dovrai inserire le tue credenziali AWS e selezionare il file system FSX per ONTAP per implementare l'infrastruttura RAG (Retrieval Augmentation Generation).
+Dovrai inserire le tue credenziali AWS e selezionare il file system FSX per ONTAP per implementare l'infrastruttura di recupero e generazione aumentata (RAG).
 
 .Prima di iniziare
 Prima di iniziare la procedura, accertarsi che l'ambiente sia conforme link:requirements.html["i requisiti"] .
@@ -75,6 +75,10 @@ L'implementazione Genai deve trovarsi in una regione AWS con Amazon Bedrock abil
 
 
 . Selezionare *Deploy* per iniziare la distribuzione.
++
+
+NOTE: Se la distribuzione non riesce con un errore di credenziali, è possibile ottenere ulteriori dettagli di errore selezionando i collegamenti ipertestuali all'interno del messaggio di errore. È possibile visualizzare un elenco di autorizzazioni mancanti o bloccate, nonché un elenco di autorizzazioni necessarie al carico di lavoro GenAI per poter implementare l'infrastruttura GenAI.
+
 
 
 .Risultato

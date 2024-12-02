@@ -124,6 +124,34 @@ Questa opzione è attivata per impostazione predefinita per garantire che la sca
 
 
 
+=== Clonare una knowledge base
+
+È possibile creare una nuova knowledge base a partire da un'istantanea della Knowledge base. Ciò è utile se la knowledge base originale è danneggiata o persa.
+
+.Fasi
+. Accedere a workload Factory utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nella pagina dell'inventario delle Knowledge base, selezionare la knowledge base che si desidera ripristinare.
+. Selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Gestisci knowledge base*.
++
+Questa pagina visualizza lo stato pubblicato, lo stato di incorporazione delle origini dati, la modalità di incorporazione, l'elenco di tutte le origini dati incorporate e altro ancora.
+
+. Selezionare il menu *azioni* e selezionare *istantanea > Clona knowledge base*.
++
+Viene visualizzata la finestra di dialogo Clona.
+
+. In alternativa, deselezionare l'opzione *Pause running and scheduled scans after cloning the snapshot* se si desidera che le scansioni dell'origine dati pianificate e in esecuzione continuino dopo la clonazione dello snapshot.
++
+Questa opzione è attivata per impostazione predefinita per garantire che la scansione non avvenga mentre la base di conoscenza è in uno stato parzialmente ripristinato o che una scansione non aggiorni una knowledge base appena ripristinata con i dati meno recenti.
+
+. Selezionare dall'elenco lo snapshot che si desidera clonare.
+. Selezionare *continua*.
+. Immettere un nome per la nuova knowledge base.
+. Scegliere una SVM del file system e un nome del volume per la nuova knowledge base.
+. Selezionare *Clone*.
+
+
+
+
 == Aggiungere ulteriori origini dati a una knowledge base
 
 È possibile incorporare ulteriori origini dati nella knowledge base per inserirle con dati aggiuntivi dell'organizzazione.
