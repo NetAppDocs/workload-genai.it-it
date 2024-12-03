@@ -4,7 +4,7 @@ permalink: activate-authentication.html
 keywords: ai, chatbot, publishing, knowledge base 
 summary: 'Attivare l"autenticazione per una knowledge base in modo che la convalida dei token e gli ACL siano necessari quando si integra la knowledge base con un"applicazione chatbot.' 
 ---
-= Attivare l'autenticazione esterna per una knowledge base
+= Attivare l'autenticazione esterna per una knowledge base GenAI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

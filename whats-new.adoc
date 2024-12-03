@@ -4,7 +4,7 @@ permalink: whats-new.html
 keywords: 'what"s new, features, new, release notes, enhancements, fixes' 
 summary: Scopri le novità della funzionalità per i carichi di lavoro ai della farm. 
 ---
-= Novità
+= Novità della farm di workload BlueXP  per Genai
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

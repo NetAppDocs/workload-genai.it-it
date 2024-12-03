@@ -4,7 +4,7 @@ permalink: publish-knowledgebase.html
 keywords: ai, chatbot, publishing, knowledge base 
 summary: 'Dopo aver creato e testato la knowledge base a livello locale, è possibile pubblicare la knowledge base in modo che possa essere integrata con l"applicazione chatbot che consentirà agli utenti di interrogare la knowledge base.' 
 ---
-= Pubblicare una knowledge base e visualizzare l'endpoint univoco
+= Pubblicare una knowledge base GenAI e visualizzare l'endpoint unico
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

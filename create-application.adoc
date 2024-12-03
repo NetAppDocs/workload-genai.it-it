@@ -4,7 +4,7 @@ permalink: create-application.html
 keywords: ai, chatbot, creating, application, knowledge base, rag, retrieval augmented generation 
 summary: 'Dopo aver creato la knowledge base e verificato il chatbot, è possibile configurare l"applicazione che consentirà agli utenti di eseguire query sul chatbot.' 
 ---
-= Crea un'applicazione ai basata su RAG
+= Creare un'applicazione GenAI basata su RAG
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

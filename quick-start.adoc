@@ -14,24 +14,28 @@ summary: 'Inizia a creare una knowledge base utilizzando i dati della tua organi
 Inizia a creare una knowledge base utilizzando i dati della tua organizzazione presenti nei file system Amazon FSX per NetApp ONTAP. Un'applicazione come un chatbot accederà a questa knowledge base per fornire agli utenti finali risposte incentrate sull'organizzazione.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Accedi a workload Factory
+[role="quick-margin-para"]
 Sarà necessario https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["configurare un account con workload factory"^] ed effettuare l'accesso utilizzando uno dei https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Configura il tuo ambiente per soddisfare i requisiti Genai
 [role="quick-margin-para"]
 Avrai bisogno delle credenziali AWS per implementare l'infrastruttura AWS, un file system FSX per ONTAP implementato e rilevato, l'elenco delle origini dati che desideri integrare nella tua knowledge base, l'accesso al servizio Amazon Bedrock ai e altro ancora.
 
+[role="quick-margin-para"]
 link:requirements.html["Ulteriori informazioni sui requisiti GenAI"^].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"] Identificare il file system FSX per ONTAP che contiene le origini dati
 [role="quick-margin-para"]
 Le origini dei dati che integrerai nella tua knowledge base possono trovarsi in un singolo file system FSX per ONTAP o in più file system FSX per ONTAP. Questi sistemi possono trovarsi in VPC diversi, ma devono essere accessibili all'interno della stessa rete.
 
+[role="quick-margin-para"]
 link:identify-data-sources.html["Scopri come identificare le origini dati"^].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"] Implementare l'infrastruttura della Knowledge base
 [role="quick-margin-para"]
 Avvia la procedura guidata di implementazione dell'infrastruttura per implementare l'infrastruttura della Knowledge base nel tuo ambiente AWS. Questo processo implementa un'istanza EC2 per il motore NetApp Genai e un volume su un file system FSX for ONTAP in modo da contenere i database del motore ai di NetApp. Il volume viene utilizzato per memorizzare il database vettoriale utilizzato dalla knowledge base.
 
+[role="quick-margin-para"]
 link:deploy-infrastructure.html["Scopri come implementare l'infrastruttura della Knowledge base"^].
 
 .Cosa succederà

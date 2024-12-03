@@ -4,7 +4,7 @@ permalink: manage-data-source.html
 keywords: ai, chatbot, creating, knowledge base, data source 
 summary: 'Dopo aver creato una knowledge base utilizzando le origini dati sul file system FSX per ONTAP, è possibile visualizzare i dettagli dell"origine dati, aggiornare o modificare il contenuto dell"origine dati, modificare le impostazioni dell"origine dati o eliminare l"origine dati.' 
 ---
-= Gestire le origini dati
+= Gestire le origini dati Genai
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

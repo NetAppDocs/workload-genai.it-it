@@ -4,7 +4,7 @@ permalink: create-knowledgebase.html
 keywords: ai, chatbot, creating, knowledge base 
 summary: 'Dopo aver implementato l"infrastruttura ai e identificato le origini dei dati che integrerai nella tua knowledge base dai datastore FSX per ONTAP, sarai pronto a costruire la knowledge base utilizzando la farm di carichi di lavoro. Nell"ambito di questa fase, definirai anche le caratteristiche dell"ai e creerai modi per avviare una conversazione.' 
 ---
-= Creare una knowledge base
+= Creare una knowledge base GenAI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -67,7 +67,7 @@ Per abilitare le barriere di protezione dei dati, è necessario completare i seg
 
 +
 *** Per comunicare con la classificazione BlueXP  è necessario un account di servizio. Per la creazione dell'account di servizio, è necessario disporre del ruolo _Amministratore organizzazione_ nell'account di locazione BlueXP . Un membro che ha il ruolo di amministratore dell'organizzazione può completare tutte le azioni in BlueXP . link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-manage-members-permissions.html#add-a-role-to-a-member["Scopri come aggiungere un ruolo a un membro in BlueXP "^]
-*** Il motore ai deve avere accesso a. link:https://console.bluexp.netapp.com/["Console BlueXP"^]
+*** Il motore ai deve avere accesso all'endpoint API BlueXP : \https://api.BlueXP .NetApp.com.
 *** È necessario effettuare le seguenti operazioni come descritto in link:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-cloud-compliance.html#quick-start["Documentazione sulla classificazione BlueXP"^]:
 +
 .... Crea un connettore BlueXP

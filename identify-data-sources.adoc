@@ -4,7 +4,7 @@ permalink: identify-data-sources.html
 keywords: data sources, chatbot, documents, knowledge base 
 summary: 'Identificare o creare i documenti (origini dati) che risiedono nel file system FSX per ONTAP da integrare nella knowledge base. Queste fonti di dati consentono alla knowledge base di fornire risposte accurate e personalizzate alle query degli utenti in base a dati rilevanti per l"organizzazione.' 
 ---
-= Identificare le origini dati da integrare nella propria knowledge base
+= Identificare le origini dati da integrare nella propria knowledge base GenAI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
