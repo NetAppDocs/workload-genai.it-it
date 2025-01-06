@@ -108,6 +108,25 @@ Aprire le seguenti porte in entrata:
 | Manutenzione | Il motore ai non si avvia e viene visualizzato l'errore "errore di istanza del motore ai" nella pagina *Knowledge base*. | L'istanza del motore ai era danneggiata o non esiste. | Selezionare il pulsante *Ricostruisci*. La farm di workload BlueXP  per Genai ricostruisce l'infrastruttura e visualizza l'avanzamento della ricostruzione. Al termine, le knowledge base vengono ricollegate all'infrastruttura ricostruita e viene visualizzato l'elenco delle knowledge base. 
 
 
+| Manutenzione | Il motore ai non si avvia e viene visualizzato l'errore "l'istanza del motore Genai è ferma" nella pagina *Knowledge base*. | L'istanza del motore ai non è in esecuzione. | USA la Console di gestione AWS o l'interfaccia a riga di comando AWS per avviare l'istanza del motore ai. 
+
+
+| Manutenzione | Il motore ai non si avvia e viene visualizzato l'errore "il server del motore Genai non risponde" nella pagina *Knowledge base*. | L'istanza del motore ai non risponde.  a| 
+Attenersi alla seguente procedura di ripristino:
+
+.Fasi
+. Modificare il gruppo di sicurezza dell'istanza del motore GenAI per abilitare l'accesso SSH all'istanza del motore GenAI.
+. Accedere all'istanza utilizzando SSH.
+. Eseguire il seguente comando:
++
+[source, console]
+----
+docker-compose up
+----
+
+
+
+
 | Manutenzione | L'istanza Docker back-end utilizzata dalla farm di workload BlueXP  per Genai non si è avviata. | Eliminazione del volume e riavvio dell'istanza EC2.  a| 
 Attenersi alla seguente procedura di ripristino:
 

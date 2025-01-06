@@ -70,8 +70,17 @@ L'implementazione Genai deve trovarsi in una regione AWS con Amazon Bedrock abil
 
 . Completare gli elementi nella sezione *Impostazioni infrastruttura*:
 +
-.. *Tags*: Immettere qualsiasi coppia di chiavi di tag/valori che si desidera applicare a tutte le risorse AWS che fanno parte di questa distribuzione.
+.. *Tags*: Immettere qualsiasi coppia di chiavi di tag/valori che si desidera applicare a tutte le risorse AWS che fanno parte di questa distribuzione. Questi tag sono visibili in AWS Management Console e nell'area di informazioni sull'infrastruttura all'interno della fabbrica del carico di lavoro e possono aiutarti a tenere traccia delle risorse di fabbrica del carico di lavoro.
+
+
+. Completare la sezione *connettività*:
++
 .. *Coppia di chiavi*: Selezionare una coppia di chiavi che consente di connettersi in modo sicuro all'istanza del motore NetApp Genai.
+
+
+. Completare la sezione *motore ai*:
++
+.. *Nome istanza*: Facoltativamente, selezionare *Definisci nome istanza* e immettere un nome personalizzato per l'istanza del motore ai. Il nome dell'istanza viene visualizzato in AWS Management Console e nell'area di informazioni sull'infrastruttura all'interno della fabbrica dei workload e può aiutarti a tenere traccia delle risorse di fabbrica dei workload.
 
 
 . Selezionare *Deploy* per iniziare la distribuzione.

@@ -100,7 +100,6 @@
   <block id="e36b38f91227e22bbae32a9f84bef25b" category="list-text">*Posizione*: Selezionare una regione AWS, un VPC e una subnet.</block>
   <block id="6f2c1c768f2edab4eb318bdb1580f9f7" category="paragraph">L'implementazione Genai deve trovarsi in una regione AWS con Amazon Bedrock abilitato.<block ref="25581c78bc5f676a9b9f4743abf4f06f" category="inline-link-rx"></block></block>
   <block id="49d6fbbfca02733209ee2833d2481e4e" category="list-text">Completare gli elementi nella sezione *Impostazioni infrastruttura*:</block>
-  <block id="3869544f6aa6ccd1570caed7671ca0d6" category="list-text">*Tags*: Immettere qualsiasi coppia di chiavi di tag/valori che si desidera applicare a tutte le risorse AWS che fanno parte di questa distribuzione.</block>
   <block id="f445edd51fe9e6a1af8ffd9c30e87f40" category="list-text">*Coppia di chiavi*: Selezionare una coppia di chiavi che consente di connettersi in modo sicuro all'istanza del motore NetApp Genai.</block>
   <block id="6449a99be42d938ed27187e040028634" category="list-text">Selezionare *Deploy* per iniziare la distribuzione.</block>
   <block id="64dea11099d626528fa052576a740de2" category="paragraph">Durante il processo di distribuzione, vengono impostati i seguenti elementi:</block>
@@ -121,28 +120,21 @@
   <block id="270fcb785810d0206945029bb05f4e97" category="list-text">Amazon S3</block>
   <block id="0072b242011f459b57b0768dceac82f8" category="list-text">AWS Systems Manager (SSM)</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">Richiedi assistenza</block>
-  <block id="3c6efe0ce159fb5b8ee4882bcf3ad973" category="paragraph">NetApp fornisce supporto per workload Factory e i suoi servizi cloud in diversi modi. Sono disponibili opzioni complete di supporto autonomo gratuito 24 ore su 24, 7 giorni su 7, come articoli della knowledge base (KB) e un forum della community. La registrazione al supporto include il supporto tecnico remoto via web ticketing.</block>
   <block id="6a7b2c9c4cec65ad972b108fa0a1192b" category="section-title">Ottieni supporto per FSX per ONTAP</block>
-  <block id="4435b263dd1a35bcd8dfda050db92b3b" category="paragraph">Per il supporto tecnico relativo a FSX per ONTAP, alla sua infrastruttura o a qualsiasi soluzione che utilizza il servizio, fare riferimento a "Guida in linea" nella documentazione di workload Factory relativa a quel prodotto.</block>
   <block id="18cf072964a583150dd247485ba75b92" category="inline-link-macro">Amazon FSX per ONTAP</block>
   <block id="9d06990508d25d367d9158c6558eb9c8" category="paragraph"><block ref="9d06990508d25d367d9158c6558eb9c8" category="inline-link-macro-rx"></block></block>
   <block id="35f9849ffdd809bda11d0fc56e1e3583" category="paragraph">Per ricevere supporto tecnico specifico di workload Factory e delle relative soluzioni e servizi di storage, utilizzare le opzioni di supporto descritte di seguito.</block>
   <block id="edd15fbeb7b2dffa163336ecd4f3e80c" category="section-title">Utilizzare le opzioni di supporto automatico</block>
   <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">Queste opzioni sono disponibili gratuitamente, 24 ore su 24, 7 giorni su 7:</block>
   <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">Documentazione</block>
-  <block id="d935525f4850c4638cbf48ae53fb4686" category="paragraph">La documentazione di workload Factory che stai visualizzando.</block>
   <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">Knowledge base</block>
   <block id="436f63b446dba5a418c698d49bd39718" category="list-text"><block ref="436f63b446dba5a418c698d49bd39718" category="inline-link-rx"></block></block>
-  <block id="ba6274b9c9d1f81bb3a648fa289986b8" category="paragraph">Ricerca nella knowledge base di workload Factory per trovare articoli utili per la risoluzione dei problemi.</block>
   <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">Community</block>
   <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
-  <block id="7faef90df03399696ba9d4815b37171a" category="paragraph">Unisciti alla community workload Factory per seguire le discussioni in corso o crearne di nuovi.</block>
   <block id="d88bacf2a9fdcbbc844edcba97c34e30" category="section-title">Crea un caso con il supporto NetApp</block>
   <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">Oltre alle opzioni di supporto autonomo sopra descritte, puoi collaborare con uno specialista del supporto NetApp per risolvere eventuali problemi dopo l'attivazione del supporto.</block>
   <block id="8fece025a1a8fef7018449bf104a2527" category="paragraph-title">Prima di iniziare</block>
   <block id="e2a733504c4088b809813bbb35a3ddfd" category="inline-link-macro">Scopri come registrarti per il supporto</block>
-  <block id="a12ea39ddf1c98adfd7f751299705efa" category="paragraph">Per utilizzare la funzionalità *Crea un caso*, è necessario prima registrarsi per ricevere assistenza. Associare le credenziali del sito di supporto NetApp al proprio login workload Factory. <block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>.</block>
-  <block id="356c88ac4b0ec3f7689cc91f54701fef" category="list-text">Nella parte superiore destra della console di workload Factory, selezionare *Guida &gt; supporto*.</block>
   <block id="aadd86a3fadf19221852692c6e4adc2f" category="paragraph">La selezione di questa opzione apre la console BlueXP, una nuova scheda del browser e carica la dashboard di supporto.</block>
   <block id="08d96fdd1a845d80db99e6e1dffb8bc7" category="list-text">Nella pagina *risorse*, scegliere una delle opzioni disponibili in supporto tecnico:</block>
   <block id="6a1b74969231967ed071d465206b15c7" category="list-text">Selezionare *Chiamateci* se si desidera parlare con qualcuno al telefono. Viene visualizzata una pagina su netapp.com che elenca i numeri di telefono che è possibile chiamare.</block>
@@ -372,8 +364,6 @@
   <block id="d5858b81edfda50f75f7994c971764f0" category="inline-link">Scopri come implementare e gestire i file system FSX per ONTAP</block>
   <block id="7d57ea8255b8142e76fbb442ea9a782f" category="paragraph"><block ref="7d57ea8255b8142e76fbb442ea9a782f" category="inline-link-rx"></block></block>
   <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">Registrati per ricevere assistenza</block>
-  <block id="996ad73a480311d4f86d6946935389d2" category="paragraph">La registrazione del supporto è necessaria per ricevere supporto tecnico specifico per workload Factory e le relative soluzioni e servizi di storage. Devi registrarti per ricevere supporto dalla console BlueXP, che è una console separata basata su web di workload Factory.</block>
-  <block id="c552970fd4dc8118ba1806da596acad9" category="paragraph">La registrazione per il supporto non attiva il supporto NetApp per un file service provider cloud. Per il supporto tecnico relativo a un file service di un cloud provider, alla sua infrastruttura o a una soluzione che utilizza il servizio, fare riferimento a "Assistenza" nella documentazione di workload Factory relativa al prodotto in questione.</block>
   <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">Panoramica sulla registrazione del supporto</block>
   <block id="d7e4bb081bf4ec4814d83edcfbdb8b96" category="paragraph">La registrazione dell'abbonamento al supporto con l'account ID (il numero di serie 960xxxxxxxxx a 20 cifre situato nella pagina Support Resources di BlueXP) funge da singolo ID di abbonamento al supporto. Ogni abbonamento al supporto a livello di account BlueXP deve essere registrato.</block>
   <block id="f9e05c2b383e3f11e3b4bebbe8952225" category="paragraph">La registrazione abilita funzionalità come l'apertura di ticket di supporto e la generazione automatica dei casi. La registrazione viene completata aggiungendo account del sito di supporto NetApp a BlueXP come descritto di seguito.</block>
@@ -565,7 +555,6 @@
   <block id="f77361b272ce81d8275727f7b1a756a8" category="list-text">Selezionare *Restore* (Ripristina).</block>
   <block id="75adfeedf06d70e0bc627133f85cd211" category="section-title">Sincronizzare le origini dati con una knowledge base</block>
   <block id="44736bad98446163ecd5077653cbd105" category="paragraph">Le origini dati vengono sincronizzate automaticamente con la knowledge base associata una volta al giorno, in modo che eventuali modifiche all'origine dati vengano riflesse nel chatbot. Se si apportano modifiche a una delle origini dati e si desidera sincronizzare immediatamente i dati, è possibile eseguire una sincronizzazione su richiesta.</block>
-  <block id="26e6f4cc71039ce95ddbb0acdad6891d" category="section-title">29 settembre 2024</block>
   <block id="f8016d0e0375ce671e71803692cf105c" category="paragraph"><block ref="f8016d0e0375ce671e71803692cf105c" category="inline-link-rx"></block></block>
   <block id="340b5c4d996cad6cf6d27d13faf94e89" category="paragraph"><block ref="340b5c4d996cad6cf6d27d13faf94e89" category="inline-link-rx"></block></block>
   <block id="f951fa0f2608d186cd1f0bd8889ac232" category="paragraph"><block ref="f951fa0f2608d186cd1f0bd8889ac232" category="inline-link-rx"></block></block>
@@ -583,7 +572,6 @@
   <block id="ab6bcff4b8fb91fe0c83c8ef83da1c6e" category="list-text">Modalità Enterprise</block>
   <block id="e168133413009827e06cf1b52bf82d2e" category="paragraph">Le origini dati dell'organizzazione possono contenere informazioni sull'identità privata (PII, Private Identity Information). Per proteggere queste informazioni sensibili, è possibile abilitare _data Guardrails_ durante la creazione e la configurazione di knowledge base. Le barriere di protezione dei dati, basate sulla classificazione BlueXP , identificano e maschera PII, rendendolo inaccessibile e irrecuperabile.</block>
   <block id="2abf45f9ff5a74918b97267cd4e59d6a" category="paragraph"><block ref="384713a8a1d5a2dd365da2851c50ad93" category="inline-link-macro-rx"></block>.</block>
-  <block id="cf24c0f0066b07e51df4da735abd84e5" category="admonition">Le barriere di sicurezza dei dati possono essere attivate o disattivate in qualsiasi momento. Se si cambia l'abilitazione dei data Guardrails, workload Factory analizza da zero l'intera knowledge base, il che implica un costo.</block>
   <block id="1be907baab24daef236be08a55d381ce" category="inline-link-macro">Scopri le barriere di protezione dei dati, basate sulla classificazione BlueXP </block>
   <block id="239980b6c377cd208cd4875dd11871a7" category="list-text">*Data Guardrails*: Scegliere se attivare o disattivare le barriere di protezione dei dati. <block ref="705e589dc60832aba1b9593eb1d26a9a" category="inline-link-macro-rx"></block>.</block>
   <block id="5d78af30e91e495d74cbd3cac7a282db" category="paragraph">Per abilitare le barriere di protezione dei dati, è necessario completare i seguenti prerequisiti.</block>
@@ -756,4 +744,42 @@
   <block id="69065fcb8a054a77edd3d2da74b89c6e" category="doc">Risoluzione dei problemi relativi a GenAI</block>
   <block id="1e7bcc0dba826f450b3684e2a2c6f04e" category="doc">Novità della farm di workload BlueXP  per Genai</block>
   <block id="988a487756dcb4e1605a4e07dc7dbd42" category="doc">Cosa puoi fare con GenAI</block>
+  <block id="a117d99fd0597e840921767ec50fe791" category="doc">Nome istantanea personalizzata</block>
+  <block id="34df51ccce053f8aef051fe069f6004a" category="paragraph">A questo punto è possibile fornire un nome di istantanea per uno snapshot ad-hoc.</block>
+  <block id="2cbaa1be80e354895c4d9e497cad82ad" category="paragraph"><block ref="2cbaa1be80e354895c4d9e497cad82ad" category="inline-link-macro-rx"></block></block>
+  <block id="63713d130d6ced83e06b8a2f84ca4236" category="section-title">Nome istanza motore ai personalizzato</block>
+  <block id="5a22f1756638135653917db715aeec43" category="paragraph">Ora puoi assegnare un nome personalizzato all'istanza del motore ai durante l'implementazione.</block>
+  <block id="c3e29d6f9db8b5f89b548e4659ce60ad" category="paragraph"><block ref="c3e29d6f9db8b5f89b548e4659ce60ad" category="inline-link-macro-rx"></block></block>
+  <block id="cc78f676d3193b6273b428bb17c26dd7" category="section-title">Ricostruire un'infrastruttura GenAI danneggiata o mancante</block>
+  <block id="1691fa3a19bfaa3082dd2f6e01934960" category="paragraph">Se l'istanza del motore di ai viene danneggiata o viene eliminata, puoi permettere alla fabbrica del carico di lavoro di ricrearla per te. Workload Factory ricollega automaticamente le knowledge base all'infrastruttura al termine della ricostruzione, in modo che siano pronte all'uso.</block>
+  <block id="b23e4d787bd591292c1d5f10247e0e53" category="paragraph"><block ref="b23e4d787bd591292c1d5f10247e0e53" category="inline-link-macro-rx"></block></block>
+  <block id="22d9005388d9e535daefed3f2e693f8c" category="inline-link-macro">tipi di dati personali sensibili</block>
+  <block id="9c5f697c48859cff8ee185f1b8ac3722" category="admonition">La fabbrica di carichi di lavoro BlueXP  per GenAI non maschera le informazioni personali sensibili (SPii). Per ulteriori informazioni su questo tipo di dati, fare riferimento alla <block ref="0cdb750dab1dfb2fce5dd1cc6f558f0e" category="inline-link-macro-rx"></block>.</block>
+  <block id="634af6b3fd334eee66435e4f2e04ce47" category="admonition">Le barriere di sicurezza dei dati possono essere attivate o disattivate in qualsiasi momento. Se si cambia l'abilitazione dei data Guardrails, workload Factory analizza da zero l'intera knowledge base, il che implica un costo.</block>
+  <block id="a7bb1a72ba5daec3d8a1d19df6b6bfdf" category="list-text">*Tags*: Immettere qualsiasi coppia di chiavi di tag/valori che si desidera applicare a tutte le risorse AWS che fanno parte di questa distribuzione. Questi tag sono visibili in AWS Management Console e nell'area di informazioni sull'infrastruttura all'interno della fabbrica del carico di lavoro e possono aiutarti a tenere traccia delle risorse di fabbrica del carico di lavoro.</block>
+  <block id="9792e49b2f9fed0238e75a434a13725e" category="list-text">Completare la sezione *connettività*:</block>
+  <block id="dcb1e9c4a6d6ef362f734666c01d318f" category="list-text">Completare la sezione *motore ai*:</block>
+  <block id="da34ad28948952faf2270d1bcce9b360" category="list-text">*Nome istanza*: Facoltativamente, selezionare *Definisci nome istanza* e immettere un nome personalizzato per l'istanza del motore ai. Il nome dell'istanza viene visualizzato in AWS Management Console e nell'area di informazioni sull'infrastruttura all'interno della fabbrica dei workload e può aiutarti a tenere traccia delle risorse di fabbrica dei workload.</block>
+  <block id="b6a4501cc05e54e2e5a513c3b552183a" category="paragraph">NetApp fornisce supporto per la fabbrica di carichi di lavoro BlueXP  e i suoi servizi cloud in diversi modi. Sono disponibili opzioni complete di supporto autonomo gratuito 24 ore su 24, 7 giorni su 7, come articoli della knowledge base (KB) e un forum della community. La registrazione al supporto include il supporto tecnico remoto via web ticketing.</block>
+  <block id="261966eaf033c38f6934f2c8fc36d79c" category="paragraph">Per il supporto tecnico relativo a FSX per ONTAP, alla sua infrastruttura o a qualsiasi soluzione che utilizza il servizio, fare riferimento a "come ottenere assistenza" nella documentazione della workload Factory relativa al prodotto.</block>
+  <block id="5b49df4e58e2a4750acd8bfa8687ccd6" category="paragraph">La documentazione di fabbrica del carico di lavoro attualmente visualizzata.</block>
+  <block id="ba51332e265e54eb4295d6e7d057bad8" category="paragraph">Ricerca nella knowledge base di workload Factory per trovare articoli utili per la risoluzione dei problemi.</block>
+  <block id="fc3e8f3c2017c33d444d483913a485ba" category="paragraph">Unisciti alla community dedicata alla fabbrica dei carichi di lavoro per seguire le discussioni in corso o crearne di nuovi.</block>
+  <block id="ffa18fada5deeeb1e533786297855e7d" category="paragraph">Per utilizzare la funzionalità *Crea un caso*, è necessario prima registrarsi per ricevere assistenza. Associare le credenziali del sito di supporto NetApp all'accesso alla fabbrica del carico di lavoro. <block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>.</block>
+  <block id="e13a5649dfef3a1c76c4be8e463226d7" category="list-text">Nella parte superiore destra della console di fabbrica del carico di lavoro, selezionare *Guida &gt; supporto*.</block>
+  <block id="e6a72011ca1d5b86a45e139dca7d8c59" category="list-text">Facoltativamente, selezionare *Definisci nome istantanea* e immettere un nome personalizzato per l'istantanea.</block>
+  <block id="2fd69cb6fb890f515a9ee75ec3abef3e" category="paragraph">La definizione di un nome personalizzato può aiutare a determinare meglio il contenuto di uno snapshot se è necessario ripristinarlo in futuro.</block>
+  <block id="bf18811faac9b8e4fcaebab51afd1113" category="list-text">Selezionare *Crea*.</block>
+  <block id="ce638fcfafd4d79a49524062225d7fbc" category="paragraph">La registrazione del supporto è necessaria per ricevere supporto tecnico specifico per la fabbrica di carichi di lavoro BlueXP  e per le sue soluzioni e servizi di storage. È necessario registrarsi per il supporto dalla console BlueXP , che è una console basata su Web separata da workload Factory.</block>
+  <block id="2cbcc262b0a39ec19c5f69bffccb70fb" category="paragraph">La registrazione per il supporto non attiva il supporto NetApp per un file service provider cloud. Per il supporto tecnico relativo a un file service del cloud provider, alla sua infrastruttura o a qualsiasi soluzione che utilizzi il servizio, fare riferimento a "Assistenza" nella documentazione del workload factory relativa a quel prodotto.</block>
+  <block id="414ff5fbb1dedd0a94eaf89dd63e0d56" category="cell">Il motore ai non si avvia e viene visualizzato l'errore "l'istanza del motore Genai è ferma" nella pagina *Knowledge base*.</block>
+  <block id="350597e8589fb52f516cea4c281e8b5c" category="cell">L'istanza del motore ai non è in esecuzione.</block>
+  <block id="00ab0abb4e492e5b332d431d1fc71f64" category="cell">USA la Console di gestione AWS o l'interfaccia a riga di comando AWS per avviare l'istanza del motore ai.</block>
+  <block id="1b6165f62ab07b6de85b6692fb2f09d6" category="cell">Il motore ai non si avvia e viene visualizzato l'errore "il server del motore Genai non risponde" nella pagina *Knowledge base*.</block>
+  <block id="b3135b75f2a1f3333ef049b35ad90616" category="cell">L'istanza del motore ai non risponde.</block>
+  <block id="f085d4610c632e532de19159fa803edf" category="list-text">Modificare il gruppo di sicurezza dell'istanza del motore GenAI per abilitare l'accesso SSH all'istanza del motore GenAI.</block>
+  <block id="2c6cb4e03314c724c32217626f17bd37" category="list-text">Accedere all'istanza utilizzando SSH.</block>
+  <block id="337d79852891a37d41285c9101c3fff4" category="list-text">Eseguire il seguente comando:</block>
+  <block id="37b8354fe553b0151888468751ea8eb0" category="section-title">05 gennaio 2025</block>
+  <block id="0fdf33109843473a96b84acfe576030a" category="paragraph"><block ref="384713a8a1d5a2dd365da2851c50ad93" category="inline-link-macro-rx"></block> == 29 settembre 2024</block>
 </blocks>

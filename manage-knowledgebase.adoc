@@ -89,6 +89,11 @@ Le snapshot possono essere più veloci ed efficienti in termini di storage rispe
 Questa pagina visualizza lo stato pubblicato, lo stato di incorporazione delle origini dati, la modalità di incorporazione, l'elenco di tutte le origini dati incorporate e altro ancora.
 
 . Selezionare il menu *azioni* e selezionare *istantanea > Crea nuova istantanea*.
+. Facoltativamente, selezionare *Definisci nome istantanea* e immettere un nome personalizzato per l'istantanea.
++
+La definizione di un nome personalizzato può aiutare a determinare meglio il contenuto di uno snapshot se è necessario ripristinarlo in futuro.
+
+. Selezionare *Crea*.
 +
 Viene creata un'istantanea della knowledge base.
 

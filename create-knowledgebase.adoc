@@ -25,6 +25,9 @@ Le origini dati dell'organizzazione possono contenere informazioni sull'identit�
 link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Scopri di più sulla classificazione BlueXP"^].
 
 
+NOTE: La fabbrica di carichi di lavoro BlueXP  per GenAI non maschera le informazioni personali sensibili (SPii). Per ulteriori informazioni su questo tipo di dati, fare riferimento alla link:https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-sensitive-personal-data["tipi di dati personali sensibili"^].
+
+
 NOTE: Le barriere di sicurezza dei dati possono essere attivate o disattivate in qualsiasi momento. Se si cambia l'abilitazione dei data Guardrails, workload Factory analizza da zero l'intera knowledge base, il che implica un costo.
 
 --
