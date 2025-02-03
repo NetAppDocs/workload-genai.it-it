@@ -37,6 +37,7 @@ La fabbrica di workload BlueXP  per Genai semplifica il processo di implementaz
 * Accelera lo sviluppo di applicazioni Genai come un chatbot Q&A utilizzando framework open source come LangChain che utilizzano l'API GenAI per fornire e gestire knowledge base, chattare con una knowledge base e memorizzare e recuperare la cronologia delle chat.
 * Migliora la data Protection e il livello di disponibilità implementando l'infrastruttura di dati generativa ai su file system FSX per NetApp ONTAP e sfruttando funzionalità ONTAP come alta disponibilità, snapshot per la data Protection e il recovery locali, SnapMirror per il disaster recovery e SnapVault per il backup della tua infrastruttura dati.
 * Ridurre i costi generali di storage per l'infrastruttura dati ai generativa, sfruttando le funzionalità di efficienza dei dati di ONTAP, come deduplica, compressione e compaction dei dati, tiering dei dati e thin provisioning.
+* Ottieni risultati di alta qualità dai tuoi dati con la ricerca ibrida e le funzionalità di re-rank fornite da GenAI. La ricerca ibrida combinata con il re-ranking migliora notevolmente l'importanza dei risultati di ricerca. Queste funzionalità sono disponibili tramite Amazon AWS e dipendono da una regione.
 
 
 
@@ -80,6 +81,8 @@ GenAI aiuta a creare applicazioni ai generative utilizzando RAG nei seguenti mod
 L'utilizzo della funzionalità GenAI della workload factory non comporta costi.
 
 Tuttavia, dovrai pagare per le risorse AWS implementate per supportare l'infrastruttura ai generativa. Ad esempio, pagherai AWS per il servizio Amazon Bedrock ai, FSX per la capacità di storage e file system ONTAP e l'istanza Genai Engine EC2.
+
+Alcune operazioni multimodali, come la scansione delle immagini per le informazioni di testo, possono utilizzare più risorse e quindi comportano costi più elevati. Alcune operazioni di configurazione, ad esempio la modifica delle impostazioni per una knowledgebase, possono causare la ripetizione della scansione delle origini dati, mentre le scansioni delle origini dati possono comportare costi più elevati.
 
 
 

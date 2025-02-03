@@ -57,7 +57,7 @@ Se si utilizza la modalità Manuale per avviare una conversazione, è anche poss
 
 +
 
-NOTE: Ogni scansione della Knowledge base, che include l'integrazione, i costi. Se le barriere di sicurezza dei dati sono abilitate dopo la creazione di una knowledge base, la knowledge base viene nuovamente sottoposta a scansione e i costi sono sostenuti.
+NOTE: Ogni scansione della Knowledge base, che include l'integrazione, i costi. Se le barriere di sicurezza dei dati sono abilitate dopo la creazione di una knowledge base, la knowledge base viene nuovamente sottoposta a scansione e i costi sono sostenuti. Allo stesso modo, se si modificano i modelli di chat, GenAI eseguirà una nuova scansione delle origini dati associate (con costi aggiuntivi).
 
 . Selezionare *Salva* dopo aver apportato le modifiche.
 
@@ -171,17 +171,41 @@ Questa opzione è attivata per impostazione predefinita per garantire che la sca
 Quando si selezionano i file archiviati utilizzando il protocollo SMB, è necessario immettere le informazioni di Active Directory, che includono il dominio, l'indirizzo IP, il nome utente e la password.
 
 . *Selezionare un'origine dati*: Selezionare la posizione dell'origine dati in base alla posizione in cui sono stati salvati i file. Può trattarsi di un intero volume o solo di una cartella o sottocartella specifica del volume e selezionare *Avanti*.
-. *Definisci i parametri ai*: Nella sezione *strategia di Chunking*, definisci come il motore GenAI suddivide il contenuto dell'origine dati in blocchi quando l'origine dati è integrata con una knowledge base. È possibile scegliere una delle seguenti strategie:
+. *Configurazioni*: Configurare il modo in cui l'origine dati acquisisce le informazioni dai file e quali file include nelle scansioni:
 +
-** *Chunking a più frasi*: Organizza le informazioni dalla vostra origine dati in blocchi definiti dalle frasi. È possibile scegliere quante frasi compongono ciascun blocco (fino a 100).
-** *Chunking basato su sovrapposizione*: Organizza le informazioni dall'origine dati in blocchi definiti dai caratteri che possono sovrapporsi a blocchi adiacenti. È possibile scegliere la dimensione di ciascun frammento in caratteri e la sovrapposizione di ciascun frammento con i frammenti adiacenti. È possibile configurare una dimensione del frammento compresa tra 50 e 3000 caratteri e una percentuale di sovrapposizione compresa tra 1 e 99%.
+** *Definisci origine dati*: Nella sezione *strategia di Chunking*, definisci il modo in cui il motore GenAI divide il contenuto dell'origine dati in blocchi quando l'origine dati è integrata con una knowledge base. È possibile scegliere una delle seguenti strategie:
++
+*** *Chunking a più frasi*: Organizza le informazioni dalla vostra origine dati in blocchi definiti dalle frasi. È possibile scegliere quante frasi compongono ciascun blocco (fino a 100).
+*** *Chunking basato su sovrapposizione*: Organizza le informazioni dall'origine dati in blocchi definiti dai caratteri che possono sovrapporsi a blocchi adiacenti. È possibile scegliere la dimensione di ciascun frammento in caratteri e la sovrapposizione di ciascun frammento con i frammenti adiacenti. È possibile configurare una dimensione del frammento compresa tra 50 e 3000 caratteri e una percentuale di sovrapposizione compresa tra 1 e 99%.
 +
 
 NOTE: La scelta di un'elevata percentuale di sovrapposizione può aumentare notevolmente i requisiti di archiviazione con solo lievi miglioramenti nella precisione di recupero.
 
 
 
-. Nella sezione *Permission Aware*, disponibile solo quando l'origine dati selezionata si trova su un volume che utilizza il protocollo SMB, è possibile attivare o disattivare la selezione:
+** *Filtraggio dei file*: Configurare i file da includere nelle scansioni:
++
+*** Nella sezione *supporto tipi di file*, scegliere di includere tutti i tipi di file o selezionare singoli tipi di file da includere nelle scansioni dell'origine dati.
++
+Se si includono immagini o file PDF, BlueXP  workload factory per GenAI analizza il testo nelle immagini (incluse le immagini nei documenti PDF) e ciò comporta un costo maggiore.
+
++
+Quando si includono dati di testo da immagini, GenAI non è in grado di mascherare informazioni di identificazione personale (PII) dall'immagine, poiché i dati di testo acquisiti vengono inviati dall'ambiente ad AWS. Tuttavia, una volta memorizzati i dati, tutte le PII vengono mascherate nel database GenAI.
+
++
+
+NOTE: La scelta di includere i file di immagine nelle scansioni è correlata al modello di chat della Knowledge base. Se si includono file di immagine nelle scansioni, il modello di chat deve supportare le immagini. Se qui sono selezionati i tipi di file immagine, non è possibile passare dalla knowledge base a un modello di chat che non supporta i file immagine.
+
+*** Nella sezione *filtro ora modifica file*, scegliere di attivare o disattivare l'inclusione dei file in base al tempo di modifica. Se si attiva il filtraggio dell'ora di modifica, selezionare un intervallo di date dall'elenco.
++
+
+NOTE: Se si includono file basati su un intervallo di date di modifica, non appena l'intervallo di date non è soddisfatto (i file non sono stati modificati entro l'intervallo di date specificato), i file saranno esclusi dalla scansione periodica e l'origine dati non includerà questi file.
+
+
+
+
+
+. Nella sezione *Permission Aware*, disponibile solo quando l'origine dati selezionata si trova su un volume che utilizza il protocollo SMB, è possibile attivare o disattivare le risposte in base alle autorizzazioni:
 +
 ** *Enabled*: Gli utenti del chatbot che accedono a questa knowledge base riceveranno solo risposte alle query provenienti da origini dati a cui hanno accesso.
 ** *Disabled*: Gli utenti del chatbot riceveranno le risposte utilizzando il contenuto di tutte le origini dati integrate.

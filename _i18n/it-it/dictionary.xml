@@ -5,7 +5,6 @@
   <block id="e3fbe9ea657688c1ff4a86f23c1752c3" category="list-text">*Selezionare un volume*: Selezionare il volume in cui risiedono i file di origine dati e selezionare *Avanti*.</block>
   <block id="3bce906453410b081d8e495b9cf8c9b0" category="paragraph">Quando si selezionano i file archiviati utilizzando il protocollo SMB, è necessario immettere le informazioni di Active Directory, che includono il dominio, l'indirizzo IP, il nome utente e la password.</block>
   <block id="7028355d43ef8a71ff4d5e7bed32be2b" category="list-text">*Selezionare un'origine dati*: Selezionare la posizione dell'origine dati in base alla posizione in cui sono stati salvati i file. Può trattarsi di un intero volume o solo di una cartella o sottocartella specifica del volume e selezionare *Avanti*.</block>
-  <block id="12d073958c6d4922a6f27ae8b5e4b533" category="list-text">Nella sezione *Permission Aware*, disponibile solo quando l'origine dati selezionata si trova su un volume che utilizza il protocollo SMB, è possibile attivare o disattivare la selezione:</block>
   <block id="751157f855d8f0597671b65bc8ea1301" category="list-text">*Enabled*: Gli utenti del chatbot che accedono a questa knowledge base riceveranno solo risposte alle query provenienti da origini dati a cui hanno accesso.</block>
   <block id="9969ec0e7476736a130c54f32700611e" category="list-text">*Disabled*: Gli utenti del chatbot riceveranno le risposte utilizzando il contenuto di tutte le origini dati integrate.</block>
   <block id="65f706122d6156fd52b6cb2ff2214944" category="list-text">Selezionare *Aggiungi* per aggiungere questa origine dati alla knowledge base.</block>
@@ -115,9 +114,7 @@
   <block id="36d8c0d0c9711e8ac7a5bbcbe9b96008" category="list-text">Le regole in uscita sono aperte a tutto il traffico, mentre le regole in entrata sono completamente chiuse.</block>
   <block id="1f171bab0b26254e4c58e536973c5c09" category="list-text">Endpoint privati</block>
   <block id="34048930da0f8b448828d6774b139b17" category="list-text">Amazon Bedrock</block>
-  <block id="c421d122321bec48d6b30858f4e7b515" category="list-text">Amazon EC2</block>
   <block id="719ffca696aa714ef090fce0aca97bd2" category="list-text">Amazon Elastic Container Registry (ECR)</block>
-  <block id="270fcb785810d0206945029bb05f4e97" category="list-text">Amazon S3</block>
   <block id="0072b242011f459b57b0768dceac82f8" category="list-text">AWS Systems Manager (SSM)</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">Richiedi assistenza</block>
   <block id="6a7b2c9c4cec65ad972b108fa0a1192b" category="section-title">Ottieni supporto per FSX per ONTAP</block>
@@ -475,7 +472,6 @@
   <block id="4fc1d0607a3fe50db5ef612a2c4a178e" category="list-text">Accedere a<block ref="0e14f9ffc1d2673bd92f13a4ac79e32e" category="inline-link-rx"></block> per accedere all'applicazione.</block>
   <block id="5f62c285aea87618ed1381c43c7ae2cf" category="paragraph">Viene visualizzata l'applicazione chatbot di esempio.</block>
   <block id="d59048f21fd887ad520398ce677be586" category="section-title">Scopri di più</block>
-  <block id="8f3f613a5094ebfa7c5f531cb356028e" category="list-text">*Definisci i parametri ai*: Nella sezione *strategia di Chunking*, definisci come il motore GenAI suddivide il contenuto dell'origine dati in blocchi quando l'origine dati è integrata con una knowledge base. È possibile scegliere una delle seguenti strategie:</block>
   <block id="091e1c7957272ab69145f4859b4465d0" category="list-text">*Chunking a più frasi*: Organizza le informazioni dalla vostra origine dati in blocchi definiti dalle frasi. È possibile scegliere quante frasi compongono ciascun blocco (fino a 100).</block>
   <block id="87aa4ffcf50084a10651fe7094e75bda" category="list-text">*Chunking basato su sovrapposizione*: Organizza le informazioni dall'origine dati in blocchi definiti dai caratteri che possono sovrapporsi a blocchi adiacenti. È possibile scegliere la dimensione di ciascun frammento in caratteri e la sovrapposizione di ciascun frammento con i frammenti adiacenti. È possibile configurare una dimensione del frammento compresa tra 50 e 3000 caratteri e una percentuale di sovrapposizione compresa tra 1 e 99%.</block>
   <block id="18c41e2a8da7a23dcc990da8d7dfe06d" category="admonition">La scelta di un'elevata percentuale di sovrapposizione può aumentare notevolmente i requisiti di archiviazione con solo lievi miglioramenti nella precisione di recupero.</block>
@@ -583,7 +579,6 @@
   <block id="3e3c8a56035df76e06772f4505dc58c7" category="list-text">Accertarsi che l'ambiente in uso soddisfi i prerequisiti</block>
   <block id="0ce4d42838344488f607ff306088fae9" category="list-text">Implementare la classificazione BlueXP</block>
   <block id="b91895758c5a35a75fd3e87dc1fa0741" category="list-text">Nella pagina Modifica knowledge base è possibile modificare il nome della knowledge base, la descrizione, il modello di incorporazione, il modello di chat, l'abilitazione delle barriere di protezione dei dati, scegliere se creare automaticamente o manualmente gli avviatori di conversazione e il criterio di snapshot utilizzato per il volume che contiene la knowledge base.</block>
-  <block id="fde00ba8f64d2c57d64a163698fd6f03" category="admonition">Ogni scansione della Knowledge base, che include l'integrazione, i costi. Se le barriere di sicurezza dei dati sono abilitate dopo la creazione di una knowledge base, la knowledge base viene nuovamente sottoposta a scansione e i costi sono sostenuti.</block>
   <block id="d9f5899ddcae7952c9df69e075c822e2" category="section-title">3 novembre 2024</block>
   <block id="4d82a1ec1af02725042c8c785564ee7a" category="list-text">Amazon FSX per NetApp ONTAP</block>
   <block id="4b88d56bd65ef92611ac63064c38369f" category="list-text">Amazon CloudWatch</block>
@@ -781,5 +776,47 @@
   <block id="2c6cb4e03314c724c32217626f17bd37" category="list-text">Accedere all'istanza utilizzando SSH.</block>
   <block id="337d79852891a37d41285c9101c3fff4" category="list-text">Eseguire il seguente comando:</block>
   <block id="37b8354fe553b0151888468751ea8eb0" category="section-title">05 gennaio 2025</block>
-  <block id="0fdf33109843473a96b84acfe576030a" category="paragraph"><block ref="384713a8a1d5a2dd365da2851c50ad93" category="inline-link-macro-rx"></block> == 29 settembre 2024</block>
+  <block id="2b33992406857bfe64aea3c375dfd0f3" category="list-text">*Configurazioni*: Configurare il modo in cui l'origine dati acquisisce le informazioni dai file e quali file include nelle scansioni:</block>
+  <block id="556d69e48e56f7282433b4470f9fc985" category="list-text">*Definisci origine dati*: Nella sezione *strategia di Chunking*, definisci il modo in cui il motore GenAI divide il contenuto dell'origine dati in blocchi quando l'origine dati è integrata con una knowledge base. È possibile scegliere una delle seguenti strategie:</block>
+  <block id="441ffcb2a5deb53b096bf6da09532c3c" category="list-text">*Filtraggio dei file*: Configurare i file da includere nelle scansioni:</block>
+  <block id="fbf5c3d1e175475dce2b6f27f23e342c" category="list-text">Nella sezione *supporto tipi di file*, scegliere di includere tutti i tipi di file o selezionare singoli tipi di file da includere nelle scansioni dell'origine dati.</block>
+  <block id="9c91ae043d4f1fed127449b7d9f56f1a" category="paragraph">Se si includono immagini o file PDF, BlueXP  workload factory per GenAI analizza il testo nelle immagini (incluse le immagini nei documenti PDF) e ciò comporta un costo maggiore.</block>
+  <block id="cdc5210ee55660ad12576b6b12e53505" category="paragraph">Quando si includono dati di testo da immagini, GenAI non è in grado di mascherare informazioni di identificazione personale (PII) dall'immagine, poiché i dati di testo acquisiti vengono inviati dall'ambiente ad AWS. Tuttavia, una volta memorizzati i dati, tutte le PII vengono mascherate nel database GenAI.</block>
+  <block id="527140faa5b9a355e269287e721ad95b" category="admonition">La scelta di includere i file di immagine nelle scansioni è correlata al modello di chat della Knowledge base. Se si includono file di immagine nelle scansioni, il modello di chat deve supportare le immagini. Se qui sono selezionati i tipi di file immagine, non è possibile passare dalla knowledge base a un modello di chat che non supporta i file immagine.</block>
+  <block id="2af4913e8e59a092d414744be9ae44d2" category="list-text">Nella sezione *filtro ora modifica file*, scegliere di attivare o disattivare l'inclusione dei file in base al tempo di modifica. Se si attiva il filtraggio dell'ora di modifica, selezionare un intervallo di date dall'elenco.</block>
+  <block id="67aa8f84073b450b225b7d2830cc4e41" category="admonition">Se si includono file basati su un intervallo di date di modifica, non appena l'intervallo di date non è soddisfatto (i file non sono stati modificati entro l'intervallo di date specificato), i file saranno esclusi dalla scansione periodica e l'origine dati non includerà questi file.</block>
+  <block id="a036984d47253ddc828a04bc8ac85524" category="list-text">Nella sezione *Permission Aware*, disponibile solo quando l'origine dati selezionata si trova su un volume che utilizza il protocollo SMB, è possibile attivare o disattivare le risposte in base alle autorizzazioni:</block>
+  <block id="77fd00559b8279b555e48d21e5e67c34" category="doc">Filtraggio del tipo di file per le origini dati</block>
+  <block id="47cf5538cc85b7acf0e24098fc5bbffd" category="paragraph">GenAI ora supporta la selezione di tipi di file specifici da includere nella scansione dell'origine dati quando si aggiunge un'origine dati.</block>
+  <block id="e57c1e86c82776cdcb9c50b4e82943f8" category="paragraph"><block ref="e57c1e86c82776cdcb9c50b4e82943f8" category="inline-link-macro-rx"></block></block>
+  <block id="f191d5f0a123d62966b3617a9d8c752c" category="section-title">Filtro della data di modifica del file per le origini dati</block>
+  <block id="b1be3e2e5ab05373dbf3927507ea84d2" category="paragraph">GenAI ora supporta il filtraggio dei file da includere nella scansione dell'origine dati per data di modifica quando si aggiunge un'origine dati. È possibile scegliere un intervallo di date di modifica per i file inclusi.</block>
+  <block id="7a7ba68ff13813a8c9d7413b67a91e34" category="section-title">Supporto per i file di immagine e supporto migliorato per i file PDF</block>
+  <block id="02edd7a4065e5f73535b550150fc46f2" category="paragraph">GenAI ora supporta la scansione di file di immagine e immagini all'interno di file PDF (noto anche come supporto di file multimodali). Se si scelgono i file immagine, il testo delle immagini viene acquisito nell'origine dati e utilizzato come dati. Questa funzionalità include immagini all'interno di documenti PDF; se si includono tipi di file PDF, le immagini all'interno di ciascun PDF vengono acquisite per il testo e tale testo viene incluso nelle informazioni provenienti dall'origine dati.</block>
+  <block id="b9a5ff8382cbb9f5609b8bff25344245" category="section-title">Ricerca ibrida e supporto di nuovo rank</block>
+  <block id="429b63d212adaceb6de8dae934d76ea4" category="paragraph">GenAI ora migliora la rilevanza dei risultati di ricerca utilizzando la ricerca ibrida e ri-classificando i risultati. La ricerca ibrida combina le ricerche per parola chiave con la ricerca vettoriale e semantica. I risultati della ricerca per parola chiave standard sono aumentati con corrispondenze ravvicinate e sfumature linguistiche, migliorando la rilevanza. GenAI riclassifica i risultati della ricerca e restituisce solo i risultati con la massima rilevanza.</block>
+  <block id="397adcec169a6ce17f0abfc941258c0f" category="paragraph"><block ref="397adcec169a6ce17f0abfc941258c0f" category="inline-link-macro-rx"></block></block>
+  <block id="c009fe342f72cc06fe63760e2eaa701c" category="list-text">Ottieni risultati di alta qualità dai tuoi dati con la ricerca ibrida e le funzionalità di re-rank fornite da GenAI. La ricerca ibrida combinata con il re-ranking migliora notevolmente l'importanza dei risultati di ricerca. Queste funzionalità sono disponibili tramite Amazon AWS e dipendono da una regione.</block>
+  <block id="e1201f675c705c74b856dba391a68602" category="paragraph">Alcune operazioni multimodali, come la scansione delle immagini per le informazioni di testo, possono utilizzare più risorse e quindi comportano costi più elevati. Alcune operazioni di configurazione, ad esempio la modifica delle impostazioni per una knowledgebase, possono causare la ripetizione della scansione delle origini dati, mentre le scansioni delle origini dati possono comportare costi più elevati.</block>
+  <block id="0a2b76d9cf1a9ffdd3b88e030e038252" category="example-title">Autorizzazioni ruolo IAM</block>
+  <block id="216304eb42158c57d4ec762a309c7df6" category="list-text">bedrock</block>
+  <block id="12789b4d0bdf3d54be09051f154d5eba" category="list-text">bedrock-runtime</block>
+  <block id="ca6c1f270eb3bc12524f0c3ad6af0765" category="list-text">bedrock-agent-runtime</block>
+  <block id="db974238714ca8de634a7ce1d083a14f" category="list-text">API</block>
+  <block id="05b6053c41a2130afd6fc3b158bda4e6" category="list-text">docker</block>
+  <block id="078aab7ae8c1a0df339ac8525790d5e1" category="list-text">ssm</block>
+  <block id="627597c7a47356c5c9f55a4854a59ff3" category="list-text">ec2messages</block>
+  <block id="25f6388206f436c2d1de63216302b13d" category="list-text">smmessages</block>
+  <block id="907e06a16862d82ca6907a28a68d0ad6" category="cell">JPEG</block>
+  <block id="8106d47388a74c58448d40c84de6fd91" category="cell">.jpg or.jpeg</block>
+  <block id="7281c70f390b5e0f3c8827352c83f0b0" category="cell">Grafica di rete portatile</block>
+  <block id="6446d860dbbfe540e9e2cbab5f98f1e3" category="cell">.png</block>
+  <block id="a97aa4a947e531a7fa6f96a2b73876e3" category="cell">Formato di interscambio grafico</block>
+  <block id="03a46779cf1ed515b29e1c471efd4c0f" category="cell">gif</block>
+  <block id="830b1d3b1096152076b8daa22a275a74" category="cell">Immagine WebP</block>
+  <block id="f38a468e497336f7e3144a22393a4ca9" category="cell">.webp</block>
+  <block id="0c05a373f02466ab8f502ea4b3b8e2e8" category="admonition">Ogni scansione della Knowledge base, che include l'integrazione, i costi. Se le barriere di sicurezza dei dati sono abilitate dopo la creazione di una knowledge base, la knowledge base viene nuovamente sottoposta a scansione e i costi sono sostenuti. Allo stesso modo, se si modificano i modelli di chat, GenAI eseguirà una nuova scansione delle origini dati associate (con costi aggiuntivi).</block>
+  <block id="f7fb3b5dc06e03848b8f5ff23bbcd37d" category="paragraph">Genai classifica nuovamente i risultati di ricerca per impostazione predefinita per migliorare la pertinenza dei risultati. Per ottenere i migliori risultati, assicurati che la configurazione del modello di base Amazon Bedrock includa l'accesso a un modello di re-rank, come Cohere Rank o Amazon Rank, se disponibile nella tua regione.</block>
+  <block id="986aee2caba870111e5ce3c5571c82de" category="section-title">02 febbraio 2025</block>
+  <block id="26e6f4cc71039ce95ddbb0acdad6891d" category="section-title">29 settembre 2024</block>
 </blocks>

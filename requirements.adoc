@@ -35,6 +35,8 @@ Prima di iniziare a utilizzare la fabbrica di carichi di lavoro BlueXP  per Gen
 * https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html["Documentazione AWS: Regioni e modelli supportati per le Knowledge base di Amazon Bedrock"^]
 
 
+Genai classifica nuovamente i risultati di ricerca per impostazione predefinita per migliorare la pertinenza dei risultati. Per ottenere i migliori risultati, assicurati che la configurazione del modello di base Amazon Bedrock includa l'accesso a un modello di re-rank, come Cohere Rank o Amazon Rank, se disponibile nella tua regione.
+
 --
 Modello di inclusione:: È necessario attivare il modello di integrazione che si intende utilizzare prima di creare la propria knowledge base. Sono supportati i seguenti modelli di inclusione:
 +
