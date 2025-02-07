@@ -19,6 +19,14 @@ Scopri le novità della funzionalità per i carichi di lavoro ai generici della 
 
 
 
+=== Supporto dei modelli di base di Amazon Nova
+
+Genai ora supporta i modelli di base Amazon Nova. Sono supportati Amazon Nova Micro, Amazon Nova Lite e Amazon Nova Pro.
+
+link:https://docs.netapp.com/us-en/workload-genai/requirements.html["Requisiti Genai"]
+
+
+
 === Filtraggio del tipo di file per le origini dati
 
 GenAI ora supporta la selezione di tipi di file specifici da includere nella scansione dell'origine dati quando si aggiunge un'origine dati.
