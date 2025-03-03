@@ -20,6 +20,9 @@ Puoi testare una knowledge base chattando con le tue origini dati incorporate ne
 
 Prima di distribuire la knowledge base in un'applicazione per gli utenti, eseguirete la maggior parte dei test all'interno della fabbrica dei carichi di lavoro. Se devi apportare modifiche all'origine dati o all'operazione chatbot, devi farlo ora prima di pubblicare la tua knowledge base.
 
+
+TIP: È possibile ridimensionare e modificare il titolo della finestra del simulatore di chatbot e copiare domande e risposte negli Appunti.
+
 Alcune delle attività che si desidera eseguire per testare il chatbot sono:
 
 * Immettere un numero elevato di domande rilevanti per l'organizzazione per assicurarsi che le risposte siano quelle previste.
@@ -33,5 +36,13 @@ Alcune delle attività che si desidera eseguire per testare il chatbot sono:
 Il simulatore di chatbot viene visualizzato nel riquadro di destra. Se definito, vengono visualizzati anche gli avviatori di conversazione esistenti.
 
 . Nel campo di immissione chatbot, immettere un prompt o una domanda e selezionare image:button-run.png["il pulsante esegui"] per vedere come il chatbot risponde con le proprie conoscenze organizzative.
++
+[TIP]
+====
+** È possibile visualizzare le fonti utilizzate per produrre la risposta espandendo l'elenco *sources* sotto la risposta. Viene fornito un elenco di file utilizzati per generare la risposta. È possibile visualizzare e copiare i blocchi di dati utilizzati da ciascun percorso di file e volume in ciascun file passando con il mouse sul nome del file.
+** Se le tabelle sono incluse nella risposta, è possibile ordinare i dati in ciascuna colonna e copiare ciascuna tabella negli Appunti.
+
+
+====
 . Se è necessario aggiornare una qualsiasi delle origini dati in modo che la knowledge base fornisca risposte più mirate, apportare le modifiche subito e quindi testare nuovamente la knowledge base.
 

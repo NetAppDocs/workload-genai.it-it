@@ -52,7 +52,16 @@ Attualmente sono supportati i seguenti formati di file di origine dati.
 | Formato file | Interno 
 
 
+| Parquet Apache | parquet 
+
+
 | File di valori separati da virgola | .csv 
+
+
+| Formato di interscambio grafico | gif 
+
+
+| JPEG | .jpg or.jpeg 
 
 
 | Valutazione | md 
@@ -67,13 +76,7 @@ Attualmente sono supportati i seguenti formati di file di origine dati.
 | Formato documento portatile | in formato .pdf 
 
 
-| JPEG | .jpg or.jpeg 
-
-
 | Grafica di rete portatile | .png 
-
-
-| Formato di interscambio grafico | gif 
 
 
 | Immagine WebP | .webp 
