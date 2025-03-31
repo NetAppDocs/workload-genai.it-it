@@ -60,17 +60,22 @@ https://aws.amazon.com/bedrock/titan/["Scopri di più su Amazon Titan"^]
 
 
 
-.. *Modello chat*: Scegli tra i modelli chat Claude integrati in Amazon Bedrock. Nota: È necessario aver già attivato il modello di chat da Amazon Bedrock.
+.. *Modello chat*: Scegli tra i modelli di chat antropici Claude o Amazon Nova integrati in Amazon Bedrock. Nota: È necessario aver già attivato il modello di chat da Amazon Bedrock.
 +
-Ulteriori informazioni sui modelli disponibili per effettuare la selezione: https://aws.amazon.com/bedrock/claude/["Claude di antropic in Amazon Bedrock"^]
+Ulteriori informazioni sull'utilizzo di questi modelli con Amazon Bedrock:
+
++
+*** https://aws.amazon.com/bedrock/claude/["Claude di antropic in Amazon Bedrock"^]
+*** https://docs.aws.amazon.com/nova/latest/userguide/getting-started-console.html["Guida introduttiva ad Amazon Nova nella console Amazon Bedrock"^]
+
 
 .. *Data Guardrails*: Scegliere se attivare o disattivare le barriere di protezione dei dati. link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Scopri le barriere di protezione dei dati, basate sulla classificazione BlueXP "^].
 +
-Per abilitare le barriere di protezione dei dati, è necessario completare i seguenti prerequisiti.
+Per abilitare le barriere di protezione dei dati, è necessario soddisfare i seguenti prerequisiti.
 
 +
 *** Per comunicare con la classificazione BlueXP  è necessario un account di servizio. Per la creazione dell'account di servizio, è necessario disporre del ruolo _Amministratore organizzazione_ nell'account di locazione BlueXP . Un membro che ha il ruolo di amministratore dell'organizzazione può completare tutte le azioni in BlueXP . link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-manage-members-permissions.html#add-a-role-to-a-member["Scopri come aggiungere un ruolo a un membro in BlueXP "^]
-*** Il motore ai deve avere accesso all'endpoint API BlueXP : \https://api.BlueXP .NetApp.com.
+*** Il motore ai deve avere accesso a link:https://api.bluexp.netapp.com["Endpoint API BlueXP "^].
 *** È necessario effettuare le seguenti operazioni come descritto in link:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-cloud-compliance.html#quick-start["Documentazione sulla classificazione BlueXP"^]:
 +
 .... Crea un connettore BlueXP
@@ -80,6 +85,13 @@ Per abilitare le barriere di protezione dei dati, è necessario completare i seg
 
 
 
+
+
++
+
+NOTE: La funzione data Guardrails non è supportata quando si acquisiscono file di dati strutturati come CSV, JSON, JSONP o Parquet.
+
++
 .. *Avviatori di conversazione*: Scegliere se si desidera fornire fino a quattro prompt iniziali di conversazione che vengono visualizzati agli utenti che interagiscono con un chatbot che utilizza questa knowledge base. Si consiglia di attivare questa impostazione.
 +
 Se si attivano gli avviatori di conversazione, per impostazione predefinita viene selezionata la modalità automatica. La "modalità manuale" può essere attivata solo dopo aver aggiunto origini dati alla knowledge base. link:manage-knowledgebase.html["Scopri come modificare le impostazioni della Knowledge base"].

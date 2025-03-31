@@ -52,16 +52,19 @@ Attualmente sono supportati i seguenti formati di file di origine dati.
 | Formato file | Interno 
 
 
-| Parquet Apache | parquet 
+| Apache Parquetfootnote:disclaimer[la funzione di protezione dei dati non è supportata quando si acquisiscono file di dati strutturati.] | parquet 
 
 
-| File di valori separati da virgola | .csv 
+| Valori separati da virgola filefootnote:disclaimer[] | .csv 
 
 
 | Formato di interscambio grafico | gif 
 
 
 | JPEG | .jpg or.jpeg 
+
+
+| JSON e JSONPfootnote:disclaimer[] | json 
 
 
 | Valutazione | md 
