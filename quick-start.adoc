@@ -26,11 +26,7 @@ link:requirements.html["Ulteriori informazioni sui requisiti GenAI"^].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"] Identificare il file system FSX per ONTAP che contiene le origini dati
 [role="quick-margin-para"]
-Le origini dei dati che integrerai nella tua knowledge base possono trovarsi in un singolo file system FSX per ONTAP o in più file system FSX per ONTAP. Se questi sistemi si trovano in VPC diversi, devono utilizzare una delle due configurazioni seguenti:
-
-* Accessibile all'interno della stessa rete
-* I VPC devono essere sottoposti a peering e utilizzando la stessa regione e l'account AWS del motore ai
-
+Le origini dei dati che integrerai nella tua knowledge base possono trovarsi in un singolo file system FSX per ONTAP o in più file system FSX per ONTAP. Se questi sistemi si trovano in VPC diversi, devono essere accessibili all'interno della stessa rete, oppure è necessario eseguire il peering dei VPC e utilizzare la stessa regione e lo stesso account AWS del motore di ai.
 
 [role="quick-margin-para"]
 link:identify-data-sources.html["Scopri come identificare le origini dati"^].
