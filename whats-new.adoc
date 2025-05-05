@@ -15,47 +15,39 @@ Scopri le novità della funzionalità per i carichi di lavoro ai generici della 
 
 
 
-== 30 marzo 2025
+== 04 maggio 2025
 
 
 
-=== Supporto avanzato dei tipi di file
+=== Supporto per NetApp ONTAP Connector per Amazon Q
 
-Questa versione di GenAI introduce il supporto dei formati di file JSON e JSONP durante l'acquisizione di file `.json` da origini dati. Sono supportati i file JSON con oggetti nidificati, con supporto limitato per gli array nidificati.
+Questa versione di GenAI introduce il supporto per NetApp ONTAP Connector per Amazon Q, consentendo di creare connettori per Amazon Q Business. Sfrutta in modo rapido e semplice l'assistente ai aziendale Amazon Q con una configurazione iniziale inferiore rispetto alla creazione di una knowledge base Genai per Amazon Bedrock.
 
-link:https://docs.netapp.com/us-en/workload-genai/identify-data-sources.html#supported-data-source-file-formats["Formati di file origine dati supportati"]
-
-
-
-=== Supporto dell'internazionalizzazione per l'applicazione di esempio chatbot esterna
-
-Ora potete cambiare facilmente l'interfaccia utente dell'applicazione chatbot esterna di esempio GenAI in una lingua o in una lingua diversa.
-
-link:https://github.com/NetApp/FSx-ONTAP-samples-scripts/tree/main/AI/GenAI-ChatBot-application-sample#netapp-workload-factory-genai-sample-application["Applicazione chatbot di esempio GenAI esterna"]
+link:https://docs.netapp.com/us-en/workload-genai/connector/define-connector.html["Creare un connettore GenAI per Amazon Q Business"]
 
 
 
-=== Supporto per il modello di chat antropico Claude Sonnet 3,7
+=== Supporto di modelli di chat avanzati
 
-GenAI ora include il supporto per il modello di chat antropico Claude 3,7 Sonnet. Le funzionalità beta di Claude 3,7 Sonnet consentono fino a 128K token di output per richiesta e supportano nuove azioni di utilizzo del computer. Claude 3,7 Sonnet Extended Thinking Mode sarà supportato in una futura versione di GenAI.
+GenAI supporta ora i seguenti modelli di chat aggiuntivi per le knowledge base:
 
-link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html["Creare una knowledge base GenAI"]
-
-
-
-=== Supporto per l'aggiunta di origini dati da condivisioni NFS/SMB generiche
-
-Utilizzando l'API della farm dei workload, ora puoi aggiungere un'origine dati da una condivisione generica NFSv3, NFSv4 o SMB. Quando Aggiungi un'origine dati da una condivisione NFS o SMB, il volume della Knowledge base rimane su un volume Amazon FSX per NetApp ONTAP. L'interfaccia utente Web di workload Factory supporterà questa funzione in una versione futura.
-
-link:https://console.workloads.netapp.com/api-doc["Utilizza l'API della fabbrica del carico di lavoro"^]
+* link:https://docs.mistral.ai/getting-started/models/models_overview/["Modelli Mistral ai"^]
+* link:https://docs.aws.amazon.com/bedrock/latest/userguide/titan-text-models.html["Modelli di testo Amazon Titan"^]
+* link:https://www.llama.com/docs/model-cards-and-prompt-formats/["Modelli meta Llama"^]
+* link:https://docs.ai21.com/["Modelli Jamba 1,5"^]
+* link:https://docs.cohere.com/docs/the-cohere-platform["Modelli Cohere Command"^]
+* link:https://aws.amazon.com/bedrock/deepseek/["Modelli Deepseek"^]
 
 
-
-=== Supporto peering VPC
-
-Ora puoi implementare un'infrastruttura Genai link:https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html["Cloud privati virtuali (VPC) in peering"^]nella stessa area e utilizzare il medesimo account AWS. Puoi implementare il motore ai in un VPC e quindi creare una knowledge base in un VPC con peered e selezionare i file system Amazon FSX per NetApp ONTAP che risiedono in un VPC con peered.
+GenAI supporta i modelli di ciascun provider supportati da Amazon Bedrock: link:https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html["Modelli di base supportati in Amazon Bedrock"^]
 
 link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html["Creare una knowledge base GenAI"]
+
+
+
+=== Terminologia aggiornata per le autorizzazioni
+
+L'interfaccia utente di fabbrica del carico di lavoro e la documentazione ora utilizzano "sola lettura" per fare riferimento alle autorizzazioni di lettura e "lettura-scrittura" per fare riferimento all'automazione delle autorizzazioni.
 
 
 
@@ -67,7 +59,7 @@ link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html["Cre
 
 A questo punto è possibile copiare domande e risposte direttamente negli Appunti, regolare le dimensioni della finestra di chat e modificarne il titolo. Inoltre, le risposte della chat possono ora includere tabelle, che sono anche copyable.
 
-link:https://docs.netapp.com/us-en/workload-genai/test-knowledgebase.html["Testare una knowledge base GenAI"]
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/test-knowledgebase.html["Testare una knowledge base GenAI"]
 
 
 
@@ -75,7 +67,7 @@ link:https://docs.netapp.com/us-en/workload-genai/test-knowledgebase.html["Testa
 
 Le risposte della chat ora includono citazioni che elencano i file e i frammenti di dati che sono stati utilizzati per generare la risposta.
 
-link:https://docs.netapp.com/us-en/workload-genai/test-knowledgebase.html["Testare una knowledge base GenAI"]
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/test-knowledgebase.html["Testare una knowledge base GenAI"]
 
 
 
@@ -88,7 +80,7 @@ Questa versione di GenAI fornisce un supporto file migliorato:
 * GenAI ora supporta l'acquisizione di file Microsoft Word DOCX che includono immagini. Le immagini incorporate nei documenti DOCX vengono sottoposte a scansione e le informazioni sul testo delle immagini incorporate vengono incluse nelle risposte alle query della Knowledge base.
 
 
-link:https://docs.netapp.com/us-en/workload-genai/identify-data-sources.html#supported-data-source-file-formats["Formati di file origine dati supportati"]
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/identify-data-sources-knowledge-base.html#supported-data-source-file-formats["Formati di file origine dati supportati"]
 
 
 
@@ -100,7 +92,7 @@ link:https://docs.netapp.com/us-en/workload-genai/identify-data-sources.html#sup
 
 Genai ora supporta i modelli di base Amazon Nova. Sono supportati Amazon Nova Micro, Amazon Nova Lite e Amazon Nova Pro.
 
-link:https://docs.netapp.com/us-en/workload-genai/requirements.html["Requisiti Genai"]
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/requirements-knowledge-base.html["Requisiti Genai"]
 
 
 
@@ -108,7 +100,7 @@ link:https://docs.netapp.com/us-en/workload-genai/requirements.html["Requisiti G
 
 GenAI ora supporta la selezione di tipi di file specifici da includere nella scansione dell'origine dati quando si aggiunge un'origine dati.
 
-link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html#add-data-sources-to-the-knowledge-base["Aggiungere fonti di dati alla knowledge base"]
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html#add-data-sources-to-the-knowledge-base["Aggiungere fonti di dati alla knowledge base"]
 
 
 
@@ -116,7 +108,7 @@ link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html#add-
 
 GenAI ora supporta il filtraggio dei file da includere nella scansione dell'origine dati per data di modifica quando si aggiunge un'origine dati. È possibile scegliere un intervallo di date di modifica per i file inclusi.
 
-link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html#add-data-sources-to-the-knowledge-base["Aggiungere fonti di dati alla knowledge base"]
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html#add-data-sources-to-the-knowledge-base["Aggiungere fonti di dati alla knowledge base"]
 
 
 
@@ -124,7 +116,7 @@ link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html#add-
 
 GenAI ora supporta il miglioramento delle risposte alle query della knowledge base con approfondimenti dalle immagini e dalle descrizioni dei grafici, oltre al testo dei documenti, per ottenere risposte più ricche e di qualità superiore. GenAI può ora eseguire la scansione di file e immagini di immagini all'interno di file PDF (noti anche come supporto di file multimodali). Se si sceglie di eseguire la scansione di immagini o file PDF, il testo delle immagini (comprese le immagini incorporate nei documenti PDF) viene sottoposto a scansione nell'origine dati e le informazioni acquisite dalle scansioni vengono incluse nelle risposte alle query della Knowledge base.
 
-link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html#add-data-sources-to-the-knowledge-base["Aggiungere fonti di dati alla knowledge base"]
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html#add-data-sources-to-the-knowledge-base["Aggiungere fonti di dati alla knowledge base"]
 
 
 
@@ -132,7 +124,7 @@ link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html#add-
 
 GenAI può ora migliorare significativamente la pertinenza e la precisione dei risultati di ricerca utilizzando la ricerca ibrida e ri-classificando i risultati. La ricerca ibrida combina i punti di forza della ricerca tradizionale basata su parole chiave con tecniche di ricerca semantica avanzate basate su vettori densi. I risultati della ricerca per parola chiave standard sono aumentati con corrispondenze ravvicinate e sfumature linguistiche, migliorando la rilevanza. GenAI perfeziona ulteriormente questi risultati utilizzando modelli avanzati di re-classifica, come Cohere Rank e Amazon Rank, e restituisce i risultati più rilevanti. Questa funzionalità è disponibile per le nuove basi di conoscenza create.
 
-link:https://docs.netapp.com/us-en/workload-genai/ai-workloads-overview.html#benefits-of-using-genai-to-create-generative-ai-applications["Scopri la BlueXP  workload Factory per Genai"]
+link:https://docs.netapp.com/us-en/workload-genai/general/ai-workloads-overview.html#benefits-of-using-genai-to-create-generative-ai-applications["Scopri la BlueXP  workload Factory per Genai"]
 
 
 
@@ -144,7 +136,7 @@ link:https://docs.netapp.com/us-en/workload-genai/ai-workloads-overview.html#ben
 
 A questo punto è possibile fornire un nome di istantanea per uno snapshot ad-hoc.
 
-link:https://docs.netapp.com/us-en/workload-genai/manage-knowledgebase.html#protect-a-knowledge-base-with-snapshots["Proteggere una knowledge base con le snapshot"]
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/manage-knowledgebase.html#protect-a-knowledge-base-with-snapshots["Proteggere una knowledge base con le snapshot"]
 
 
 
@@ -152,7 +144,7 @@ link:https://docs.netapp.com/us-en/workload-genai/manage-knowledgebase.html#prot
 
 Ora puoi assegnare un nome personalizzato all'istanza del motore ai durante l'implementazione.
 
-link:https://docs.netapp.com/us-en/workload-genai/deploy-infrastructure.html["Implementare l'infrastruttura GenAI"]
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/deploy-infrastructure.html["Implementare l'infrastruttura GenAI"]
 
 
 
@@ -160,7 +152,7 @@ link:https://docs.netapp.com/us-en/workload-genai/deploy-infrastructure.html["Im
 
 Se l'istanza del motore di ai viene danneggiata o viene eliminata, puoi permettere alla fabbrica del carico di lavoro di ricrearla per te. Workload Factory ricollega automaticamente le knowledge base all'infrastruttura al termine della ricostruzione, in modo che siano pronte all'uso.
 
-link:https://docs.netapp.com/us-en/workload-genai/troubleshooting.html["Risoluzione dei problemi"]
+link:https://docs.netapp.com/us-en/workload-genai/general/troubleshooting.html["Risoluzione dei problemi"]
 
 
 
@@ -172,7 +164,7 @@ link:https://docs.netapp.com/us-en/workload-genai/troubleshooting.html["Risoluzi
 
 La fabbrica di carichi di lavoro BlueXP  per Genai ora supporta il cloning di una knowledge base da una snapshot. Ciò consente il rapido recupero delle basi di conoscenza e la creazione di nuove basi di conoscenza con fonti di dati esistenti, e contribuisce al recupero e allo sviluppo dei dati.
 
-link:https://docs.netapp.com/us-en/workload-genai/manage-knowledgebase.html#clone-a-knowledge-base["Clonare una knowledge base"]
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/manage-knowledgebase.html#clone-a-knowledge-base["Clonare una knowledge base"]
 
 
 
@@ -192,7 +184,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/use-onprem-data.html["Scop
 
 Il carico di lavoro ai generativo introduce la funzionalità di data Guardrails, con tecnologia di classificazione BlueXP . La funzione di protezione dei dati identifica e maschera le informazioni personali identificabili (PII, Personal Identifiable Information), contribuendo a mantenere la conformità e a rafforzare la sicurezza dei dati aziendali sensibili.
 
-link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html#create-and-configure-the-knowledge-base["Creare una knowledge base"]
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html["Creare una knowledge base GenAI"]
 
 link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Scopri di più sulla classificazione BlueXP"^]
 
@@ -206,9 +198,9 @@ link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-complianc
 
 Ora puoi proteggere i dati dei carichi di lavoro ai generici acquisendo una copia point-in-time di una knowledge base. Ciò consente di proteggere i dati da perdite accidentali o di verificare le modifiche alle impostazioni della knowledge base. È possibile ripristinare la versione precedente del volume della Knowledge base in qualsiasi momento.
 
-https://docs.netapp.com/us-en/workload-genai/manage-knowledgebase.html#take-a-snapshot-of-a-knowledge-base-volume["Creare un'istantanea del volume di una knowledge base"]
+https://docs.netapp.com/us-en/workload-genai/knowledge-base/manage-knowledgebase.html#take-a-snapshot-of-a-knowledge-base-volume["Creare un'istantanea del volume di una knowledge base"]
 
-https://review.docs.netapp.com/us-en/workload-genai_29-sept-24-release/manage-knowledgebase.html#restore-a-snapshot-of-a-knowledge-base-volume["Ripristinare uno snapshot di un volume della Knowledge base"]
+https://docs.netapp.com/us-en/workload-genai/knowledge-base/manage-knowledgebase.html#restore-a-snapshot-of-a-knowledge-base-volume["Ripristinare uno snapshot di un volume della Knowledge base"]
 
 
 
@@ -216,7 +208,7 @@ https://review.docs.netapp.com/us-en/workload-genai_29-sept-24-release/manage-kn
 
 È ora possibile mettere in pausa le scansioni delle origini dati pianificate. Per impostazione predefinita, i carichi di lavoro ai generativi analizzano ogni origine dati ogni giorno per acquisire nuovi dati in ciascuna knowledge base. Se non si desidera acquisire le ultime modifiche (ad esempio durante il test o il ripristino di uno snapshot), è possibile sospendere le scansioni pianificate e riprenderle in qualsiasi momento.
 
-https://docs.netapp.com/us-en/workload-genai/manage-knowledgebase.html["Gestire le knowledge base"]
+https://docs.netapp.com/us-en/workload-genai/knowledge-base/manage-knowledgebase.html["Gestire le knowledge base"]
 
 
 
@@ -224,7 +216,7 @@ https://docs.netapp.com/us-en/workload-genai/manage-knowledgebase.html["Gestire 
 
 Quando si seleziona un volume della Knowledge base, è ora possibile scegliere un volume di data Protection che fa parte di una relazione di replica NetApp SnapMirror. In questo modo è possibile archiviare knowledge base su volumi già protetti dalla replica SnapMirror.
 
-https://docs.netapp.com/us-en/workload-genai/identify-data-sources.html["Identificare le origini dati da integrare nella propria knowledge base"]
+https://docs.netapp.com/us-en/workload-genai/knowledge-base/identify-data-sources-knowledge-base.html["Identificare le origini dati da integrare nella propria knowledge base"]
 
 
 

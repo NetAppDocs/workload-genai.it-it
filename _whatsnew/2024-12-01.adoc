@@ -8,7 +8,7 @@
 
 La fabbrica di carichi di lavoro BlueXP  per Genai ora supporta il cloning di una knowledge base da una snapshot. Ciò consente il rapido recupero delle basi di conoscenza e la creazione di nuove basi di conoscenza con fonti di dati esistenti, e contribuisce al recupero e allo sviluppo dei dati.
 
-link:https://docs.netapp.com/us-en/workload-genai/manage-knowledgebase.html#clone-a-knowledge-base["Clonare una knowledge base"]
+link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/manage-knowledgebase.html#clone-a-knowledge-base["Clonare una knowledge base"]
 
 
 

@@ -1,34 +1,34 @@
 ---
 sidebar: sidebar 
-permalink: manage-data-source.html 
+permalink: general/manage-data-source.html 
 keywords: ai, chatbot, creating, knowledge base, data source 
 summary: 'Dopo aver creato una knowledge base utilizzando le origini dati sul file system FSX per ONTAP, è possibile visualizzare i dettagli dell"origine dati, aggiornare o modificare il contenuto dell"origine dati, modificare le impostazioni dell"origine dati o eliminare l"origine dati.' 
 ---
 = Gestire le origini dati Genai
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
-Dopo aver creato una knowledge base utilizzando le origini dati sul file system FSX per ONTAP, è possibile visualizzare i dettagli dell'origine dati, aggiornare o modificare il contenuto dell'origine dati, modificare le impostazioni dell'origine dati o eliminare l'origine dati.
+Dopo aver creato una knowledge base o un connettore utilizzando origini dati sul file system FSX per ONTAP, è possibile visualizzare i dettagli dell'origine dati, aggiornare o modificare il contenuto dell'origine dati, modificare le impostazioni dell'origine dati o eliminare l'origine dati.
 
 
 
 == Consente di visualizzare informazioni su un'origine dati
 
-È possibile visualizzare le informazioni sul contenuto di un'origine dati ed è possibile visualizzarne lo stato di integrazione con la knowledge base. Poiché un'origine dati fa parte di una knowledge base, è necessario aprire la knowledge base prima di poter visualizzare i dettagli dell'origine dati.
+È possibile visualizzare le informazioni sul contenuto di un'origine dati ed è possibile visualizzarne lo stato di integrazione con la knowledge base o il connettore. Poiché le origini dati sono associate a una knowledge base o a un connettore, prima di poter visualizzare i dettagli delle origini dati è necessario scegliere la knowledge base o il connettore.
 
 .Fasi
-. Accedere a workload Factory utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Accedere a workload Factory utilizzando uno dei https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^] .
 . Dal menu di navigazione di fabbrica del carico di lavoro, selezionare *ai*.
-. Selezionare la knowledge base in cui risiede l'origine dati, quindi selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Gestisci knowledge base*.
+. Selezionare la knowledge base o il connettore in cui risiede l'origine dati, quindi selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Gestisci knowledge base* o *Gestisci connettore*.
 +
-Nella parte inferiore della pagina sono elencate le origini dati che fanno parte di questa knowledge base.
+Nella parte inferiore della pagina sono elencate le origini dati associate.
 
 . Espandere ogni riga selezionando i image:button-down-caret.png["il pulsante freccia giù"] per visualizzare informazioni dettagliate su ciascuna origine dati, come il file system FSX per ONTAP, il volume e il percorso in cui risiede l'origine dati.
 +
-Elenca inoltre le informazioni di inclusione e se tale origine dati è attualmente incorporata nella base di conoscenza.
+Elenca inoltre le informazioni di inclusione e indica se l'origine dati è attualmente incorporata nella knowledge base o nel connettore.
 
 
 
@@ -36,7 +36,7 @@ Elenca inoltre le informazioni di inclusione e se tale origine dati è attualmen
 
 == Modificare le impostazioni dell'origine dati
 
-È possibile modificare le informazioni relative a un'origine dati integrata in una knowledge base. La maggior parte delle informazioni viene risolta dopo aver aggiunto un'origine dati a una knowledge base, ma è possibile apportare modifiche alla definizione e alla configurazione di suddivisione in blocchi e alla consapevolezza delle autorizzazioni (quando si utilizza il protocollo SMB sul volume di origine dati).
+È possibile modificare le informazioni relative a un'origine dati integrata con una knowledge base o un connettore. La maggior parte delle informazioni viene risolta dopo aver aggiunto un'origine dati, ma è possibile apportare modifiche ad alcune configurazioni (ad esempio definizione dei blocchi o consapevolezza delle autorizzazioni).
 
 .Fasi
 . Accedere a workload Factory utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
@@ -58,7 +58,7 @@ Le impostazioni dell'origine dati vengono aggiornate e il sistema ai sincronizza
 
 È possibile modificare il contenuto di un'origine dati in qualsiasi momento per aggiungere o aggiornare i dati dell'organizzazione. Se questa origine dati viene utilizzata attivamente in una knowledge base, è necessario sincronizzare l'origine dati in modo che venga riindicizzata nella knowledge base. La sincronizzazione è incrementale, quindi Amazon Bedrock elabora solo gli oggetti nel volume FSX per ONTAP che sono stati aggiunti, modificati o eliminati dall'ultima sincronizzazione.
 
-Le origini dati vengono sincronizzate automaticamente con la knowledge base una volta al giorno, in modo che eventuali modifiche all'origine dati vengano riflesse nel chatbot. Se si apportano modifiche a un'origine dati e si desidera sincronizzare immediatamente i dati, è possibile link:manage-knowledgebase.html#synchronize-your-data-sources-with-a-knowledge-base["eseguire una sincronizzazione su richiesta"].
+Le origini dati vengono sincronizzate automaticamente con la knowledge base una volta al giorno, in modo che eventuali modifiche all'origine dati vengano riflesse nel chatbot. Se si apportano modifiche a un'origine dati e si desidera sincronizzare immediatamente i dati, è possibile link:../knowledge-base/manage-knowledgebase.html#synchronize-your-data-sources-with-a-knowledge-base["eseguire una sincronizzazione su richiesta"].
 
 
 

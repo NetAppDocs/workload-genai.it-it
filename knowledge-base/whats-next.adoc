@@ -1,13 +1,13 @@
 ---
 sidebar: sidebar 
-permalink: whats-next.html 
+permalink: knowledge-base/whats-next.html 
 keywords: what you can do, knowledge base 
 summary: 'Ora che hai creato una knowledge base utilizzando i dati aziendali e li hai implementati per i tuoi utenti, puoi gestire la knowledge base, le origini dei dati e l"infrastruttura RAG, inclusi i file system FSX per ONTAP.' 
 ---
 = Cosa puoi fare con GenAI
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

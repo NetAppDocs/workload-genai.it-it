@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: connector/identify-data-sources-connector.html 
+keywords: data sources, chatbot, documents, knowledge base, connector 
+summary: 'Identificare o creare i documenti (origini dati) che risiedono nel file system FSX per ONTAP da integrare nella knowledge base. Queste fonti di dati consentono alla knowledge base di fornire risposte accurate e personalizzate alle query degli utenti in base a dati rilevanti per l"organizzazione.' 
+---
+= Identificare le origini dati da aggiungere a un connettore
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Identificare o creare i documenti (origini dati) che risiedono nel file system FSX per ONTAP da integrare nel connettore. Queste fonti di dati consentono ad Amazon Q Business di fornire risposte accurate e personalizzate alle domande degli utenti in base ai dati rilevanti per l'organizzazione.
+
+
+
+== Numero massimo di origini dati
+
+Il numero massimo di origini dati supportate è 10.
+
+
+
+== Ubicazione delle origini dati
+
+Le origini dati possono essere memorizzate in un singolo volume o in una cartella all'interno di un volume, in una condivisione SMB o in un file system NFS su Amazon FSX per NetApp ONTAP. Le origini dei dati possono anche essere memorizzate su Amazon FSX per NetApp ONTAP Volumes che sono in una relazione di data Protection di NetApp SnapMirror.
+
+Non è possibile selezionare singoli documenti all'interno di un volume o di una cartella, pertanto è necessario assicurarsi che ogni volume o cartella contenente origini dati non contenga documenti estranei che non devono essere integrati con la knowledge base.
+
+Puoi aggiungere più origini dati in ogni connettore, ma tutte devono risiedere in FSX per ONTAP, accessibili dal tuo account AWS.
+
+La dimensione massima del file per ciascuna origine dati è di 50 MB.
+
+
+
+== Protocolli supportati
+
+I connettori supportano i dati da volumi che utilizzano protocolli NFS o SMB/CIFS. Quando si selezionano i file archiviati utilizzando il protocollo SMB, è necessario immettere le informazioni di Active Directory in modo che il connettore possa accedere ai file su tali volumi. Sono inclusi il dominio Active Directory, l'indirizzo IP, il nome utente e la password.
+
+Quando si archivia l'origine dati in una condivisione (file o directory) a cui si accede tramite SMB, i dati sono accessibili solo da utenti o gruppi di chatbot che dispongono delle autorizzazioni per accedere a tale condivisione. Quando questa funzionalità "in base alle autorizzazioni" è attivata, il sistema ai confronta l'e-mail dell'utente in auth0 con gli utenti autorizzati a visualizzare o utilizzare i file nella condivisione SMB. Il chatbot fornirà le risposte in base alle autorizzazioni dell'utente per i file incorporati.
+
+Ad esempio, se avete integrato file 10 (origini dati) nel connettore e 2 dei file sono file di risorse umane che contengono informazioni riservate, solo gli utenti di chatbot che sono autenticati per accedere a questi file 2 riceveranno risposte dal chatbot che includono dati da questi file.
+
+
+NOTE: Quando si aggiungono origini dati a un Amazon Q Business Connector, ai file di origine dati vengono applicate solo le autorizzazioni utente. Le autorizzazioni del gruppo non vengono applicate.
+
+
+NOTE: Se nell'origine dati sono presenti file che non contengono testo, Amazon Q Business non indicizza tali file e registra invece una voce in Amazon CloudWatch Logs notando che i file non contengono testo da indicizzare.
+
+
+
+== Formati di file origine dati supportati
+
+I seguenti formati di file di origine dati sono attualmente supportati con NetApp ONTAP Connector per Amazon Q
+
+[cols="2*"]
+|===
+| Formato file | Interno 
+
+
+| File di valori separati da virgola | .csv 
+
+
+| JSON e JSONP | json 
+
+
+| Valutazione | md 
+
+
+| Microsoft Word | .docx 
+
+
+| Testo normale | .txt 
+
+
+| Formato documento portatile | in formato .pdf 
+
+
+| Microsoft PowerPoint | .ppt o .pptx 
+
+
+| Hypertext Markup Language | html 
+
+
+| Extensible Markup Language | xml 
+
+
+| XSLT | xslt 
+
+
+| Microsoft Excel | .xls 
+
+
+| Formato RTF | rtf 
+|===

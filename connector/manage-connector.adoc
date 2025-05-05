@@ -1,0 +1,175 @@
+---
+sidebar: sidebar 
+permalink: connector/manage-connector.html 
+keywords: ai, chatbot, managing, knowledge base 
+summary: Dopo aver creato una knowledge base, è possibile visualizzare i dettagli della knowledge base, modificare la knowledge base, integrare fonti di dati aggiuntive o eliminare la knowledge base. 
+---
+= Gestione di Amazon Q Business Connector
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver creato un connettore per Amazon Q Business, è possibile visualizzare i dettagli del connettore, modificare il connettore, integrare altre origini dati o eliminare il connettore.
+
+
+
+== Consente di visualizzare informazioni su un connettore
+
+È possibile visualizzare informazioni sulle impostazioni di un connettore e sulle origini dati integrate.
+
+.Fasi
+. Accedere a workload Factory utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Dal menu di navigazione di fabbrica del carico di lavoro, selezionare *ai*.
+. Selezionare il connettore che si desidera visualizzare.
+. Per visualizzare i dettagli del connettore, selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Gestisci connettore*.
++
+Questa pagina visualizza lo stato pubblicato, lo stato di incorporazione delle origini dati, la modalità di incorporazione, l'elenco di tutte le origini dati incorporate e altro ancora.
+
++
+Il menu *azioni* consente di gestire il connettore se si desidera apportare modifiche.
+
+
+
+
+
+== Modificare un connettore
+
+È possibile aggiornare un connettore modificando alcune impostazioni oppure aggiungere o rimuovere origini dati.
+
+Ogni volta che si aggiungono, modificano o rimuovono origini dati dal connettore, GenAI deve inviare le informazioni dell'origine dati ad Amazon Q Business in modo che vengano riindicizzate. La sincronizzazione è incrementale, quindi Amazon Q Business elabora solo gli oggetti nel volume FSX per ONTAP che sono stati aggiunti, modificati o eliminati dall'ultima sincronizzazione.
+
+.Fasi
+. Accedere a workload Factory utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nella pagina di inventario Knowledge base e connettori, selezionare il connettore che si desidera aggiornare.
+. Selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Gestisci connettore*.
++
+Questa pagina visualizza lo stato pubblicato, lo stato di incorporazione delle origini dati, la modalità di incorporazione, l'elenco di tutte le origini dati incorporate e altro ancora.
+
+. Selezionare il menu *azioni* e selezionare *Modifica connettore*.
+. Nella pagina Modifica connettore è possibile modificare il nome del connettore, la descrizione, il modello di incorporazione, l'abilitazione delle barriere di protezione dei dati e il criterio snapshot utilizzato per il volume che contiene il connettore.
++
+
+NOTE: Ogni scansione dell'origine dati, che include l'inclusione, implica un costo. Se si abilitano le barriere di sicurezza dei dati dopo la creazione di un connettore, l'origine dati viene nuovamente sottoposta a scansione e i costi sono sostenuti.
+
+. Selezionare *Salva* dopo aver apportato le modifiche.
+
+
+
+
+== Aggiungere ulteriori origini dati a un connettore
+
+È possibile incorporare ulteriori origini dati nel connettore per popolarlo con ulteriori dati dell'organizzazione.
+
+.Fasi
+. Accedere a workload Factory utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Dalla pagina di inventario Knowledge base e connettori, selezionare il connettore in cui si desidera aggiungere l'origine dati.
+. Selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Aggiungi origine dati*.
+. *Selezionare un file system*: Selezionare il file system FSX per ONTAP in cui risiedono i file di origine dati e selezionare *Avanti*.
+. *Selezionare un volume*: Selezionare il volume in cui risiedono i file di origine dati e selezionare *Avanti*.
++
+Quando si selezionano i file archiviati utilizzando il protocollo SMB, è necessario immettere le informazioni di Active Directory, che includono il dominio, l'indirizzo IP, il nome utente e la password.
+
+. *Selezionare un'origine dati*: Selezionare la posizione dell'origine dati in base alla posizione in cui sono stati salvati i file. Può trattarsi di un intero volume o solo di una cartella o sottocartella specifica del volume e selezionare *Avanti*.
+. *Configurazioni*: Configurare il modo in cui l'origine dati acquisisce le informazioni dai file e quali file include nelle scansioni:
++
+** *Definisci origine dati*: Nella sezione *strategia di Chunking*, definisci il modo in cui il motore GenAI divide il contenuto dell'origine dati in blocchi quando l'origine dati è integrata con una knowledge base. È possibile scegliere una delle seguenti strategie:
++
+*** *Chunking a più frasi*: Organizza le informazioni dalla vostra origine dati in blocchi definiti dalle frasi. È possibile scegliere quante frasi compongono ciascun blocco (fino a 100).
+*** *Chunking basato su sovrapposizione*: Organizza le informazioni dall'origine dati in blocchi definiti dai caratteri che possono sovrapporsi a blocchi adiacenti. È possibile scegliere la dimensione di ciascun frammento in caratteri e la sovrapposizione di ciascun frammento con i frammenti adiacenti. È possibile configurare una dimensione del frammento compresa tra 50 e 3000 caratteri e una percentuale di sovrapposizione compresa tra 1 e 99%.
++
+
+NOTE: La scelta di un'elevata percentuale di sovrapposizione può aumentare notevolmente i requisiti di archiviazione con solo lievi miglioramenti nella precisione di recupero.
+
+
+
+** *Filtraggio dei file*: Configurare i file da includere nelle scansioni:
++
+*** Nella sezione *supporto tipi di file*, scegliere di includere tutti i tipi di file o selezionare singoli tipi di file da includere nelle scansioni dell'origine dati.
++
+Se si includono immagini o file PDF, BlueXP  workload factory per GenAI analizza il testo nelle immagini (incluse le immagini nei documenti PDF) e ciò comporta un costo maggiore.
+
++
+Quando si includono dati di testo da immagini, GenAI non è in grado di mascherare informazioni di identificazione personale (PII) dall'immagine, poiché i dati di testo acquisiti vengono inviati dall'ambiente ad AWS. Tuttavia, una volta memorizzati i dati, tutte le PII vengono mascherate nel database GenAI.
+
++
+
+NOTE: La scelta di includere i file di immagine nelle scansioni è correlata al modello di chat della Knowledge base. Se si includono file di immagine nelle scansioni, il modello di chat deve supportare le immagini. Se qui sono selezionati i tipi di file immagine, non è possibile passare dalla knowledge base a un modello di chat che non supporta i file immagine.
+
+*** Nella sezione *filtro ora modifica file*, scegliere di attivare o disattivare l'inclusione dei file in base al tempo di modifica. Se si attiva il filtraggio dell'ora di modifica, selezionare un intervallo di date dall'elenco.
++
+
+NOTE: Se si includono file basati su un intervallo di date di modifica, non appena l'intervallo di date non è soddisfatto (i file non sono stati modificati entro l'intervallo di date specificato), i file saranno esclusi dalla scansione periodica e l'origine dati non includerà questi file.
+
+
+
+
+
+. Nella sezione *Permission Aware*, disponibile solo quando l'origine dati selezionata si trova su un volume che utilizza il protocollo SMB, è possibile attivare o disattivare le risposte in base alle autorizzazioni:
++
+** *Enabled*: Gli utenti del chatbot che accedono a questa knowledge base riceveranno solo risposte alle query provenienti da origini dati a cui hanno accesso.
+** *Disabled*: Gli utenti del chatbot riceveranno le risposte utilizzando il contenuto di tutte le origini dati integrate.
+
+
+. Selezionare *Aggiungi* per aggiungere questa origine dati alla knowledge base.
+
+
+.Risultato
+L'origine dati è integrata nel connettore.
+
+
+
+== Sincronizzare le origini dati con un connettore
+
+Le origini dati vengono sincronizzate automaticamente con il connettore associato una volta al giorno, in modo che eventuali modifiche all'origine dati vengano riflesse in Amazon Q Business. Se si apportano modifiche a una delle origini dati e si desidera sincronizzare (eseguire la scansione) immediatamente i dati, è possibile eseguire una sincronizzazione su richiesta.
+
+La sincronizzazione è incrementale, quindi Amazon Q Business elabora solo gli oggetti nelle origini dati che sono stati aggiunti, modificati o eliminati dall'ultima sincronizzazione.
+
+.Fasi
+. Accedere a workload Factory utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Dalla scheda Knowledge base e connettori, selezionare il connettore che si desidera sincronizzare.
+. Selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Gestisci connettore*.
+. Selezionare il menu *azioni* e selezionare *Esegui scansione ora*.
++
+Viene visualizzato un messaggio che indica che le origini dati sono in fase di scansione e un messaggio finale al termine della scansione.
+
+
+
+.Risultato
+Il connettore è sincronizzato con le origini dati collegate e Amazon Q Business inizierà a utilizzare le informazioni più recenti provenienti dalle origini dati.
+
+
+
+=== Consente di sospendere o riprendere una sincronizzazione pianificata
+
+Se si desidera sospendere o riprendere la successiva sincronizzazione (scansione) delle origini dati, è possibile farlo in qualsiasi momento. Potrebbe essere necessario sospendere la successiva sincronizzazione pianificata se si intende apportare modifiche a un'origine dati e non si desidera che la sincronizzazione avvenga durante la finestra di modifica.
+
+.Fasi
+. Accedere a workload Factory utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Dalla pagina di inventario del connettore, selezionare il connettore per il quale si desidera sospendere o riprendere le scansioni.
+. Selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Gestisci connettore*.
+. Selezionare il menu *azioni* e selezionare *scansione > Pausa scansione pianificata* o *scansione > Riprendi scansione pianificata*.
++
+Viene visualizzato un messaggio che indica che la successiva scansione pianificata è stata sospesa o ripresa.
+
+
+
+
+
+== Eliminare un connettore
+
+Se non è più necessario un connettore, è possibile eliminarlo. Quando si elimina un connettore, questo viene rimosso dalla fabbrica del carico di lavoro e il volume che contiene il connettore viene eliminato. L'eliminazione di un connettore non è reversibile.
+
+Quando si elimina un connettore, è necessario scollegarlo da tutti gli agenti a cui è associato per eliminare completamente tutte le risorse associate al connettore.
+
+.Fasi
+. Accedere a workload Factory utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nella pagina di inventario Knowledge base e connettori, selezionare il connettore che si desidera eliminare.
+. Selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Gestisci connettore*.
+. Selezionare il menu *azioni* e selezionare *Elimina connettore*.
+. Nella finestra di dialogo Elimina connettore, confermare che si desidera eliminarlo e selezionare *Elimina*.
+
+
+.Risultato
+Il connettore viene rimosso dalla fabbrica del carico di lavoro e il volume associato viene eliminato.

@@ -1,17 +1,17 @@
 ---
 sidebar: sidebar 
-permalink: quick-start.html 
+permalink: knowledge-base/quick-start-knowledge-base.html 
 keywords: quick start, knowledge base, chatbot 
 summary: 'Inizia a creare una knowledge base utilizzando i dati della tua organizzazione presenti nei file system Amazon FSX per NetApp ONTAP. Un"applicazione come un chatbot accederà a questa knowledge base per fornire agli utenti finali risposte incentrate sull"organizzazione.' 
 ---
-= Avvio rapido per GenAI
+= Introduzione rapida alle basi di conoscenza GenAI
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
-Inizia a creare una knowledge base utilizzando i dati della tua organizzazione presenti nei file system Amazon FSX per NetApp ONTAP. Un'applicazione come un chatbot accederà a questa knowledge base per fornire agli utenti finali risposte incentrate sull'organizzazione.
+Inizia a creare una knowledge base o Amazon Q Business Connector utilizzando i dati della tua organizzazione presenti nei file system di Amazon FSX per NetApp ONTAP. Un'applicazione come un chatbot accede a questa knowledge base o a questo connettore per fornire agli utenti finali risposte incentrate sull'organizzazione.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Accedi a workload Factory
 [role="quick-margin-para"]
@@ -19,21 +19,21 @@ Sarà necessario https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Configura il tuo ambiente per soddisfare i requisiti Genai
 [role="quick-margin-para"]
-Avrai bisogno delle credenziali AWS per implementare l'infrastruttura AWS, un file system FSX per ONTAP implementato e rilevato, l'elenco delle origini dati che desideri integrare nella tua knowledge base, l'accesso al servizio Amazon Bedrock ai e altro ancora.
+Avrai bisogno delle credenziali AWS per implementare l'infrastruttura AWS, un file system FSX per ONTAP implementato e rilevato, l'elenco delle origini dati che desideri integrare nella tua knowledge base o connettore, l'accesso al servizio ai di Amazon Bedrock o all'applicazione Amazon Q Business e altro ancora.
 
 [role="quick-margin-para"]
-link:requirements.html["Ulteriori informazioni sui requisiti GenAI"^].
+link:requirements-knowledge-base.html["Ulteriori informazioni sui requisiti GenAI"^].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"] Identificare il file system FSX per ONTAP che contiene le origini dati
 [role="quick-margin-para"]
 Le origini dei dati che integrerai nella tua knowledge base possono trovarsi in un singolo file system FSX per ONTAP o in più file system FSX per ONTAP. Se questi sistemi si trovano in VPC diversi, devono essere accessibili all'interno della stessa rete, oppure è necessario eseguire il peering dei VPC e utilizzare la stessa regione e lo stesso account AWS del motore di ai.
 
 [role="quick-margin-para"]
-link:identify-data-sources.html["Scopri come identificare le origini dati"^].
+link:identify-data-sources-knowledge-base.html["Scopri come identificare le origini dati"^].
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"] Implementare l'infrastruttura della Knowledge base
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"] Implementare l'infrastruttura GenAI
 [role="quick-margin-para"]
-Avvia la procedura guidata di implementazione dell'infrastruttura per implementare l'infrastruttura della Knowledge base nel tuo ambiente AWS. Questo processo implementa un'istanza EC2 per il motore NetApp Genai e un volume su un file system FSX for ONTAP in modo da contenere i database del motore ai di NetApp. Il volume viene utilizzato per memorizzare il database vettoriale utilizzato dalla knowledge base.
+Avvia la procedura guidata di implementazione dell'infrastruttura per implementare l'infrastruttura Genai nel tuo ambiente AWS. Questo processo implementa un'istanza EC2 per il motore NetApp Genai e un volume su un file system FSX for ONTAP in modo da contenere i database del motore ai di NetApp. Il volume viene utilizzato per memorizzare il database vettoriale utilizzato dalla knowledge base.
 
 [role="quick-margin-para"]
 link:deploy-infrastructure.html["Scopri come implementare l'infrastruttura della Knowledge base"^].

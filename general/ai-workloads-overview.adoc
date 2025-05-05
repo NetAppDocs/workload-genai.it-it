@@ -1,27 +1,29 @@
 ---
 sidebar: sidebar 
-permalink: ai-workloads-overview.html 
+permalink: general/ai-workloads-overview.html 
 keywords: overview, concepts, features, use case, workloads, AI, Bedrock, knowledge base, chatbot 
 summary: La BlueXP  workload factory per Genai ti permette di integrare i file system Amazon FSX per NetApp ONTAP con i modelli di base Genai. In questo modo otterrai uno storage dalle performance elevate con un ricco set di funzionalità di protezione, sicurezza e ottimizzazione dei costi per i tuoi set di dati ai. 
 ---
 = Scopri la BlueXP  workload Factory per Genai
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
-Workload factory per Genai ti permette di integrare i file system Amazon FSX per NetApp ONTAP con modelli di base Genai. In questo modo otterrai uno storage dalle performance elevate con un ricco set di funzionalità di protezione, sicurezza e ottimizzazione dei costi per i tuoi set di dati ai.
+La BlueXP  workload factory per Genai ti permette di integrare i file system Amazon FSX per NetApp ONTAP con i modelli di base Genai. In questo modo otterrai uno storage dalle performance elevate con un ricco set di funzionalità di protezione, sicurezza e ottimizzazione dei costi per i tuoi set di dati ai.
 
 
 
 == Che cos'è la fabbrica di carichi di lavoro BlueXP  per GenAI?
 
-La BlueXP  workload factory per Genai ti permette di usare le tue origini dei dati Enterprise in Amazon FSX per NetApp ONTAP con applicazioni ai generative. Utilizzando il framework Retrieval Augmentation Generation (RAG), è possibile collegare rapidamente le origini dati ai modelli di base disponibili tramite Amazon Bedrock per sviluppare applicazioni basate sull'intelligenza artificiale generativa, come assistenti virtuali, chatbot Q&A, sintesi dei documenti, creazione di contenuti, ecc.
+La BlueXP  workload factory per Genai ti permette di usare le tue origini dei dati Enterprise in Amazon FSX per NetApp ONTAP con applicazioni ai generative. Utilizzando la generazione aumentata di recupero (RAG), è possibile collegare rapidamente le origini dati ai modelli di base disponibili tramite Amazon Bedrock o Amazon Q Business per sviluppare applicazioni basate sull'intelligenza artificiale generativa, come assistenti virtuali, chatbot di domande e risposte, sintesi dei documenti, creazione di contenuti, ecc.
 
 L'utilizzo dell'intelligenza artificiale generativa con i dati organizzativi ti consente di sfruttare le tue conoscenze e competenze, non solo l'intelligenza del modello basata sui dati pubblici su cui i modelli sono stati formati. L'utilizzo di RAG per personalizzare i modelli garantisce risposte precise e pertinenti alle domande specifiche dell'organizzazione, migliorando la produttività e l'efficienza per gli utenti delle applicazioni utilizzando l'intelligenza artificiale generativa.
 
 Lo sviluppo di un'applicazione Genai personalizzata in base ai dati della vostra organizzazione vi consente di sfruttare le vostre conoscenze e competenze. Questa funzionalità di personalizzazione garantisce risposte accurate e pertinenti alle domande specifiche dell'organizzazione, migliorando la soddisfazione e la produttività di tutti gli utenti.
+
+Se link:../knowledge-base/create-knowledgebase.html["creare una knowledge base"^], GenAI acquisisce i dati dalle origini dati, memorizza i risultati vettorizzati in un database e fornisce il pieno controllo su come utilizzare i dati acquisiti per rispondere alle query. Questo approccio richiede una configurazione iniziale maggiore, ma consente di scegliere modelli di chat diversi per risultati diversi. Se si link:../connector/define-connector.html["Definire un connettore NetApp ONTAP per Amazon Q"], i dati provenienti dalle origini dati vengono acquisiti da Amazon Q Business e archiviati in un indice. Questo approccio richiede una configurazione iniziale inferiore, ma consente di avere meno controllo sui risultati.
 
 Per ulteriori informazioni sulla fabbrica dei carichi di lavoro, fare riferimento alla https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html["panoramica della fabbrica del carico di lavoro"^].
 
@@ -29,12 +31,12 @@ Per ulteriori informazioni sulla fabbrica dei carichi di lavoro, fare riferiment
 
 == Vantaggi dell'utilizzo di Genai per la creazione di applicazioni di intelligenza artificiale generative
 
-La fabbrica di workload BlueXP  per Genai semplifica il processo di implementazione dell'infrastruttura necessaria per creare applicazioni ai generative utilizzando Retrieval Augmented Generation (RAG). In particolare, GenAI offre i seguenti vantaggi:
+La fabbrica di workload BlueXP  per Genai semplifica il processo di implementazione dell'infrastruttura necessaria per creare applicazioni ai generative utilizzando la generazione aumentata di recupero (RAG). In particolare, GenAI offre i seguenti vantaggi:
 
 * Senza bisogno di una conoscenza approfondita dell'infrastruttura dati, delle basi e dei modelli linguistici, gli amministratori IT e gli sviluppatori possono accelerare lo sviluppo delle applicazioni utilizzando l'automazione fornita da Genai. Amministratori e sviluppatori dei dati possono creare in modo semplice e rapido knowledge base aziendali che integrano i dati non strutturati dell'organizzazione che possono essere utilizzati da applicazioni ai generative.
 * Migliorare la protezione preservando le autorizzazioni degli utenti nei file incorporati nelle knowledge base per garantire il mantenimento della protezione e della privacy dei dati. Un'applicazione, come un chatbot, può essere sviluppata per fornire solo agli utenti autenticati risposte basate sui dati a cui gli utenti hanno accesso.
 * Mantieni privati e protetti i tuoi dati aziendali all'interno dell'account clienti AWS, in cui i dati aziendali non sono mai esposti all'esterno.
-* Accelera lo sviluppo di applicazioni Genai come un chatbot Q&A utilizzando framework open source come LangChain che utilizzano l'API GenAI per fornire e gestire knowledge base, chattare con una knowledge base e memorizzare e recuperare la cronologia delle chat.
+* Accelera lo sviluppo di applicazioni Genai come un chatbot Q&A utilizzando framework open source come LangChain che utilizzano l'API GenAI per il provisioning e la gestione di knowledge base e connettori, chattare con una knowledge base e memorizzare e recuperare la cronologia delle chat.
 * Migliora la data Protection e il livello di disponibilità implementando l'infrastruttura di dati generativa ai su file system FSX per NetApp ONTAP e sfruttando funzionalità ONTAP come alta disponibilità, snapshot per la data Protection e il recovery locali, SnapMirror per il disaster recovery e SnapVault per il backup della tua infrastruttura dati.
 * Ridurre i costi generali di storage per l'infrastruttura dati ai generativa, sfruttando le funzionalità di efficienza dei dati di ONTAP, come deduplica, compressione e compaction dei dati, tiering dei dati e thin provisioning.
 * Ottieni risultati di alta qualità dai tuoi dati con la ricerca ibrida e le funzionalità di re-rank fornite da GenAI. La ricerca ibrida combinata con il re-ranking migliora notevolmente l'importanza dei risultati di ricerca. Queste funzionalità sono disponibili tramite Amazon AWS e dipendono da una regione.
@@ -44,9 +46,9 @@ La fabbrica di workload BlueXP  per Genai semplifica il processo di implementaz
 
 == Come funziona GenAI
 
-GenAI utilizza i dati privati della tua organizzazione per integrare l'intelligenza del modello (in base ai dati su cui è stata formata) per fornire risposte personalizzate alle domande poste dagli utenti della tua organizzazione. Innanzitutto, è necessario implementare l'infrastruttura necessaria per un framework RAG, quindi creare una knowledge base utilizzando le origini dati e i modelli di base dell'organizzazione disponibili tramite Amazon Bedrock, quindi collegare un'applicazione (ad esempio un chatbot di domande e risposte) alla knowledge base.
+GenAI utilizza i dati privati della tua organizzazione per integrare l'intelligenza del modello (in base ai dati su cui è stata formata) per fornire risposte personalizzate alle domande poste dagli utenti della tua organizzazione. Innanzitutto, è necessario implementare l'infrastruttura necessaria per un framework RAG, quindi creare una knowledge base o definire un connettore utilizzando le origini dati e i modelli di base dell'organizzazione disponibili tramite Amazon Bedrock o Amazon Q Business, quindi collegare un'applicazione (ad esempio un chatbot Q&A) alla knowledge base o al connettore.
 
-image:diagram-chatbot-processing.png["Un diagramma che mostra i componenti principali di GenAI, la loro funzione e come funziona."]
+image:genai-infrastructure-diagram.png["Un diagramma che mostra i componenti principali di GenAI, la loro funzione e come funziona."]
 
 
 
@@ -54,25 +56,15 @@ image:diagram-chatbot-processing.png["Un diagramma che mostra i componenti princ
 
 GenAI aiuta a creare applicazioni ai generative utilizzando RAG nei seguenti modi:
 
-* Implementa l'infrastruttura richiesta per il framework RAG (Augmented Generation) per lavorare con le origini dati in FSX per i file system ONTAP e Amazon Bedrock. L'infrastruttura include l'istanza del motore GenAI di NetApp per la gestione dei dati, un database vettoriale incorporato (LanceDB) e lo storage nel file system FSX per ONTAP per il database vettoriale.
-* Consente di collegare le origini dati alle incorporazioni e ai modelli linguistici disponibili tramite Amazon Bedrock per l'inclusione delle origini dati e il recupero delle risposte per le query degli utenti. Le origini dei dati, insieme ai modelli e alla loro configurazione, sono presentate come knowledge base FSX per ONTAP.
-* Acquisisce i dati di origine nella knowledge base per integrare i file di origine nelle condivisioni SMB e nelle esportazioni NFS in FSX per i file system ONTAP, oltre a memorizzare i permessi dei file per i file all'interno delle condivisioni SMB.
-* Crea automaticamente domande introduttive sulla base del contenuto delle basi di conoscenza.
+* Implementa l'infrastruttura richiesta per il framework RAG (Return-augmented generation) per lavorare con le origini dati in FSX per i file system ONTAP e in Amazon Bedrock o Amazon Q Business. L'infrastruttura include l'istanza del motore GenAI di NetApp per la gestione dei dati, un database vettoriale incorporato (LanceDB) e lo storage nel file system FSX per ONTAP per il database vettoriale.
+* Consente di collegare le origini dati alle incorporazioni e ai modelli linguistici disponibili tramite Amazon Bedrock o Amazon Q Business per l'inclusione delle origini dati e il recupero delle risposte per le query degli utenti. Le origini dei dati, insieme ai modelli e alla loro configurazione, sono presentate come knowledge base FSX per ONTAP.
+* Acquisisce i dati di origine nella knowledge base o nel connettore per incorporare i file di origine nelle condivisioni SMB e nelle esportazioni NFS in file system FSX per ONTAP, oltre a memorizzare le autorizzazioni dei file per i file all'interno delle condivisioni SMB.
+* Crea automaticamente domande introduttive sulla base del contenuto delle knowledge base.
 * Fornisce un simulatore di chat per gli amministratori di dati per testare le chat con le knowledge base.
+* Fornisce una semplice interfaccia di connettore che ti consente di collegare Genai con Amazon Q Business, utilizzando in modo rapido e semplice le funzionalità di questo assistente ai.
 
 
-
-
-== Strumenti per l'utilizzo di workload Factory
-
-È possibile utilizzare la farm di workload BlueXP  con i seguenti tool:
-
-* *Workload Factory Console*: La console workload Factory offre un'interfaccia visiva che offre una visione olistica delle applicazioni e dei progetti.
-* *Console BlueXP *: La console BlueXP  offre un'interfaccia ibrida in modo da poter utilizzare la fabbrica dei workload BlueXP  insieme ad altri servizi BlueXP .
-* *API REST*: Le API REST DI workload Factory ti consentono di implementare e gestire i file system FSX per ONTAP e altre risorse AWS.
-* *CloudFormation*: Il codice AWS CloudFormation consente di eseguire le azioni definite nella console del workload factory per modellare, eseguire il provisioning e gestire risorse AWS e di terze parti dallo stack CloudFormation nell'account AWS.
-* *Terraform BlueXP  workload Factory Provider*: Terraform consente di creare e gestire i flussi di lavoro dell'infrastruttura generati nella console di workload Factory.
-
+https://raw.githubusercontent.com/NetAppDocs/workload-family/main/_include/learn-about-tools.adoc[]
 
 
 
@@ -80,7 +72,7 @@ GenAI aiuta a creare applicazioni ai generative utilizzando RAG nei seguenti mod
 
 L'utilizzo della funzionalità GenAI della workload factory non comporta costi.
 
-Tuttavia, dovrai pagare per le risorse AWS implementate per supportare l'infrastruttura ai generativa. Ad esempio, pagherai AWS per il servizio Amazon Bedrock ai, FSX per la capacità di storage e file system ONTAP e l'istanza Genai Engine EC2.
+Tuttavia, dovrai pagare per le risorse AWS implementate per supportare l'infrastruttura ai generativa. Ad esempio, pagherai AWS per Amazon Bedrock o Amazon Q Business, FSX per la capacità di storage e file system ONTAP e l'istanza EC2 del motore Genai.
 
 Alcune operazioni multimodali, come la scansione delle immagini per le informazioni di testo, possono utilizzare più risorse e quindi comportano costi più elevati. Alcune operazioni di configurazione, ad esempio la modifica delle impostazioni per una knowledgebase, possono causare la ripetizione della scansione delle origini dati, mentre le scansioni delle origini dati possono comportare costi più elevati.
 

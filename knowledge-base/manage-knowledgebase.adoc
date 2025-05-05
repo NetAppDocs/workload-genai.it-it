@@ -1,13 +1,13 @@
 ---
 sidebar: sidebar 
-permalink: manage-knowledgebase.html 
+permalink: knowledge-base/manage-knowledgebase.html 
 keywords: ai, chatbot, managing, knowledge base 
 summary: Dopo aver creato una knowledge base, è possibile visualizzare i dettagli della knowledge base, modificare la knowledge base, integrare fonti di dati aggiuntive o eliminare la knowledge base. 
 ---
 = Gestire le knowledge base GenAI
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -237,6 +237,22 @@ Viene visualizzato un messaggio che indica che le origini dati sono in fase di s
 
 .Risultato
 La knowledge base è sincronizzata con le origini dati collegate e qualsiasi chatbot attivo inizierà a utilizzare le informazioni più recenti provenienti dalle origini dati.
+
+
+
+=== Consente di sospendere o riprendere una sincronizzazione pianificata
+
+Se si desidera sospendere o riprendere la successiva sincronizzazione (scansione) delle origini dati, è possibile farlo in qualsiasi momento. Potrebbe essere necessario sospendere la successiva sincronizzazione pianificata se si intende apportare modifiche a un'origine dati e non si desidera che la sincronizzazione avvenga durante la finestra di modifica.
+
+.Fasi
+. Accedere a workload Factory utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Dalla scheda Knowledge base e connettori, selezionare la knowledge base per la quale si desidera sospendere o riprendere le scansioni.
+. Selezionare image:icon-action.png["il pulsante di opzione"] e selezionare *Gestisci knowledge base*.
+. Selezionare il menu *azioni* e selezionare *scansione > Pausa scansione pianificata* o *scansione > Riprendi scansione pianificata*.
++
+Viene visualizzato un messaggio che indica che la successiva scansione pianificata è stata sospesa o ripresa.
+
+
 
 
 

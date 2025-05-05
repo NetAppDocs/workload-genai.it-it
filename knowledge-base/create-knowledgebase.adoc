@@ -1,17 +1,19 @@
 ---
 sidebar: sidebar 
-permalink: create-knowledgebase.html 
+permalink: knowledge-base/create-knowledgebase.html 
 keywords: ai, chatbot, creating, knowledge base 
 summary: 'Dopo aver implementato l"infrastruttura ai e identificato le origini dei dati che integrerai nella tua knowledge base dai datastore FSX per ONTAP, sarai pronto a costruire la knowledge base utilizzando la farm di carichi di lavoro. Nell"ambito di questa fase, definirai anche le caratteristiche dell"ai e creerai modi per avviare una conversazione.' 
 ---
 = Creare una knowledge base GenAI
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
 Dopo aver implementato l'infrastruttura ai e identificato le origini dei dati che integrerai nella tua knowledge base dai datastore FSX per ONTAP, sarai pronto a costruire la knowledge base utilizzando la farm di carichi di lavoro. Nell'ambito di questo passaggio, definirai anche le caratteristiche dell'ai e creerai degli spunti di conversazione.
+
+Prima di procedere, accertarsi che l'ambiente soddisfi link:requirements-knowledge-base.html["requisiti"]le basi di conoscenza per .
 
 .A proposito di questa attività
 Le knowledge base hanno due modalità di integrazione dei dati: _Modalità pubblica_ e _modalità aziendale_.
@@ -20,7 +22,7 @@ Modalità pubblica:: È possibile utilizzare una knowledge base senza integrare 
 Modalità Enterprise:: Nella maggior parte dei casi, è necessario integrare le origini dati dell'organizzazione nella knowledge base. Questa è nota come integrazione _Enterprise mode_ perché fornisce informazioni dall'azienda.
 +
 --
-Le origini dati dell'organizzazione possono contenere informazioni sull'identità privata (PII, Private Identity Information). Per proteggere queste informazioni sensibili, è possibile abilitare _data Guardrails_ durante la creazione e la configurazione di knowledge base. Le barriere di protezione dei dati, basate sulla classificazione BlueXP , identificano e maschera PII, rendendolo inaccessibile e irrecuperabile.
+Le fonti di dati dell'organizzazione possono contenere informazioni personali identificabili (PII). Per proteggere queste informazioni sensibili, è possibile abilitare _data Guardrails_ durante la creazione e la configurazione di knowledge base. Le barriere di protezione dei dati, basate sulla classificazione BlueXP , identificano e maschera PII, rendendolo inaccessibile e irrecuperabile.
 
 link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Scopri di più sulla classificazione BlueXP"^].
 
@@ -42,7 +44,7 @@ La knowledge base definisce caratteristiche quali i modelli di intelligenza arti
 .Fasi
 . Accedere a workload Factory utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione carichi di lavoro ai, selezionare *Deploy & Manage*.
-. Dalla scheda Knowledge base, selezionare *Aggiungi knowledge base*.
+. Dalla scheda Knowledge base e connettori, selezionare il menu a discesa *Crea nuovo* e scegliere *NetApp Genai Knowledge base per Bedrock*.
 . Nella pagina Definisci Knowledge base, configurare le impostazioni della Knowledge base:
 +
 .. *Nome*: Immettere il nome che si desidera utilizzare per la knowledge base.
@@ -52,6 +54,8 @@ La knowledge base definisce caratteristiche quali i modelli di intelligenza arti
 *** Titano embedding G1 - testo
 *** Titan Embedding testo v2
 *** Incorporazioni multimodali Titan G1
+*** Incorporare l'inglese
+*** Incorpora multilingue
 +
 Si noti che è necessario aver già attivato il modello di inclusione da Amazon Bedrock.
 
@@ -60,15 +64,7 @@ https://aws.amazon.com/bedrock/titan/["Scopri di più su Amazon Titan"^]
 
 
 
-.. *Modello chat*: Scegli tra i modelli di chat antropici Claude o Amazon Nova integrati in Amazon Bedrock. Nota: È necessario aver già attivato il modello di chat da Amazon Bedrock.
-+
-Ulteriori informazioni sull'utilizzo di questi modelli con Amazon Bedrock:
-
-+
-*** https://aws.amazon.com/bedrock/claude/["Claude di antropic in Amazon Bedrock"^]
-*** https://docs.aws.amazon.com/nova/latest/userguide/getting-started-console.html["Guida introduttiva ad Amazon Nova nella console Amazon Bedrock"^]
-
-
+.. *Modello chat*: Scegli tra i vari modelli di chat integrati in Amazon Bedrock. Nota: È necessario aver già attivato il modello di chat da Amazon Bedrock.
 .. *Data Guardrails*: Scegliere se attivare o disattivare le barriere di protezione dei dati. link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Scopri le barriere di protezione dei dati, basate sulla classificazione BlueXP "^].
 +
 Per abilitare le barriere di protezione dei dati, è necessario soddisfare i seguenti prerequisiti.

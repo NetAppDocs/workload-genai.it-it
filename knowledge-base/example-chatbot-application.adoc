@@ -1,13 +1,13 @@
 ---
 sidebar: sidebar 
-permalink: example-chatbot-application.html 
+permalink: knowledge-base/example-chatbot-application.html 
 keywords: ai, example, sample, chatbot, app, application, local 
 summary: 'È possibile installare ed eseguire un"applicazione chatbot di esempio per testare le proprie knowledge base e scoprire come utilizzare l"API di workload factory per creare la propria applicazione ai generativa.' 
 ---
 = Utilizzare l'applicazione chatbot di esempio GenAI esterna
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

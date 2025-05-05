@@ -1,19 +1,19 @@
 ---
 sidebar: sidebar 
-permalink: deploy-infrastructure.html 
+permalink: knowledge-base/deploy-infrastructure.html 
 keywords: ai, chatbot, infrastructure, bedrock, fsx for ontap 
 summary: 'Prima di creare le knowledge base e le applicazioni di FSX per ONTAP per la tua organizzazione, devi implementare l"infrastruttura per il framework RAG nel tuo ambiente. I componenti principali dell"infrastruttura sono il servizio ai Amazon Bedrock, un"istanza di macchina virtuale per il motore NetApp Genai e un file system FSX per ONTAP.' 
 ---
 = Implementare l'infrastruttura GenAI
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
-Prima di creare knowledge base e applicazioni di FSX per ONTAP per la tua organizzazione, devi implementare l'infrastruttura Genai per il framework RAG nel tuo ambiente. I componenti principali dell'infrastruttura sono il servizio Amazon Bedrock, un'istanza di macchina virtuale per il motore NetApp Genai e un file system FSX per ONTAP.
+Prima di creare knowledge base, connettori e applicazioni FSX per ONTAP per la tua organizzazione, devi implementare l'infrastruttura Genai per il framework RAG nel tuo ambiente. I componenti principali dell'infrastruttura sono il servizio Amazon Bedrock, un'istanza di macchina virtuale per il motore NetApp Genai e un file system FSX per ONTAP.
 
-L'infrastruttura distribuita può supportare più knowledge base e chatbot, quindi in genere è necessario eseguire questa attività una sola volta.
+L'infrastruttura distribuita può supportare più knowledge base, chatbot e connettori, quindi in genere è necessario eseguire questa attività una sola volta.
 
 
 
@@ -21,12 +21,18 @@ L'infrastruttura distribuita può supportare più knowledge base e chatbot, quin
 
 L'implementazione Genai deve trovarsi in una regione AWS con Amazon Bedrock abilitato. https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-supported.html["Consente di visualizzare l'elenco delle regioni supportate"^]
 
-La distribuzione è costituita dai seguenti componenti.
+L'infrastruttura è costituita dai seguenti componenti.
 
 Servizio Amazon Bedrock:: Amazon Bedrock è un servizio completamente gestito che ti consente di utilizzare i modelli di base (FMS) di aziende di intelligenza artificiale leader attraverso una singola API. Fornisce inoltre le funzionalità necessarie per creare applicazioni ai generative sicure.
 +
 --
 https://aws.amazon.com/bedrock/["Scopri di più su Amazon Bedrock"^]
+
+--
+Amazon Q Business:: Amazon Q si basa su Amazon Bedrock per fornire un assistente ai generativo completamente gestito che puoi utilizzare per rispondere alle domande e generare contenuti sulla base delle informazioni provenienti dalle tue origini dati.
++
+--
+https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/what-is.html["Scopri di più su Amazon Q Business"^]
 
 --
 Macchina virtuale per il motore NetApp Genai:: Il motore NetApp Genai viene implementato durante questo processo. Fornisce la potenza di elaborazione per acquisire i dati dalle origini dati e poi scriverli nel database vettoriale.
@@ -44,7 +50,7 @@ Il motore NetApp Genai monitora e interagisce con entrambi questi volumi.
 
 L'immagine seguente mostra l'infrastruttura GenAI. I componenti numerati 1, 2 e 3 vengono attivati durante questa procedura. Gli altri elementi devono essere presenti prima di iniziare la distribuzione.
 
-image:diagram-chatbot-infrastructure.png["Diagramma dei componenti del chatbot ai."]
+image:genai-infrastructure-diagram-numbered.png["Un diagramma dei componenti dell'infrastruttura GenAI."]
 
 
 
@@ -53,7 +59,11 @@ image:diagram-chatbot-infrastructure.png["Diagramma dei componenti del chatbot a
 Dovrai inserire le tue credenziali AWS e selezionare il file system FSX per ONTAP per implementare l'infrastruttura di recupero e generazione aumentata (RAG).
 
 .Prima di iniziare
-Prima di iniziare la procedura, accertarsi che l'ambiente sia conforme link:requirements.html["i requisiti"] .
+Prima di iniziare la procedura, accertarsi che l'ambiente in uso soddisfi i requisiti delle knowledge base o dei connettori, a seconda di quale scelta si scelga.
+
+* link:../knowledge-base/requirements-knowledge-base.html["Requisiti della Knowledge base"]
+* link:../connector/requirements-connector.html["Requisiti del connettore"]
+
 
 .Fasi
 . Accedere a workload Factory utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].

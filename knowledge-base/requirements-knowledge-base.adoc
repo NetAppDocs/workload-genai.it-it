@@ -1,31 +1,43 @@
 ---
 sidebar: sidebar 
-permalink: requirements.html 
+permalink: knowledge-base/requirements-knowledge-base.html 
 keywords: ai, chatbot, prerequisites, bedrock, fsx for ontap, prerequisites, requirements 
 summary: 'Verifica che la workload Factory e AWS siano configurati correttamente prima di costruire la tua knowledge base. Ciò include la disponibilità delle credenziali di accesso ad AWS, un file system FSX per ONTAP distribuito che contiene le origini dei dati da integrare nella tua knowledge base, l"accesso al servizio ai Amazon Bedrock e altro ancora.' 
 ---
-= Requisiti Genai
+= Requisiti della Knowledge base Genai
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
 Verifica che la workload Factory e AWS siano configurati correttamente prima di costruire la tua knowledge base. Ciò include la disponibilità delle credenziali di accesso ad AWS, un file system FSX per ONTAP distribuito che contiene le origini dei dati da integrare nella tua knowledge base, l'accesso al servizio ai Amazon Bedrock e altro ancora.
 
+
+
+== Requisiti di base di GenAI
+
+Genai ha requisiti generali che il tuo ambiente deve soddisfare prima di iniziare.
+
 Account e login di fabbrica del carico di lavoro:: Sarà necessario https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["configurare un account con workload factory"^] ed effettuare l'accesso utilizzando uno dei https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^] .
-Credenziali e autorizzazioni AWS:: Devi aggiungere le credenziali AWS alla fabbrica dei carichi di lavoro con autorizzazioni automatiche, il che significa che utilizzerai la fabbrica dei carichi di lavoro in modalità _automatizza_ per Genai.
+Credenziali e autorizzazioni AWS:: Devi aggiungere le credenziali AWS alla fabbrica del carico di lavoro con permessi di lettura/scrittura, il che significa che utilizzerai la fabbrica del carico di lavoro in modalità _lettura/scrittura_ per Genai.
 +
 --
-Le autorizzazioni per la modalità _Basic_ e la modalità _Read_ non sono attualmente supportate.
+Le autorizzazioni per la modalità _Basic_ e la modalità _Read-only_ non sono attualmente supportate.
 
 Quando imposti le tue credenziali, selezionando i permessi come mostrato di seguito avrai accesso completo alla gestione dei file system FSX per ONTAP e alla distribuzione e gestione dell'istanza Genai EC2 e delle altre risorse AWS necessarie per la tua knowledge base e il tuo chatbot.
-
-image:screenshot-ai-permissions.png["Uno screenshot che mostra l'impostazione delle autorizzazioni per la gestione completa delle risorse ai."]
 
 https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Scopri come aggiungere le credenziali AWS alla fabbrica di carichi di lavoro"^]
 
 --
+
+
+
+
+== Requisiti della Knowledge base Genai
+
+Se si prevede di lavorare con le knowledge base, accertarsi che l'ambiente soddisfi i seguenti requisiti.
+
 Amazon Bedrock:: Amazon Bedrock ti consente di utilizzare modelli di base e offre le funzionalità per creare applicazioni ai generative.
 +
 --
@@ -44,6 +56,8 @@ Modello di inclusione:: È necessario attivare il modello di integrazione che si
 * Titano embedding G1 - testo
 * Titan Embedding testo v2
 * Incorporazioni multimodali Titan G1
+* Incorporare l'inglese
+* Incorpora multilingue
 +
 https://aws.amazon.com/bedrock/titan/["Scopri di più su Amazon Titan"^]
 
@@ -53,38 +67,24 @@ https://aws.amazon.com/bedrock/titan/["Scopri di più su Amazon Titan"^]
 Modello di chat:: Devi attivare il modello di chat di base che intendi utilizzare prima di creare la tua knowledge base. Poiché il supporto dei modelli varia in base alla regione di AWS, fare riferimento a https://docs.aws.amazon.com/bedrock/latest/userguide/models-regions.html["La documentazione di AWS"^] per verificare quali modelli è possibile utilizzare nelle regioni in cui si prevede di implementare la propria knowledge base.
 +
 --
-GenAI supporta i seguenti modelli antropici Claude e Amazon Nova:
+GenAI supporta vari modelli da antropico, Amazon, Mistral ai, Meta, Jamba e Cohere.
 
-* Claude antropico:
-+
-** Claude 3,5 Sonnet
-** Claude 3 Opus
-** Claude 3 Haiku
-** Claude 3 Sonnet
-** Claude 2,1
-** Claude 2,0
-
-
-* Amazon Nova:
-+
-** Nova Micro
-** Nova Lite (supporta immagini e testo)
-** Nova Pro (supporta immagini e testo)
-
-
-
-
-Ulteriori informazioni sull'utilizzo di questi modelli con Amazon Bedrock:
+Scopri di più su come utilizzare questi modelli in Amazon Bedrock:
 
 * https://aws.amazon.com/bedrock/claude/["Claude di antropic in Amazon Bedrock"^]
 * https://docs.aws.amazon.com/nova/latest/userguide/getting-started-console.html["Guida introduttiva ad Amazon Nova nella console Amazon Bedrock"^]
+* https://aws.amazon.com/bedrock/mistral/["Modelli Mistral ai"^]
+* https://docs.aws.amazon.com/bedrock/latest/userguide/titan-text-models.html["Modelli di testo Amazon Titan"^]
+* https://aws.amazon.com/bedrock/llama/["Modelli meta Llama"^]
+* https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-jamba.html["Modelli Jamba"^]
+* https://aws.amazon.com/bedrock/cohere/["Modelli Cohere Command"^]
 
 
 --
 File system FSX per ONTAP:: Ti serve almeno un file system FSX per ONTAP:
 +
 --
-* Un file system verrà utilizzato dal motore NetApp GenAI per memorizzare il database vettoriale utilizzato dalla knowledge base.
+* Un file system verrà utilizzato (o creato, se non esiste) dal motore NetApp GenAI per memorizzare il database vettoriale utilizzato dalla knowledge base.
 +
 Questo file system FSX per ONTAP deve usare FlexVol Volumes. I volumi FlexGroup non sono supportati.
 

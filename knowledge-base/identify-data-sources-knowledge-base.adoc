@@ -1,13 +1,13 @@
 ---
 sidebar: sidebar 
-permalink: identify-data-sources.html 
-keywords: data sources, chatbot, documents, knowledge base 
+permalink: knowledge-base/identify-data-sources-knowledge-base.html 
+keywords: data sources, chatbot, documents, knowledge base, connector 
 summary: 'Identificare o creare i documenti (origini dati) che risiedono nel file system FSX per ONTAP da integrare nella knowledge base. Queste fonti di dati consentono alla knowledge base di fornire risposte accurate e personalizzate alle query degli utenti in base a dati rilevanti per l"organizzazione.' 
 ---
-= Identificare le origini dati da integrare nella propria knowledge base GenAI
+= Identificare le origini dati da aggiungere a una knowledge base o a un connettore
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -35,7 +35,7 @@ La dimensione massima del file per ciascuna origine dati è di 50 MB.
 
 == Protocolli supportati
 
-La knowledge base supporta i dati provenienti dai volumi che utilizzano i protocolli NFS o SMB/CIFS. Quando si selezionano i file archiviati utilizzando il protocollo SMB, è necessario immettere le informazioni di Active Directory in modo che la knowledge base possa accedere ai file su tali volumi. Sono inclusi il dominio Active Directory, l'indirizzo IP, il nome utente e la password.
+Le Knowledge base supportano i dati dai volumi che utilizzano i protocolli NFS o SMB/CIFS. Quando si selezionano i file archiviati utilizzando il protocollo SMB, è necessario immettere le informazioni di Active Directory in modo che la knowledge base possa accedere ai file su tali volumi. Sono inclusi il dominio Active Directory, l'indirizzo IP, il nome utente e la password.
 
 Quando si archivia l'origine dati in una condivisione (file o directory) a cui si accede tramite SMB, i dati sono accessibili solo da utenti o gruppi di chatbot che dispongono delle autorizzazioni per accedere a tale condivisione. Quando questa funzionalità "in base alle autorizzazioni" è attivata, il sistema ai confronta l'e-mail dell'utente in auth0 con gli utenti autorizzati a visualizzare o utilizzare i file nella condivisione SMB. Il chatbot fornirà le risposte in base alle autorizzazioni dell'utente per i file incorporati.
 
@@ -45,14 +45,14 @@ Ad esempio, se nella knowledge base sono stati integrati file 10 (origini dati) 
 
 == Formati di file origine dati supportati
 
-Attualmente sono supportati i seguenti formati di file di origine dati.
+I seguenti formati di file di origine dati sono attualmente supportati con le knowledge base Genai della fabbrica di workload.
 
 [cols="2*"]
 |===
 | Formato file | Interno 
 
 
-| Apache Parquetfootnote:disclaimer[la funzione di protezione dei dati non è supportata quando si acquisiscono file di dati strutturati.] | parquet 
+| Apache Parquetfootnote:disclaimer[la funzione di protezione dei dati non è supportata quando si acquisiscono file di dati strutturati in knowledge base.] | parquet 
 
 
 | Valori separati da virgola filefootnote:disclaimer[] | .csv 

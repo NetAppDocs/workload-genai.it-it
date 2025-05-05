@@ -19,50 +19,68 @@ sidebar:
     entries:
     - title: Novità
       url: "/whats-new.html"
-  - title: Inizia subito
+  - title: Scopri la BlueXP  workload Factory per Genai
     entries:
     - title: Scopri la BlueXP  workload Factory per Genai
-      url: "/ai-workloads-overview.html"
-    - title: Avvio rapido
-      url: "/quick-start.html"
-    - title: Requisiti Genai
-      url: "/requirements.html"
-    - title: Identificare le origini dati per la knowledge base
-      url: "/identify-data-sources.html"
-    - title: Implementare l'infrastruttura della Knowledge base
-      url: "/deploy-infrastructure.html"
-    - title: Utilizzare l'applicazione chatbot di esempio esterna
-      url: "/example-chatbot-application.html"
-    - title: Componenti per il motore NetApp Genai
-      url: "/genai-engine-instance.html"
-  - title: Utilizzare GenAI per creare basi di conoscenza
+      url: "/general/ai-workloads-overview.html"
+    - title: Componenti del motore NetApp Genai
+      url: "/general/genai-engine-instance.html"
+  - title: Utilizza GenAI per creare knowledge base per Amazon Bedrock
     entries:
+    - title: Inizia subito
+      entries:
+      - title: Avvio rapido
+        url: "/knowledge-base/quick-start-knowledge-base.html"
+      - title: Requisiti della Knowledge base
+        url: "/knowledge-base/requirements-knowledge-base.html"
+      - title: Identificare le origini dati da aggiungere a una knowledge base
+        url: "/knowledge-base/identify-data-sources-knowledge-base.html"
+      - title: Implementare l'infrastruttura GenAI
+        url: "/knowledge-base/deploy-infrastructure.html"
     - title: Creare una knowledge base
-      url: "/create-knowledgebase.html"
+      url: "/knowledge-base/create-knowledgebase.html"
     - title: Testare una base di conoscenza
-      url: "/test-knowledgebase.html"
+      url: "/knowledge-base/test-knowledgebase.html"
     - title: Attivare l'autenticazione
-      url: "/activate-authentication.html"
+      url: "/knowledge-base/activate-authentication.html"
     - title: Pubblicare una knowledge base
-      url: "/publish-knowledgebase.html"
+      url: "/knowledge-base/publish-knowledgebase.html"
+    - title: Utilizzare l'applicazione chatbot di esempio esterna
+      url: "/knowledge-base/example-chatbot-application.html"
     - title: Crea un'applicazione ai basata su RAG
-      url: "/create-application.html"
+      url: "/knowledge-base/create-application.html"
     - title: Cosa fare in seguito
-      url: "/whats-next.html"
+      url: "/knowledge-base/whats-next.html"
+  - title: Utilizzare GenAI per creare connettori per Amazon Q Business
+    entries:
+    - title: Inizia subito
+      entries:
+      - title: Avvio rapido
+        url: "/connector/quick-start-connector.html"
+      - title: Requisiti della Knowledge base
+        url: "/connector/requirements-connector.html"
+      - title: Identificare le origini dati da aggiungere a una knowledge base
+        url: "/connector/identify-data-sources-connector.html"
+      - title: Implementare l'infrastruttura GenAI
+        url: "/connector/deploy-infrastructure.html"
+    - title: Creare un connettore NetApp ONTAP per Amazon Q
+      url: "/connector/define-connector.html"
   - title: Somministrare GenAI
     entries:
     - title: Gestire l'infrastruttura GenAI
-      url: "/manage-infrastructure.html"
+      url: "/general/manage-infrastructure.html"
     - title: Gestire le knowledge base
-      url: "/manage-knowledgebase.html"
+      url: "/knowledge-base/manage-knowledgebase.html"
+    - title: Gestire i connettori
+      url: "/connector/manage-connector.html"
     - title: Gestire le origini dati
-      url: "/manage-data-source.html"
+      url: "/general/manage-data-source.html"
   - title: Conoscenza e supporto
     entries:
     - title: Registrati per ricevere assistenza
       url: "/support-registration.html"
     - title: Risoluzione dei problemi
-      url: "/troubleshooting.html"
+      url: "/general/troubleshooting.html"
     - title: Richiedi assistenza
       url: "/get-help.html"
   - title: Note legali
