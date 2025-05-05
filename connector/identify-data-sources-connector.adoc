@@ -45,7 +45,7 @@ Ad esempio, se avete integrato file 10 (origini dati) nel connettore e 2 dei fil
 NOTE: Quando si aggiungono origini dati a un Amazon Q Business Connector, ai file di origine dati vengono applicate solo le autorizzazioni utente. Le autorizzazioni del gruppo non vengono applicate.
 
 
-NOTE: Se nell'origine dati sono presenti file che non contengono testo, Amazon Q Business non indicizza tali file e registra invece una voce in Amazon CloudWatch Logs notando che i file non contengono testo da indicizzare.
+NOTE: Se un file nell'origine dati non contiene testo (ad esempio, un'immagine senza testo), Amazon Q Business non lo indicizza ma registra una voce in Amazon CloudWatch Logs rilevando l'assenza di testo.
 
 
 
