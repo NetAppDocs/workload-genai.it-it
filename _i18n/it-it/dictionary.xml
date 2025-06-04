@@ -836,7 +836,6 @@
   <block id="dbc68fe7976455ff2b6f2e5143dfd308" category="inline-link-macro">Modelli di base supportati in Amazon Bedrock</block>
   <block id="b198f4cca9409499187762bec5420672" category="paragraph">GenAI supporta i modelli di ciascun provider supportati da Amazon Bedrock: <block ref="9f10081366e85554159ed4dc640b95c7" category="inline-link-macro-rx"></block></block>
   <block id="514f1fc0ac0ff6e4200d3637146367f1" category="section-title">Terminologia aggiornata per le autorizzazioni</block>
-  <block id="a7b97ab7d88b015e92ed51ef4bee9c25" category="paragraph">L'interfaccia utente di fabbrica del carico di lavoro e la documentazione ora utilizzano "sola lettura" per fare riferimento alle autorizzazioni di lettura e "lettura-scrittura" per fare riferimento all'automazione delle autorizzazioni.</block>
   <block id="da1f9b1e0d45e28b599d8f40c855f668" category="summary">Dopo aver implementato l'infrastruttura ai e identificato le origini dati da integrare con Amazon Q Business, è possibile definire un connettore.</block>
   <block id="b4851e92b19af0c5c82447fc0937709d" category="inline-link-macro">requisiti</block>
   <block id="c544ac4406a53e3d89f1f777f49bd9ab" category="paragraph">Prima di procedere, assicurati che il tuo ambiente sia conforme a <block ref="e9a731368b15c5c87437cf87756c4dd9" category="inline-link-macro-rx"></block>per Amazon Q Business.</block>
@@ -933,7 +932,6 @@
   <block id="69c3ca978f076b54fa2030f25d3332fc" category="doc">Requisiti del connettore GenAI</block>
   <block id="a6390dd71ac213c8926f4e003361b1c7" category="section-title">Requisiti di base di GenAI</block>
   <block id="d94f906cc0b4e822ea4cc6f7282c6f3f" category="paragraph">Genai ha requisiti generali che il tuo ambiente deve soddisfare prima di iniziare.</block>
-  <block id="5d077bd2e14c4e2191fcc692704a074c" category="list-text">Devi aggiungere le credenziali AWS alla fabbrica del carico di lavoro con permessi di lettura/scrittura, il che significa che utilizzerai la fabbrica del carico di lavoro in modalità _lettura/scrittura_ per Genai.</block>
   <block id="92b8944386b41a864c3b42d0a5f178da" category="paragraph">Le autorizzazioni per la modalità _Basic_ e la modalità _Read-only_ non sono attualmente supportate.</block>
   <block id="dc24ca2a4507b8d4ffa56cd2f4ff7a5c" category="paragraph">Assicurati che il tuo ambiente soddisfi i seguenti requisiti specifici per Amazon Q Business Connector.</block>
   <block id="50a0042a7df9c6588a808141018da878" category="list-text">Applicazione business Amazon Q</block>
@@ -1076,4 +1074,7 @@
   <block id="65a16de587f6ba26884202bf406c26fe" category="section-title">Requisiti per NetApp Connector per Amazon Q Business</block>
   <block id="56daa392224e0cdcc6a69457c4094aa8" category="inline-link-macro">definire un connettore NetApp per Amazon Q Business</block>
   <block id="7e8def5c748db55cfe2ebcc2c26543fd" category="paragraph">Se <block ref="a1707f04689d949f85e4cb6db99b5c64" category="inline-link-macro-rx"></block>, GenAI acquisisce i dati dalle origini dati, memorizza i risultati vettorizzati in un database e fornisce il pieno controllo su come utilizzare i dati acquisiti per rispondere alle query. Questo approccio richiede una configurazione iniziale maggiore, ma consente di scegliere modelli di chat diversi per risultati diversi. Se si <block ref="fbe77fd827b80e33ddc74f945f323ccb" category="inline-link-macro-rx"></block>, i dati provenienti dalle origini dati vengono acquisiti da Amazon Q Business e archiviati in un indice. Questo approccio richiede una configurazione iniziale inferiore, ma consente di avere meno controllo sui risultati.</block>
+  <block id="4ead5e435cb4f2c7cf627b1d1e84c333" category="paragraph">L'interfaccia utente e la documentazione della Workload Factory ora utilizzano "sola lettura" per fare riferimento alle autorizzazioni di lettura e "lettura/scrittura" per fare riferimento alle autorizzazioni di automazione.</block>
+  <block id="2285d955a18bdde3d5780d04f48d58cd" category="list-text">Devi aggiungere le credenziali AWS alla fabbrica del carico di lavoro con autorizzazioni di lettura/scrittura, il che significa che utilizzerai la fabbrica del carico di lavoro in modalità _lettura/scrittura_ per GenAI.</block>
+  <block id="c45d86a4185cef0bc3cadb7e6e9b46f4" category="paragraph">Al momento, le autorizzazioni in modalità _base_ e _sola lettura_ non sono supportate.</block>
 </blocks>

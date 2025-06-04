@@ -20,7 +20,7 @@ Verifica che la workload Factory e AWS siano configurati correttamente prima di 
 Genai ha requisiti generali che il tuo ambiente deve soddisfare prima di iniziare.
 
 Account e login di fabbrica del carico di lavoro:: Sarà necessario https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["configurare un account con workload factory"^] ed effettuare l'accesso utilizzando uno dei https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^] .
-Credenziali e autorizzazioni AWS:: Devi aggiungere le credenziali AWS alla fabbrica del carico di lavoro con permessi di lettura/scrittura, il che significa che utilizzerai la fabbrica del carico di lavoro in modalità _lettura/scrittura_ per Genai.
+Credenziali e autorizzazioni AWS:: Devi aggiungere le credenziali AWS alla fabbrica del carico di lavoro con autorizzazioni di lettura/scrittura, il che significa che utilizzerai la fabbrica del carico di lavoro in modalità _lettura/scrittura_ per GenAI.
 +
 --
 Le autorizzazioni per la modalità _Basic_ e la modalità _Read-only_ non sono attualmente supportate.
