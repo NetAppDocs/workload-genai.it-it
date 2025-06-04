@@ -63,7 +63,7 @@ sidebar:
         url: "/connector/identify-data-sources-connector.html"
       - title: Implementare l'infrastruttura GenAI
         url: "/connector/deploy-infrastructure.html"
-    - title: Creare un connettore NetApp ONTAP per Amazon Q
+    - title: Crea un connettore NetApp per Amazon Q Business
       url: "/connector/define-connector.html"
   - title: Amministrare e monitorare
     entries:

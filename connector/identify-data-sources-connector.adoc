@@ -51,7 +51,7 @@ NOTE: Se un file nell'origine dati non contiene testo (ad esempio, un'immagine s
 
 == Formati di file origine dati supportati
 
-I seguenti formati di file di origine dati sono attualmente supportati con NetApp ONTAP Connector per Amazon Q
+I seguenti formati di file di origine dati sono attualmente supportati da NetApp Connector per Amazon Q Business.
 
 [cols="2*"]
 |===
