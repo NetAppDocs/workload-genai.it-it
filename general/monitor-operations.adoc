@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: general/monitor-operations.html 
+keywords: monitor genai, monitor jobs, track jobs, tracker 
+summary: 'Tieni traccia delle operazioni del carico di lavoro e monitora l"avanzamento dei lavori con Tracker nella fabbrica del carico di lavoro BlueXP per GenAI.' 
+---
+= Monitorare le operazioni del carico di lavoro con Tracker nella fabbrica del carico di lavoro BlueXP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Monitora e tieni traccia dell'esecuzione delle operazioni del carico di lavoro e monitora l'avanzamento delle attività con Tracker in BlueXP  workload Factory.
+
+.A proposito di questa attività
+Workload Factory fornisce Tracker, una funzionalità di monitoraggio che consente di monitorare e tenere traccia dell'avanzamento e dello stato delle operazioni dei carichi di lavoro, esaminare i dettagli delle attività operative e delle attività secondarie e diagnosticare eventuali problemi o errori.
+
+In Tracker sono disponibili diverse azioni. È possibile filtrare i lavori in base all'intervallo di tempo (ultime 24 ore, 7 giorni, 14 giorni o 30 giorni), al carico di lavoro, allo stato e all'utente, trovare i lavori utilizzando la funzione di ricerca e scaricare la tabella dei lavori come file CSV. È possibile aggiornare il Tracker in qualsiasi momento, riprovare rapidamente un'operazione non riuscita o modificare i parametri per un'operazione non riuscita e riprovare.
+
+Tracker supporta due livelli di monitoraggio a seconda del funzionamento. Ogni attività, come la distribuzione del file system, visualizza la descrizione dell'attività, lo stato, l'ora di inizio, la durata dell'attività, l'utente, la regione, la risorsa proxy, l'ID attività e tutte le attività secondarie correlate. È possibile visualizzare le risposte API per capire cosa è successo durante l'operazione.
+
+Tracker i livelli di attività con esempi::
++
+--
+* Livello 1 (attività): Tiene traccia della distribuzione del file system.
+* Livello 2 (attività secondaria): Tiene traccia delle attività secondarie relative alla distribuzione del file system.
+
+
+--
+Stato del funzionamento:: Lo stato dell'operazione in Tracker è il seguente _in Progress_, _Success_ e _FAILED_.
++
+--
+Frequenza di funzionamento:: La frequenza operativa si basa sul tipo di lavoro e sulla pianificazione del lavoro.
+
+
+--
+Conservazione degli eventi:: Gli eventi vengono conservati nell'interfaccia utente per 30 giorni.
+
+
+
+
+== Monitoraggio e monitoraggio delle operazioni
+
+Monitoraggio e monitoraggio delle operazioni in BlueXP  con Tracker.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nel carico di lavoro, seleziona il menu delle impostazioni dell'account, quindi seleziona *Tracker*.
++
+image:screenshot-menu-tracker-option.png["Una schermata del menu delle impostazioni dell'account con l'opzione Tracker evidenziata."]
+
+. Nella scheda Tracker, utilizzare i filtri o cercare per restringere i risultati dei lavori. È anche possibile scaricare un rapporto lavori.
+
+
+
+
+== Visualizza richiesta API
+
+Visualizzare la richiesta API nella Codebox per un'attività in Tracker.
+
+.Fasi
+. In Tracker, selezionare un'attività.
+. Selezionare il menu a tre punti, quindi selezionare *Visualizza richiesta API*.
+
+
+
+
+== Riprovare un'operazione non riuscita
+
+Riprovare un'operazione non riuscita in Tracker. È anche possibile copiare il messaggio di errore di un'operazione non riuscita.
+
+
+NOTE: È possibile riprovare un'operazione non riuscita fino a 10 volte.
+
+.Fasi
+. In Tracker, selezionare un'operazione non riuscita.
+. Selezionare il menu a tre punti, quindi selezionare *Riprova*.
+
+
+.Risultato
+L'operazione viene riavviata.
+
+
+
+== Modificare e riprovare un'operazione non riuscita
+
+Modificare i parametri dell'operazione non riuscita e riprovare l'operazione al di fuori del Tracker.
+
+.Fasi
+. In Tracker, selezionare un'operazione non riuscita.
+. Selezionare il menu a tre punti, quindi selezionare *Modifica e riprovare*.
++
+Si viene reindirizzati alla pagina delle operazioni in cui è possibile modificare i parametri e riprovare l'operazione.
+
+
+
+.Risultato
+L'operazione viene riavviata. Andare su Tracker per visualizzare lo stato dell'operazione.

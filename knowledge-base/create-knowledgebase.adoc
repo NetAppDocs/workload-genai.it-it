@@ -65,6 +65,7 @@ https://aws.amazon.com/bedrock/titan/["Scopri di più su Amazon Titan"^]
 
 
 .. *Modello chat*: Scegli tra i vari modelli di chat integrati in Amazon Bedrock. Nota: È necessario aver già attivato il modello di chat da Amazon Bedrock.
+.. *Riclassificazione*: attiva o disattiva la riclassificazione, che può migliorare la pertinenza e la qualità dei risultati delle query. Scegli un modello di chat standard o un modello di riclassificazione specializzato da utilizzare per la riclassificazione. Le opzioni del modello di riclassificazione vengono visualizzate solo se disponibili nella tua regione.
 .. *Data Guardrails*: Scegliere se attivare o disattivare le barriere di protezione dei dati. link:https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Scopri le barriere di protezione dei dati, basate sulla classificazione BlueXP "^].
 +
 Per abilitare le barriere di protezione dei dati, è necessario soddisfare i seguenti prerequisiti.
