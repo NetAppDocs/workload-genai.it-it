@@ -119,7 +119,18 @@ Una volta creata la knowledge base, è possibile aggiungere un'origine dati alla
 Il numero massimo di origini dati supportate è 10.
 
 .Fasi
-. Dopo aver selezionato *Aggiungi origine dati*, viene visualizzata la pagina *Seleziona un file system*.
+. Dopo aver selezionato *Aggiungi origine dati*, seleziona il tipo di origine dati che desideri aggiungere:
++
+** Aggiungi il file system FSx per ONTAP (utilizza i file da un volume FSx per ONTAP esistente)
+** Aggiungi file system (utilizza file da una condivisione SMB o NFS generica)
+
+
+
+
+[role="tabbed-block"]
+====
+.Aggiungere un file system FSx per ONTAP
+--
 . *Selezionare un file system*: Selezionare il file system FSX per ONTAP in cui risiedono i file di origine dati e selezionare *Avanti*.
 . *Selezionare un volume*: Selezionare il volume in cui risiedono i file di origine dati e selezionare *Avanti*.
 +
@@ -169,6 +180,113 @@ NOTE: Se si includono file basati su un intervallo di date di modifica, non appe
 . Selezionare *Aggiungi* per aggiungere questa origine dati alla knowledge base.
 
 
+--
+.Aggiungere un file system NFS generico
+--
+. *Seleziona un file system*: immetti l'indirizzo IP o il nome di dominio completo (FQDN) dell'host del file system in cui risiedono i file di origine dati, scegli il protocollo NFS per la condivisione di rete e seleziona *Avanti*.
+. *Selezionare un'origine dati*: Selezionare la posizione dell'origine dati in base alla posizione in cui sono stati salvati i file. Può trattarsi di un intero volume o solo di una cartella o sottocartella specifica del volume e selezionare *Avanti*.
++
+
+NOTE: In alcuni casi, potrebbe essere necessario inserire manualmente il nome dell'esportazione NFS e selezionare *Recupera directory* per visualizzare le directory disponibili. È possibile scegliere di selezionare l'intera esportazione o solo cartelle specifiche.
+
+. *Configurazioni*: Configurare il modo in cui l'origine dati acquisisce le informazioni dai file e quali file include nelle scansioni:
++
+** *Definisci origine dati*: Nella sezione *strategia di Chunking*, definisci il modo in cui il motore GenAI divide il contenuto dell'origine dati in blocchi quando l'origine dati è integrata con una knowledge base. È possibile scegliere una delle seguenti strategie:
++
+*** *Chunking a più frasi*: Organizza le informazioni dalla vostra origine dati in blocchi definiti dalle frasi. È possibile scegliere quante frasi compongono ciascun blocco (fino a 100).
+*** *Chunking basato su sovrapposizione*: Organizza le informazioni dall'origine dati in blocchi definiti dai caratteri che possono sovrapporsi a blocchi adiacenti. È possibile scegliere la dimensione di ciascun frammento in caratteri e la sovrapposizione di ciascun frammento con i frammenti adiacenti. È possibile configurare una dimensione del frammento compresa tra 50 e 3000 caratteri e una percentuale di sovrapposizione compresa tra 1 e 99%.
++
+
+NOTE: La scelta di un'elevata percentuale di sovrapposizione può aumentare notevolmente i requisiti di archiviazione con solo lievi miglioramenti nella precisione di recupero.
+
+
+
+** *Filtraggio dei file*: Configurare i file da includere nelle scansioni:
++
+*** Nella sezione *supporto tipi di file*, scegliere di includere tutti i tipi di file o selezionare singoli tipi di file da includere nelle scansioni dell'origine dati.
++
+Se si includono immagini o file PDF, BlueXP  workload factory per GenAI analizza il testo nelle immagini (incluse le immagini nei documenti PDF) e ciò comporta un costo maggiore.
+
++
+Quando si includono dati di testo da immagini, GenAI non è in grado di mascherare informazioni di identificazione personale (PII) dall'immagine, poiché i dati di testo acquisiti vengono inviati dall'ambiente ad AWS. Tuttavia, una volta memorizzati i dati, tutte le PII vengono mascherate nel database GenAI.
+
++
+
+NOTE: La scelta di includere i file di immagine nelle scansioni è correlata al modello di chat della Knowledge base. Se si includono file di immagine nelle scansioni, il modello di chat deve supportare le immagini. Se qui sono selezionati i tipi di file immagine, non è possibile passare dalla knowledge base a un modello di chat che non supporta i file immagine.
+
+*** Nella sezione *filtro ora modifica file*, scegliere di attivare o disattivare l'inclusione dei file in base al tempo di modifica. Se si attiva il filtraggio dell'ora di modifica, selezionare un intervallo di date dall'elenco.
++
+
+NOTE: Se si includono file basati su un intervallo di date di modifica, non appena l'intervallo di date non è soddisfatto (i file non sono stati modificati entro l'intervallo di date specificato), i file saranno esclusi dalla scansione periodica e l'origine dati non includerà questi file.
+
+
+
+
+
+. Seleziona *Aggiungi origine dati* per aggiungere questa origine dati alla tua knowledge base.
+
+
+--
+.Aggiungere un file system SMB generico
+--
+. *Seleziona file system*:
++
+.. Inserisci l'indirizzo IP o il nome di dominio completo (FQDN) dell'host del file system in cui risiedono i file di origine dati.
+.. Selezionare il protocollo SMB per la condivisione di rete.
+.. Immettere le informazioni di Active Directory, tra cui dominio, indirizzo IP, nome utente e password.
+.. Selezionare *Avanti*.
+
+
+. *Selezionare un'origine dati*: Selezionare la posizione dell'origine dati in base alla posizione in cui sono stati salvati i file. Può trattarsi di un intero volume o solo di una cartella o sottocartella specifica del volume e selezionare *Avanti*.
++
+
+NOTE: In alcuni casi, potrebbe essere necessario inserire manualmente il nome della condivisione SMB e selezionare *Recupera directory* per visualizzare le directory disponibili. È possibile scegliere di selezionare l'intera condivisione o solo cartelle specifiche.
+
+. *Configurazioni*: Configurare il modo in cui l'origine dati acquisisce le informazioni dai file e quali file include nelle scansioni:
++
+** *Definisci origine dati*: Nella sezione *strategia di Chunking*, definisci il modo in cui il motore GenAI divide il contenuto dell'origine dati in blocchi quando l'origine dati è integrata con una knowledge base. È possibile scegliere una delle seguenti strategie:
++
+*** *Chunking a più frasi*: Organizza le informazioni dalla vostra origine dati in blocchi definiti dalle frasi. È possibile scegliere quante frasi compongono ciascun blocco (fino a 100).
+*** *Chunking basato su sovrapposizione*: Organizza le informazioni dall'origine dati in blocchi definiti dai caratteri che possono sovrapporsi a blocchi adiacenti. È possibile scegliere la dimensione di ciascun frammento in caratteri e la sovrapposizione di ciascun frammento con i frammenti adiacenti. È possibile configurare una dimensione del frammento compresa tra 50 e 3000 caratteri e una percentuale di sovrapposizione compresa tra 1 e 99%.
++
+
+NOTE: La scelta di un'elevata percentuale di sovrapposizione può aumentare notevolmente i requisiti di archiviazione con solo lievi miglioramenti nella precisione di recupero.
+
+
+
+** *Risposte basate sull'autorizzazione*: abilita o disabilita le risposte basate sull'autorizzazione:
++
+*** *Enabled*: Gli utenti del chatbot che accedono a questa knowledge base riceveranno solo risposte alle query provenienti da origini dati a cui hanno accesso.
+*** *Disabled*: Gli utenti del chatbot riceveranno le risposte utilizzando il contenuto di tutte le origini dati integrate.
+
+
+** *Filtraggio dei file*: Configurare i file da includere nelle scansioni:
++
+*** Nella sezione *supporto tipi di file*, scegliere di includere tutti i tipi di file o selezionare singoli tipi di file da includere nelle scansioni dell'origine dati.
++
+Se si includono immagini o file PDF, BlueXP  workload factory per GenAI analizza il testo nelle immagini (incluse le immagini nei documenti PDF) e ciò comporta un costo maggiore.
+
++
+Quando si includono dati di testo da immagini, GenAI non è in grado di mascherare informazioni di identificazione personale (PII) dall'immagine, poiché i dati di testo acquisiti vengono inviati dall'ambiente ad AWS. Tuttavia, una volta memorizzati i dati, tutte le PII vengono mascherate nel database GenAI.
+
++
+
+NOTE: La scelta di includere i file di immagine nelle scansioni è correlata al modello di chat della Knowledge base. Se si includono file di immagine nelle scansioni, il modello di chat deve supportare le immagini. Se qui sono selezionati i tipi di file immagine, non è possibile passare dalla knowledge base a un modello di chat che non supporta i file immagine.
+
+*** Nella sezione *filtro ora modifica file*, scegliere di attivare o disattivare l'inclusione dei file in base al tempo di modifica. Se si attiva il filtraggio dell'ora di modifica, selezionare un intervallo di date dall'elenco.
++
+
+NOTE: Se si includono file basati su un intervallo di date di modifica, non appena l'intervallo di date non è soddisfatto (i file non sono stati modificati entro l'intervallo di date specificato), i file saranno esclusi dalla scansione periodica e l'origine dati non includerà questi file.
+
+
+
+
+
+. Seleziona *Aggiungi origine dati* per aggiungere questa origine dati alla tua knowledge base.
+
+
+--
+====
 .Risultato
 L'origine dati inizia a essere integrata nella tua knowledge base. Lo stato cambia da "incorporazione" a "incorporata" quando l'origine dati è completamente incorporata.
 

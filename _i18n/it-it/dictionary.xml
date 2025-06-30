@@ -53,7 +53,6 @@
   <block id="831e8ddab4c3e70bcfe67a3e58aaf8cc" category="paragraph">È possibile aggiungere una o più origini dati per popolare la knowledge base con i dati dell'organizzazione.</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">A proposito di questa attività</block>
   <block id="443fa995d0ec899357a7e519e2055b98" category="paragraph">Il numero massimo di origini dati supportate è 10.</block>
-  <block id="10031d73287aadb6c5f8b3dae7b23860" category="list-text">Dopo aver selezionato *Aggiungi origine dati*, viene visualizzata la pagina *Seleziona un file system*.</block>
   <block id="8817d70d4163473468fa1b2b6e498321" category="paragraph">L'origine dati inizia a essere integrata nella tua knowledge base. Lo stato cambia da "incorporazione" a "incorporata" quando l'origine dati è completamente incorporata.</block>
   <block id="b9605cf748e4b8e1c97d786258a0be40" category="summary">Prima di creare le knowledge base e le applicazioni di FSX per ONTAP per la tua organizzazione, devi implementare l'infrastruttura per il framework RAG nel tuo ambiente. I componenti principali dell'infrastruttura sono il servizio ai Amazon Bedrock, un'istanza di macchina virtuale per il motore NetApp Genai e un file system FSX per ONTAP.</block>
   <block id="e379b913896cf9bdd4e2d6717212215a" category="doc">Implementare l'infrastruttura GenAI</block>
@@ -757,7 +756,6 @@
   <block id="f1776184cd873aef06fc869138b3b776" category="admonition">È possibile ridimensionare e modificare il titolo della finestra del simulatore di chatbot e copiare domande e risposte negli Appunti.</block>
   <block id="e27f142520976de0e091895abd1a2b45" category="list-text">È possibile visualizzare le fonti utilizzate per produrre la risposta espandendo l'elenco *sources* sotto la risposta. Viene fornito un elenco di file utilizzati per generare la risposta. È possibile visualizzare e copiare i blocchi di dati utilizzati da ciascun percorso di file e volume in ciascun file passando con il mouse sul nome del file.</block>
   <block id="8e08c9e7067a8bc5d8828ba0b5a8a5b2" category="list-text">Se le tabelle sono incluse nella risposta, è possibile ordinare i dati in ciascuna colonna e copiare ciascuna tabella negli Appunti.</block>
-  <block id="2d5a4b914acb6c2f03d312067c73ce32" category="section-title">02 marzo 2025</block>
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">Blog e community</block>
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">Community NetApp</block>
   <block id="abd0fe91ce589ecf3c7bad0543ccad16" category="sidebar">Blog BlueXP</block>
@@ -1077,4 +1075,30 @@
   <block id="4ead5e435cb4f2c7cf627b1d1e84c333" category="paragraph">L'interfaccia utente e la documentazione della Workload Factory ora utilizzano "sola lettura" per fare riferimento alle autorizzazioni di lettura e "lettura/scrittura" per fare riferimento alle autorizzazioni di automazione.</block>
   <block id="2285d955a18bdde3d5780d04f48d58cd" category="list-text">Devi aggiungere le credenziali AWS alla fabbrica del carico di lavoro con autorizzazioni di lettura/scrittura, il che significa che utilizzerai la fabbrica del carico di lavoro in modalità _lettura/scrittura_ per GenAI.</block>
   <block id="c45d86a4185cef0bc3cadb7e6e9b46f4" category="paragraph">Al momento, le autorizzazioni in modalità _base_ e _sola lettura_ non sono supportate.</block>
+  <block id="7d906e58a1354072160e6ed36352865a" category="open-title">Aggiungere un file system FSx per ONTAP</block>
+  <block id="6d74c0f67ca2ffc7e802992699848ce7" category="open-title">Aggiungere un file system NFS generico</block>
+  <block id="47f6d5704c1ced6391a6f696c9715d6f" category="list-text">*Seleziona un file system*: immetti l'indirizzo IP o il nome di dominio completo (FQDN) dell'host del file system in cui risiedono i file di origine dati, scegli il protocollo NFS per la condivisione di rete e seleziona *Avanti*.</block>
+  <block id="f877eadc66897f3228392ce8c7190a3b" category="admonition">In alcuni casi, potrebbe essere necessario inserire manualmente il nome dell'esportazione NFS e selezionare *Recupera directory* per visualizzare le directory disponibili. È possibile scegliere di selezionare l'intera esportazione o solo cartelle specifiche.</block>
+  <block id="d6cc21a7239c70140c4fe9e5d219835f" category="list-text">Seleziona *Aggiungi origine dati* per aggiungere questa origine dati alla tua knowledge base.</block>
+  <block id="72d08830496d7cb22679d7006ceb540d" category="open-title">Aggiungere un file system SMB generico</block>
+  <block id="8dc6eb4b595b0f73bfb84bc0ff3bbe68" category="list-text">*Seleziona file system*:</block>
+  <block id="cff886b73f836ffbb81637a1582026d6" category="list-text">Inserisci l'indirizzo IP o il nome di dominio completo (FQDN) dell'host del file system in cui risiedono i file di origine dati.</block>
+  <block id="097fffee0ff7b9dc84809630d58d9921" category="list-text">Selezionare il protocollo SMB per la condivisione di rete.</block>
+  <block id="3a38971888a2c2f134ec4c4fe6164859" category="list-text">Immettere le informazioni di Active Directory, tra cui dominio, indirizzo IP, nome utente e password.</block>
+  <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">Selezionare *Avanti*.</block>
+  <block id="50e87b511edc21ffba5ebba81a768f04" category="admonition">In alcuni casi, potrebbe essere necessario inserire manualmente il nome della condivisione SMB e selezionare *Recupera directory* per visualizzare le directory disponibili. È possibile scegliere di selezionare l'intera condivisione o solo cartelle specifiche.</block>
+  <block id="0065452defb4a4481c8fe8db6f74a038" category="list-text">*Risposte basate sull'autorizzazione*: abilita o disabilita le risposte basate sull'autorizzazione:</block>
+  <block id="944ee388209d33a3bf1b309c6acdf693" category="doc">Supporto per fonti di dati ospitate su file system NFS/SMB generici</block>
+  <block id="9a7d241f00b55d0e00761313cced5dd8" category="paragraph">Ora è possibile aggiungere un'origine dati da una condivisione SMB o NFS generica. Ciò consente di includere file archiviati su volumi ospitati da file system diversi da Amazon FSx per NetApp ONTAP.</block>
+  <block id="5cba57d460e5683815517b44a7811760" category="inline-link">Aggiungere fonti di dati a una knowledge base</block>
+  <block id="b37629096d44c6fda917848365c84ebe" category="paragraph"><block ref="b37629096d44c6fda917848365c84ebe" category="inline-link-rx"></block></block>
+  <block id="6320af7d92cd5d357460c5cbc5f642a9" category="inline-link">Aggiungere origini dati a un connettore</block>
+  <block id="5cd676bef1867c904c092c33ad4a8f2d" category="paragraph"><block ref="5cd676bef1867c904c092c33ad4a8f2d" category="inline-link-rx"></block></block>
+  <block id="68548c26cece20bcf93105ea4fe89e88" category="list-text">Dopo aver selezionato *Aggiungi origine dati*, viene visualizzata la pagina *Seleziona un file system*.</block>
+  <block id="cf398eb273d2634893193d0e955a4fa2" category="list-text">Seleziona il tipo di origine dati che desideri aggiungere:</block>
+  <block id="c0f70038820005956aaf78b931d681c4" category="list-text">Aggiungi il file system FSx per ONTAP (utilizza i file da un volume FSx per ONTAP esistente)</block>
+  <block id="63e19fdc4a09680278ff2270264b3005" category="list-text">Aggiungi file system (utilizza file da una condivisione SMB o NFS generica)</block>
+  <block id="438852e39ff5e2c7366e67dde7cfdab4" category="list-text">Dopo aver selezionato *Aggiungi origine dati*, seleziona il tipo di origine dati che desideri aggiungere:</block>
+  <block id="7454fc4c14df2a987637928e569efe3a" category="section-title">29 giugno 2025</block>
+  <block id="84cd46ec8d4d2d63881ed3e5d98fe218" category="paragraph">L'interfaccia utente e la documentazione della Workload Factory ora utilizzano "sola lettura" per fare riferimento alle autorizzazioni di lettura e "lettura/scrittura" per fare riferimento alle autorizzazioni di automazione. == 02 marzo 2025</block>
 </blocks>

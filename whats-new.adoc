@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: whats-new.html 
-keywords: 'what"s new, features, new, release notes, enhancements, fixes' 
+keywords: 'what"s new, features, new, release notes, enhancements, fixes, genai' 
 summary: Scopri le novità della funzionalità per i carichi di lavoro ai della farm. 
 ---
 = Novità della farm di workload BlueXP  per Genai
@@ -12,6 +12,20 @@ summary: Scopri le novità della funzionalità per i carichi di lavoro ai della 
 
 [role="lead"]
 Scopri le novità della funzionalità per i carichi di lavoro ai generici della farm di workload.
+
+
+
+== 29 giugno 2025
+
+
+
+=== Supporto per fonti di dati ospitate su file system NFS/SMB generici
+
+Ora è possibile aggiungere un'origine dati da una condivisione SMB o NFS generica. Ciò consente di includere file archiviati su volumi ospitati da file system diversi da Amazon FSx per NetApp ONTAP.
+
+https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html#add-data-sources-to-the-knowledge-base["Aggiungere fonti di dati a una knowledge base"]
+
+https://docs.netapp.com/us-en/workload-genai/connector/define-connector.html#add-data-sources-to-the-connector["Aggiungere origini dati a un connettore"]
 
 
 
@@ -67,11 +81,7 @@ link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledg
 
 === Terminologia aggiornata per le autorizzazioni
 
-L'interfaccia utente e la documentazione della Workload Factory ora utilizzano "sola lettura" per fare riferimento alle autorizzazioni di lettura e "lettura/scrittura" per fare riferimento alle autorizzazioni di automazione.
-
-
-
-== 02 marzo 2025
+L'interfaccia utente e la documentazione della Workload Factory ora utilizzano "sola lettura" per fare riferimento alle autorizzazioni di lettura e "lettura/scrittura" per fare riferimento alle autorizzazioni di automazione. == 02 marzo 2025
 
 
 
